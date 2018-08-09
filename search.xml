@@ -3,6 +3,512 @@
   
     
     <entry>
+      <title>Linux学习笔记-2</title>
+      <link href="/Linux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-2/"/>
+      <url>/Linux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-2/</url>
+      <content type="html"><![CDATA[<p><strong>学习参考书籍：<a href="https://www.linuxprobe.com/" target="_blank" rel="noopener">《Linux就该这么学》</a></strong></p><blockquote><p>新手必须掌握的Linux命令：本章首先介绍系统内核和Shell终端的关系与作用，然后介绍bash解释器的4大优势并学习Linux命令的执行方法。本章还精挑细选了数十个Linux命令，它们与系统工作、系统状态、工作目录、文件、目录、打包压缩与搜索等主题相关。学习这些最基础的Linux命令，可以为今后学习更复杂的命令和服务做好必备知识铺垫。</p></blockquote>]]></content>
+      
+      <categories>
+          
+          <category> 学习笔记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 学习笔记 </tag>
+            
+            <tag> Linux </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
+      <title>Linux学习笔记-常用</title>
+      <link href="/Linux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E5%B8%B8%E7%94%A8/"/>
+      <url>/Linux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E5%B8%B8%E7%94%A8/</url>
+      <content type="html"><![CDATA[<h4 id="apg-get常用命令（安装deb包）"><a href="#apg-get常用命令（安装deb包）" class="headerlink" title="apg-get常用命令（安装deb包）"></a>apg-get常用命令（安装deb包）</h4><table><thead><tr><th>命令</th><th>作用</th></tr></thead><tbody><tr><td>apt-cache search package</td><td>搜索软件包</td></tr><tr><td>apt-cache show package</td><td>获取包的相关信息，如说明、大小、版本等</td></tr><tr><td>sudo apt-get install package</td><td>安装安装包</td></tr><tr><td>sudo apt-get install package –reinstall</td><td>重新安装包</td></tr><tr><td>sudo apt-get -f install</td><td>修复安装</td></tr><tr><td>sudo apt-get remove package</td><td>删除包</td></tr><tr><td>sudo apt-get remove package –purge</td><td>删除包，包括配置文件等</td></tr><tr><td>sudo apt-get update</td><td>更新源</td></tr><tr><td>sudo apt-get upgrade</td><td>更新已安装的包</td></tr><tr><td>sudo apt-get dist-upgrade</td><td>升级系统</td></tr><tr><td>apt-cache depends package</td><td>了解使用该包依赖那些包</td></tr><tr><td>apt-cache rdepends package</td><td>查看该包被哪些包依赖</td></tr><tr><td>sudo apt-get build-dep package</td><td>安装相关的编译环境</td></tr><tr><td>apt-get source package</td><td>下载该包的源代码</td></tr><tr><td>sudo apt-get clean &amp;&amp; sudo apt-get autoclean</td><td>清理无用的包</td></tr><tr><td>sudo apt-get check</td><td>检查是否有损坏的依赖</td></tr></tbody></table>]]></content>
+      
+      <categories>
+          
+          <category> 学习笔记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 学习笔记 </tag>
+            
+            <tag> Linux </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
+      <title>Linux学习笔记-3</title>
+      <link href="/Linux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-3/"/>
+      <url>/Linux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-3/</url>
+      <content type="html"><![CDATA[<p><strong>学习参考书籍：<a href="https://www.linuxprobe.com/" target="_blank" rel="noopener">《Linux就该这么学》</a></strong></p><blockquote><p>管道符、重定向与环境变量：本章讲解了与文件读写操作有关的重定向技术的5种模式，让读者通过实验切实理解每个重定向模式的作用，解决输出信息的保存问题；然后深入讲解了管道命令符，帮助读者掌握命令之间的搭配使用方法，进一步提高命令输出值的处理效率；随后通过讲解Linux系统命令行中的通配符和常见转义符，让您输入的Linux命令具有更准确的意义，为下一章学习编写Shell脚本打好功底。</p></blockquote>]]></content>
+      
+      <categories>
+          
+          <category> 学习笔记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 学习笔记 </tag>
+            
+            <tag> Linux </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
+      <title>Linux学习笔记-4</title>
+      <link href="/Linux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-4/"/>
+      <url>/Linux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-4/</url>
+      <content type="html"><![CDATA[<p><strong>学习参考书籍：<a href="https://www.linuxprobe.com/" target="_blank" rel="noopener">《Linux就该这么学》</a></strong></p><blockquote><p>Vim编辑器与Shell命令脚本：本章讲解了如何使用Vim编辑器来编写、修改文档，然后通过逐个配置主机名称、系统网卡以及Yum软件仓库参数文件等实验，帮助读者加深Vim编辑器中诸多命令、快捷键、模式切换方法的理解；然后把前面章节中讲解的Linux命令、命令语法与Shell脚本中的各种流程控制语句通过Vim编辑器写到Shell脚本中结合到一起，实现最终能够自动化工作的脚本文件；本章最后演示了怎样通过at命令与crond计划任务服务来分别实现一次性的系统任务设置和长期性的系统任务设置，从而让日常的工作更加高效，更自动化。</p></blockquote>]]></content>
+      
+      <categories>
+          
+          <category> 学习笔记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 学习笔记 </tag>
+            
+            <tag> Linux </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
+      <title>Linux学习笔记-5</title>
+      <link href="/Linux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-5/"/>
+      <url>/Linux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-5/</url>
+      <content type="html"><![CDATA[<p><strong>学习参考书籍：<a href="https://www.linuxprobe.com/" target="_blank" rel="noopener">《Linux就该这么学》</a></strong></p><blockquote><p>用户身份与文件权限：本章详细讲解了文件的所有者、所属组以及其他人可对文件进行的读（r）写（w）执行（x）等操作，以及如何在Linux系统中添加、删除、修改用户账户信息。我们还可以使用SUID、SGID与SBIT特殊权限更加灵活地设置系统权限功能，来弥补对文件设置一般操作权限时所带来的不足。隐藏权限能够给系统增加一层隐形的防护层，让黑客最多只能查看关键日志信息，而不能进行修改或删除。而文件的访问控制列表（Access Control List，ACL）可以进一步让单一用户、用户组对单一文件或目录进行特殊的权限设置，让文件具有能满足工作需求的最小权限吧。本章最后还将讲解如何使用su命令与sudo服务让普通用户具备超级管理员的权限，不仅可以满足日常的工作需求，还可以确保系统的安全性。</p></blockquote>]]></content>
+      
+      <categories>
+          
+          <category> 学习笔记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 学习笔记 </tag>
+            
+            <tag> Linux </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
+      <title>Linux学习笔记-6</title>
+      <link href="/Linux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-6/"/>
+      <url>/Linux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-6/</url>
+      <content type="html"><![CDATA[<p><strong>学习参考书籍：<a href="https://www.linuxprobe.com/" target="_blank" rel="noopener">《Linux就该这么学》</a></strong></p><blockquote><p>存储结构与磁盘划分：本章详细地分析了Linux系统中最常见的Ext3、Ext4与XFS文件系统的不同之处，并带领各位读者着重练习硬盘设备分区、格式化以及挂载等常用的硬盘管理操作，以便熟练掌握文件系统的使用方法。在打下坚实的理论基础与完成一些相关的实践练习后，我们还将进一步完整地部署SWAP（交换）分区、配置quota磁盘配额服务，以及掌握ln命令带来的软硬链接。</p></blockquote>]]></content>
+      
+      <categories>
+          
+          <category> 学习笔记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 学习笔记 </tag>
+            
+            <tag> Linux </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
+      <title>Linux学习笔记-7</title>
+      <link href="/Linux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-7/"/>
+      <url>/Linux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-7/</url>
+      <content type="html"><![CDATA[<p><strong>学习参考书籍：<a href="https://www.linuxprobe.com/" target="_blank" rel="noopener">《Linux就该这么学》</a></strong></p><blockquote><p>使用RAID与LVM磁盘阵列技术：本章深入讲解了各个常用RAID技术方案的特性，并通过实际部署RAID 10、RAID 5+备份盘等方案来更直观地查看RAID的强大效果，以便进一步满足生产环境对硬盘设备的I/O读写速度和数据冗余备份机制的需求。同时，考虑到用户可能会动态调整存储资源，本章还将介绍LVM（Logical Volume Manager，逻辑卷管理器）的部署、扩容、缩小、快照以及卸载删除的相关知识。</p></blockquote>]]></content>
+      
+      <categories>
+          
+          <category> 学习笔记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 学习笔记 </tag>
+            
+            <tag> Linux </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
+      <title>Linux学习笔记-8</title>
+      <link href="/Linux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-8/"/>
+      <url>/Linux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-8/</url>
+      <content type="html"><![CDATA[<p><strong>学习参考书籍：<a href="https://www.linuxprobe.com/" target="_blank" rel="noopener">《Linux就该这么学》</a></strong></p><blockquote><p>iptables与firewalld防火墙：本章讲解了RHEL 7中新增的firewalld防火墙与先前版本中iptables防火墙之间的区别，并分别使用iptables、firewall-cmd、firewall-config和TCP Wrappers等防火墙策略配置服务来完成数十个根据真实工作需求而设计的防火墙策略配置实验。在学习完这些实验之后，各位读者不仅可以熟练地过滤请求的流量，还可以基于服务程序的名称对流量进行允许和拒绝操作，确保Linux系统的安全性万无一失。</p></blockquote>]]></content>
+      
+      <categories>
+          
+          <category> 学习笔记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 学习笔记 </tag>
+            
+            <tag> Linux </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
+      <title>Linux学习笔记-9</title>
+      <link href="/Linux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-9/"/>
+      <url>/Linux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-9/</url>
+      <content type="html"><![CDATA[<p><strong>学习参考书籍：<a href="https://www.linuxprobe.com/" target="_blank" rel="noopener">《Linux就该这么学》</a></strong></p><blockquote><p>使用ssh服务管理远程主机：本章讲解了如何使用nmtui命令配置网络参数，以及通过nmcli命令查看网络信息并管理网络会话服务，从而让您能够在不同工作场景中快速地切换网络运行参数；还讲解了如何手工绑定mode6模式双网卡，实现网络的负载均衡。本章还深入介绍了SSH协议与sshd服务程序的理论知识、Linux系统的远程管理方法以及在系统中配置服务程序的方法，并采用实验的形式演示了使用基于密钥验证的sshd服务程序进行远程登录，以及使用screen服务程序远程管理Linux系统的不间断会话等技术。</p></blockquote>]]></content>
+      
+      <categories>
+          
+          <category> 学习笔记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 学习笔记 </tag>
+            
+            <tag> Linux </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
+      <title>Linux学习笔记-10</title>
+      <link href="/Linux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-10/"/>
+      <url>/Linux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-10/</url>
+      <content type="html"><![CDATA[<p><strong>学习参考书籍：<a href="https://www.linuxprobe.com/" target="_blank" rel="noopener">《Linux就该这么学》</a></strong></p><blockquote><p>使用Apache服务部署静态网站：本章通过对比当前主流的Web服务程序来使读者更好地理解各自的优势及特点，并真正掌握在Linux系统中配置服务的技巧。本章还详细讲解了SELinux服务的作用、三种工作模式以及策略管理方法，确保读者掌握SELinux域和SELinux安全上下文的配置方法。</p></blockquote>]]></content>
+      
+      <categories>
+          
+          <category> 学习笔记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 学习笔记 </tag>
+            
+            <tag> Linux </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
+      <title>Linux学习笔记-11</title>
+      <link href="/Linux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-11/"/>
+      <url>/Linux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-11/</url>
+      <content type="html"><![CDATA[<p><strong>学习参考书籍：<a href="https://www.linuxprobe.com/" target="_blank" rel="noopener">《Linux就该这么学》</a></strong></p><blockquote><p>使用vsftpd服务传输文件：本章讲解了什么是文件传输协议（File Transfer Protocol，FTP），以及如何部署vsftpd服务程序，然后深度剖析了vsftpd主配置文件中最常用的参数及其作用，并完整演示了vsftpd服务程序三种认证模式的配置方法；本章还涵盖了可插拔认证模块的原理、作用以及实用配置方法。</p></blockquote>]]></content>
+      
+      <categories>
+          
+          <category> 学习笔记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 学习笔记 </tag>
+            
+            <tag> Linux </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
+      <title>Linux学习笔记-12</title>
+      <link href="/Linux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-12/"/>
+      <url>/Linux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-12/</url>
+      <content type="html"><![CDATA[<p><strong>学习参考书籍：<a href="https://www.linuxprobe.com/" target="_blank" rel="noopener">《Linux就该这么学》</a></strong></p><blockquote><p>使用Samba或NFS实现文件共享：本章讲解了Samba服务的理论知识，以及SMB协议与Samba服务程序的起源和发展过程，并通过实验的方式部署文件共享服务来深入了解Samba服务程序中相关参数的作用；还讲解了如何配置网络文件系统（Network File System，NFS）服务来简化Linux系统之间的文件共享工作，以及通过部署NFS服务在多台Linux系统之间挂载并使用资源。</p></blockquote>]]></content>
+      
+      <categories>
+          
+          <category> 学习笔记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 学习笔记 </tag>
+            
+            <tag> Linux </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
+      <title>Linux学习笔记-13</title>
+      <link href="/Linux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-13/"/>
+      <url>/Linux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-13/</url>
+      <content type="html"><![CDATA[<p><strong>学习参考书籍：<a href="https://www.linuxprobe.com/" target="_blank" rel="noopener">《Linux就该这么学》</a></strong></p><blockquote><p>使用BIND提供域名解析服务：本章讲解了DNS域名解析服务的原理以及作用，介绍了域名查询功能中正向解析与反向解析的作用，实践部署了DNS主服务器、DNS从服务器、DNS缓存服务器，并通过实验的方式演示了如何在DNS主服务器上部署正、反解析工作模式，以便让大家深刻体会到DNS域名查询的便利和强大。</p></blockquote>]]></content>
+      
+      <categories>
+          
+          <category> 学习笔记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 学习笔记 </tag>
+            
+            <tag> Linux </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
+      <title>Linux学习笔记-14</title>
+      <link href="/Linux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-14/"/>
+      <url>/Linux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-14/</url>
+      <content type="html"><![CDATA[<p><strong>学习参考书籍：<a href="https://www.linuxprobe.com/" target="_blank" rel="noopener">《Linux就该这么学》</a></strong></p><blockquote><p>使用DHCP动态管理主机地址：本章讲解了动态主机配置协议的作用，以及在Linux系统中配置部署dhcpd服务程序的方法，剖析了dhcpd服务程序配置文件内每个参数的作用，并通过自动分配IP地址、绑定IP地址与MAC地址等实验，让各位读者更直观地体会DHCP协议的强大之处。</p></blockquote>]]></content>
+      
+      <categories>
+          
+          <category> 学习笔记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 学习笔记 </tag>
+            
+            <tag> Linux </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
+      <title>Linux学习笔记-15</title>
+      <link href="/Linux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-15/"/>
+      <url>/Linux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-15/</url>
+      <content type="html"><![CDATA[<p><strong>学习参考书籍：<a href="https://www.linuxprobe.com/" target="_blank" rel="noopener">《Linux就该这么学》</a></strong></p><blockquote><p>使用Postfix与Dovecot部署邮件系统：本章介绍了SMTP、POP3、IMAP4等常见的电子邮件协议，以及MUA、MTA、MDA这三种服务角色的作用；还完整地演示了在Linux系统中使用Postfix和Dovecot服务程序配置电子邮件系统服务的方法，重点讲解了常用的配置参数，此外将结合BIND服务程序提供的DNS域名解析服务来验证客户端主机与服务器之间的邮件收发功能；最后还介绍了如何在电子邮件系统中设置用户别名，以帮助大家在生产环境中更好地控制、管理电子邮件账户以及信箱地址。</p></blockquote>]]></content>
+      
+      <categories>
+          
+          <category> 学习笔记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 学习笔记 </tag>
+            
+            <tag> Linux </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
+      <title>Linux学习笔记-16</title>
+      <link href="/Linux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-16/"/>
+      <url>/Linux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-16/</url>
+      <content type="html"><![CDATA[<p><strong>学习参考书籍：<a href="https://www.linuxprobe.com/" target="_blank" rel="noopener">《Linux就该这么学》</a></strong></p><blockquote><p>使用Squid部署代理缓存服务：本章介绍了代理服务的原理以及作用、Squid服务程序正向解析和反向解析的理论以及配置方法。在掌握了Squid服务程序的标准正向代理模式、透明正向代理模式、访问控制列表功能以及反向代理等实用功能之后，读者不但可以进一步理解代理服务，提升服务控制能力，而且在步入运维岗位后能够游刃有余地处理相关问题。</p></blockquote>]]></content>
+      
+      <categories>
+          
+          <category> 学习笔记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 学习笔记 </tag>
+            
+            <tag> Linux </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
+      <title>Linux学习笔记-17</title>
+      <link href="/Linux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-17/"/>
+      <url>/Linux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-17/</url>
+      <content type="html"><![CDATA[<p><strong>学习参考书籍：<a href="https://www.linuxprobe.com/" target="_blank" rel="noopener">《Linux就该这么学》</a></strong></p><blockquote><p>使用iSCSI服务部署网络存储：本章开篇介绍了计算机硬件存储设备的不同接口技术的优缺点，并由此切入iSCSI技术主题的讲解。本章还将带领大家在Linux系统上部署iSCSI服务端程序，并分别基于Linux系统和Windows系统来访问远程的存储资源。</p></blockquote>]]></content>
+      
+      <categories>
+          
+          <category> 学习笔记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 学习笔记 </tag>
+            
+            <tag> Linux </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
+      <title>Linux学习笔记-18</title>
+      <link href="/Linux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-18/"/>
+      <url>/Linux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-18/</url>
+      <content type="html"><![CDATA[<p><strong>学习参考书籍：<a href="https://www.linuxprobe.com/" target="_blank" rel="noopener">《Linux就该这么学》</a></strong></p><blockquote><p>使用MariaDB数据库管理系统：本章介绍了数据库以及数据库管理系统的理论知识，然后介绍了MariaDB数据库管理系统的内容，接下来将通过动手实验的方式，帮助各位读者掌握MariaDB数据库管理系统的一些常规操作；最后还介绍了数据库的备份与恢复方法。</p></blockquote>]]></content>
+      
+      <categories>
+          
+          <category> 学习笔记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 学习笔记 </tag>
+            
+            <tag> Linux </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
+      <title>Linux学习笔记-19</title>
+      <link href="/Linux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-19/"/>
+      <url>/Linux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-19/</url>
+      <content type="html"><![CDATA[<p><strong>学习参考书籍：<a href="https://www.linuxprobe.com/" target="_blank" rel="noopener">《Linux就该这么学》</a></strong></p><blockquote><p>使用PXE+Kickstart无人值守安装服务：本章介绍了可以实现无人值守安装服务的PXE+Kickstart服务程序，并带领大家动手安装部署PXE + TFTP + FTP + DHCP + Kickstart等服务程序，从而搭建出一套可批量安装Linux系统的无人值守安装系统。在学完本章内容之后，运维新手就可以避免枯燥乏味的重复性工作，大大提高系统安装的效率。</p></blockquote>]]></content>
+      
+      <categories>
+          
+          <category> 学习笔记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 学习笔记 </tag>
+            
+            <tag> Linux </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
+      <title>Linux学习笔记-20</title>
+      <link href="/Linux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-20/"/>
+      <url>/Linux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-20/</url>
+      <content type="html"><![CDATA[<p><strong>学习参考书籍：<a href="https://www.linuxprobe.com/" target="_blank" rel="noopener">《Linux就该这么学》</a></strong></p><blockquote><p>使用LNMP架构部署动态网站环境：LNMP动态网站部署架构是一套由Linux + Nginx + MySQL + PHP组成的动态网站系统解决方案，具有免费、高效、扩展性强且资源消耗低等优良特性。本章首先对比了使用源码包安装服务程序与使用RPM软件包安装服务程序的区别，然后讲解了如何手工编译源码包并安装各个服务程序，以及如何使用Discuz! X3.2版本论坛系统验证架构环境。</p></blockquote>]]></content>
+      
+      <categories>
+          
+          <category> 学习笔记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 学习笔记 </tag>
+            
+            <tag> Linux </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
+      <title>Linux学习笔记-1</title>
+      <link href="/Linux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-1/"/>
+      <url>/Linux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-1/</url>
+      <content type="html"><![CDATA[<p><strong>学习参考书籍：<a href="https://www.linuxprobe.com/" target="_blank" rel="noopener">《Linux就该这么学》</a></strong></p><blockquote><p>部署虚拟环境安装Linux系统：从零基础详细讲解了虚拟机软件与红帽Linux系统，完整演示了VM虚拟机的安装与配置过程，以及红帽RHEL 7系统的安装、配置过程和初始化方法。此外，本章还涵盖了在Linux系统中找回root管理员密码、RPM与Yum软件仓库的知识，以及RHEL 7系统中systemd初始化进程的特色与使用方法。</p></blockquote><h4 id="重设root管理员密码"><a href="#重设root管理员密码" class="headerlink" title="重设root管理员密码"></a>重设root管理员密码</h4><blockquote><p>进入到系统的紧急求援模式</p><pre><code>mount -o remount,rw /sysrootchroot /sysrootpasswdtouch /.autorelabelexitreboot</code></pre></blockquote><p><strong><code>RPM是为了简化安装的复杂度，而Yum软件仓库是为了解决软件包之间的依赖关系。</code></strong></p><h4 id="RPM（红帽软件包管理器）"><a href="#RPM（红帽软件包管理器）" class="headerlink" title="RPM（红帽软件包管理器）"></a>RPM（红帽软件包管理器）</h4><blockquote><p>在RPM（红帽软件包管理器）公布之前，要想在Linux系统中安装软件只能采取源码包的方式安装。早期在Linux系统中安装程序是一件非常困难、耗费耐心的事情，而且大多数的服务程序仅仅提供源代码，需要运维人员自行编译代码并解决许多的软件依赖关系，因此要安装好一个服务程序，运维人员需要具备丰富知识、高超的技能，甚至良好的耐心。而且在安装、升级、卸载服务程序时还要考虑到其他程序、库的依赖关系，所以在进行校验、安装、卸载、查询、升级等管理软件操作时难度都非常大。<br>RPM机制则为解决这些问题而设计的。RPM有点像Windows系统中的控制面板，会建立统一的数据库文件，详细记录软件信息并能够自动分析依赖关系。目前RPM的优势已经被公众所认可，使用范围也已不局限在红帽系统中了。</p></blockquote><table><thead><tr><th>功能</th><th>命令</th></tr></thead><tbody><tr><td>安装软件的命令格式</td><td>rpm -ivh filename.rpm</td></tr><tr><td>升级软件的命令格式</td><td>rpm -Uvh filename.rpm</td></tr><tr><td>卸载软件的命令格式</td><td>rpm -e filename.rpm</td></tr><tr><td>查询软件描述信息的命令格式</td><td>rpm -qpi filename.rpm</td></tr><tr><td>列出软件文件信息的命令格式</td><td>rpm -qpl filename.rpm</td></tr><tr><td>查询文件属于哪个RPM的命令格式</td><td>rpm -qf filename</td></tr></tbody></table><h4 id="Yum软件仓库"><a href="#Yum软件仓库" class="headerlink" title="Yum软件仓库"></a>Yum软件仓库</h4><blockquote><p>尽管RPM能够帮助用户查询软件相关的依赖关系，但问题还是要运维人员自己来解决，而有些大型软件可能与数十个程序都有依赖关系，在这种情况下安装软件会是非常痛苦的。Yum软件仓库便是为了进一步降低软件安装难度和复杂度而设计的技术。Yum软件仓库可以根据用户的要求分析出所需软件包及其相关的依赖关系，然后自动从服务器下载软件包并安装到系统。</p></blockquote><table><thead><tr><th>命令</th><th>作用</th></tr></thead><tbody><tr><td>yum repolist all</td><td>列出所有仓库</td></tr><tr><td>yum list all</td><td>列出仓库中所有软件包</td></tr><tr><td>yum info软件包名称</td><td>查看软件包信息</td></tr><tr><td>yum install软件包名称</td><td>安装软件包</td></tr><tr><td>yum reinstall软件包名称</td><td>重新安装软件包</td></tr><tr><td>yum update软件包名称</td><td>升级软件包</td></tr><tr><td>yum remove软件包名称</td><td>移除软件包</td></tr><tr><td>yum clean all</td><td>清除所有仓库缓存</td></tr><tr><td>yum check-update</td><td>检查可更新的软件包</td></tr><tr><td>yum grouplist</td><td>查看系统中已经安装的软件包组</td></tr><tr><td>yum groupinstall软件包组</td><td>安装指定的软件包组</td></tr><tr><td>yum groupremove软件包组</td><td>移除指定的软件包组</td></tr><tr><td>yum groupinfo软件包组</td><td>查询指定的软件包组信息</td></tr></tbody></table><blockquote><p>一般来说市面上常见的Linux系统分为两大类：<br>RH类：Redhat、centOS和Fedora等<br>Debian类：ubuntu、Debian等。<br><strong>上述两类系统对应的包管理工具命令分别是yum和apt-get，而安装包类型则对应为rpm包和deb包。</strong></p></blockquote><h4 id="apg-get常用命令（Ubantu安装deb包）"><a href="#apg-get常用命令（Ubantu安装deb包）" class="headerlink" title="apg-get常用命令（Ubantu安装deb包）"></a>apg-get常用命令（Ubantu安装deb包）</h4><p>在Ubuntu下，apt-get近乎是最常用的shell命令之一了，因为他是Ubuntu通过新立得安装软件的常用工具命令。</p><table><thead><tr><th>命令</th><th>作用</th></tr></thead><tbody><tr><td>apt-cache search package</td><td>搜索软件包</td></tr><tr><td>apt-cache show package</td><td>获取包的相关信息，如说明、大小、版本等</td></tr><tr><td>sudo apt-get install package</td><td>安装安装包</td></tr><tr><td>sudo apt-get install package –reinstall</td><td>重新安装包</td></tr><tr><td>sudo apt-get -f install</td><td>修复安装</td></tr><tr><td>sudo apt-get remove package</td><td>删除包</td></tr><tr><td>sudo apt-get remove package –purge</td><td>删除包，包括配置文件等</td></tr><tr><td>sudo apt-get update</td><td>更新源</td></tr><tr><td>sudo apt-get upgrade</td><td>更新已安装的包</td></tr><tr><td>sudo apt-get dist-upgrade</td><td>升级系统</td></tr><tr><td>apt-cache depends package</td><td>了解使用该包依赖那些包</td></tr><tr><td>apt-cache rdepends package</td><td>查看该包被哪些包依赖</td></tr><tr><td>sudo apt-get build-dep package</td><td>安装相关的编译环境</td></tr><tr><td>apt-get source package</td><td>下载该包的源代码</td></tr><tr><td>sudo apt-get clean &amp;&amp; sudo apt-get autoclean</td><td>清理无用的包</td></tr><tr><td>sudo apt-get check</td><td>检查是否有损坏的依赖</td></tr></tbody></table>]]></content>
+      
+      <categories>
+          
+          <category> 学习笔记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 学习笔记 </tag>
+            
+            <tag> Linux </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
+      <title>Linux学习笔记-0（前言）</title>
+      <link href="/Linux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-0/"/>
+      <url>/Linux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-0/</url>
+      <content type="html"><![CDATA[<h4 id="开源软件的特性"><a href="#开源软件的特性" class="headerlink" title="开源软件的特性"></a>开源软件的特性</h4><ol><li>低风险：使用闭源软件无疑把命运交付给他人，一旦封闭的源代码没有人来维护，你将进退维谷；而且相较于商业软件公司，开源社区很少存在倒闭的问题。</li><li>高品质：相较于闭源软件产品，开源项目通常是由开源社区来研发及维护的，参与编写、维护、测试的用户量众多，一般的bug还没有等爆发就已经被修补。</li><li>低成本：开源工作者都是在幕后默默且无偿地付出劳动成果，为美好的世界贡献一份力量，因此使用开源社区推动的软件项目可以节省大量的人力、物力和财力。</li><li>更透明：没有哪个笨蛋会把木马、后门等放到开放的源代码中，这样无疑是把自己的罪行暴露在阳光之下。<blockquote><p>嘻嘻，是不是觉得自己的小项目开源了，就能变成大项目。</p></blockquote></li></ol><h4 id="开源许可协议整理"><a href="#开源许可协议整理" class="headerlink" title="开源许可协议整理"></a>开源许可协议整理</h4><ol><li>GNU GPL（GNU General Public License，GNU通用公共许可证）：只要软件中包含了遵循GPL协议的产品或代码，该软件就必须也遵循GPL许可协议且开源、免费，因此这个协议并不适合商用软件。遵循该协议的开源软件数量极其庞大，包括Linux系统在内的大多数的开源软件都是基于这个协议的。GPL开源许可协议最大的4个特点如下所示。</li></ol><ul><li>复制自由：允许把软件复制到任何人的电脑中，并且不限制复制的数量。</li><li>传播自由：允许软件以各种形式进行传播。</li><li>收费传播：允许在各种媒介上出售该软件，但必须提前让买家知道这个软件是可以免费获得的；因此，一般来讲，开源软件都是通过为用户提供有偿服务的形式来盈利的。</li><li>修改自由：允许开发人员增加或删除软件的功能，但软件修改后必须依然基于GPL许可协议授权。</li></ul><ol start="2"><li>BSD（Berkeley Software Distribution，伯克利软件发布版）许可协议：用户可以使用、修改和重新发布遵循该许可的软件，并且可以将软件作为商业软件发布和销售，前提是需要满足下面3个条件。</li></ol><ul><li>如果再发布的软件中包含源代码，则源代码必须继续遵循BSD许可协议。</li><li>如果再发布的软件中只有二进制程序，则需要在相关文档或版权文件中声明原始代码遵循了BSD协议。</li><li>不允许用原始软件的名字、作者名字或机构名称进行市场推广。</li></ul><ol start="3"><li>Apache许可证版本（Apache License Version）许可协议：在为开发人员提供版权及专利许可的同时，允许用户拥有修改代码及再发布的自由。该许可协议适用于商业软件，现在热门的Hadoop、Apache HTTP Server、MongoDB等项目都是基于该许可协议研发的，程序开发人员在开发遵循该协议的软件时，要严格遵守下面的4个条件。</li></ol><ul><li>该软件及其衍生品必须继续使用Apache许可协议。</li><li>如果修改了程序源代码，需要在文档中进行声明。</li><li>若软件是基于他人的源代码编写而成的，则需要保留原始代码的协议、商标、专利声明及其他原作者声明的内容信息。</li><li>如果再发布的软件中有声明文件，则需在此文件中标注Apache许可协议及其他许可协议。</li></ul><ol start="4"><li>MPL（Mozilla Public License，Mozilla公共许可）许可协议：相较于GPL许可协议，MPL更加注重对开发者的源代码需求和收益之间的平衡。</li></ol><ol start="5"><li>MIT（Massachusetts Institute of Technology）许可协议：目前限制最少的开源许可协议之一，只要程序的开发者在修改后的源代码中保留原作者的许可信息即可，因此普遍被商业软件所使用。</li></ol><h4 id="常见的Linux系统版本"><a href="#常见的Linux系统版本" class="headerlink" title="常见的Linux系统版本"></a>常见的Linux系统版本</h4><p>在介绍常见的Linux系统版本之前，首先需要区分Linux系统内核与Linux发行套件系统的不同。</p><ul><li>Linux系统内核指的是一个由Linus Torvalds负责维护，提供硬件抽象层、硬盘及文件系统控制及多任务功能的系统核心程序。</li><li>Linux发行套件系统(Linux系统)是我们常说的Linux操作系统，也即是由Linux内核与各种常用软件的集合产品。<br>全球大约有数百款的Linux系统版本，每个系统版本都有自己的特性和目标人群，下面将可以从用户的角度选出最热门的几款进行介绍。<ul><li>红帽企业版Linux（RedHat Enterprise Linux，RHEL）：红帽公司是全球最大的开源技术厂商，RHEL是全世界内使用最广泛的Linux系统。</li><li>社区企业操作系统（Community Enterprise Operating System，CentOS）：通过把RHEL系统重新编译并发布给用户免费使用的Linux系统，具有广泛的使用人群。CentOS当前已被红帽公司“收编”。</li><li>Fedora：由红帽公司发布的桌面版系统套件（目前已经不限于桌面版）。用户可免费体验到最新的技术或工具，这些技术或工具在成熟后会被加入到RHEL系统中，因此Fedora也称为RHEL系统的“试验田”。运维人员如果想时刻保持自己的技术领先，就应该多关注此类Linux系统的发展变化及新特性，不断改变自己的学习方向。</li><li>openSUSE：源自德国的一款著名的Linux系统，在全球范围内有着不错的声誉及市场占有率。</li><li>Gentoo：具有极高的自定制性，操作复杂，因此适合有经验的人员使用。</li><li>Debian：稳定性、安全性强，提供了免费的基础支持，可以良好地支持各种硬件架构，以及提供近十万种不同的开源软件，在国外拥有很高的认可度和使用率。</li><li>Ubuntu：是一款派生自Debian的操作系统，对新款硬件具有极强的兼容能力。Ubuntu与Fedora都是极其出色的Linux桌面系统，而且Ubuntu也可用于服务器领域。</li></ul></li></ul>]]></content>
+      
+      <categories>
+          
+          <category> 学习笔记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 学习笔记 </tag>
+            
+            <tag> Linux </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
       <title>博客搭建记录(coding Pages 配合 hexo搭建博客)))</title>
       <link href="/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E8%AE%B0%E5%BD%95/"/>
       <url>/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E8%AE%B0%E5%BD%95/</url>
@@ -103,6 +609,13 @@
     </entry>
     
     <entry>
+      <title>Arley&#39;s Inc</title>
+      <link href="/gallery/index.html"/>
+      <url>/gallery/index.html</url>
+      <content type="html"><![CDATA[]]></content>
+    </entry>
+    
+    <entry>
       <title>标签云</title>
       <link href="/tags/index.html"/>
       <url>/tags/index.html</url>
@@ -113,13 +626,6 @@
       <title>时间轴</title>
       <link href="/timeline/index.html"/>
       <url>/timeline/index.html</url>
-      <content type="html"><![CDATA[]]></content>
-    </entry>
-    
-    <entry>
-      <title>Arley&#39;s Inc</title>
-      <link href="/gallery/index.html"/>
-      <url>/gallery/index.html</url>
       <content type="html"><![CDATA[]]></content>
     </entry>
     
