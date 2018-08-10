@@ -50,7 +50,7 @@
     
     <title>
         
-            Linux学习笔记-2 | 
+            Linux学习笔记-3（vim编辑器学习） | 
         
         Arley&#39;s Blog (小磊同学博客)
     </title>
@@ -227,7 +227,7 @@
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="Arley&#39;s Blog (小磊同学博客)">
-    <meta name="msapplication-starturl" content="https://i7xy.cn/Linux学习笔记-2/">
+    <meta name="msapplication-starturl" content="https://i7xy.cn/Linux学习笔记-3（vim编辑器学习）/">
     <meta name="msapplication-navbutton-color" content="#619DDE">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="Arley&#39;s Blog (小磊同学博客)">
@@ -242,16 +242,16 @@
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="https://i7xy.cn/Linux学习笔记-2/">
+    <meta property="og:url" content="https://i7xy.cn/Linux学习笔记-3（vim编辑器学习）/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="Linux学习笔记-2 | Arley&#39;s Blog (小磊同学博客)">
+    <meta property="og:title" content="Linux学习笔记-3（vim编辑器学习） | Arley&#39;s Blog (小磊同学博客)">
     <meta property="og:image" content="/img/logo.png">
     <meta property="og:description" content="小程序全栈开发者/伪极客/灵魂摄影师，热爱技术&amp;生活，很高兴能在这里与你分享我对技术和生活的思考。">
     <meta property="og:article:tag" content="学习笔记"> <meta property="og:article:tag" content="Linux"> 
 
     
-        <meta property="article:published_time" content="Thu Aug 09 2018 19:48:31 GMT+0800">
-        <meta property="article:modified_time" content="Fri Aug 10 2018 12:32:53 GMT+0800">
+        <meta property="article:published_time" content="Fri Aug 10 2018 15:22:29 GMT+0800">
+        <meta property="article:modified_time" content="Fri Aug 10 2018 16:07:57 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -259,7 +259,7 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="https://i7xy.cn/Linux学习笔记-2/index.html" />
+        <link rel="canonical" href="https://i7xy.cn/Linux学习笔记-3（vim编辑器学习）/index.html" />
     
 
     <!-- Structured-data for SEO -->
@@ -271,10 +271,10 @@
 {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "mainEntityOfPage": "https://i7xy.cn/Linux学习笔记-2/index.html",
-    "headline": "Linux学习笔记-2",
-    "datePublished": "Thu Aug 09 2018 19:48:31 GMT+0800",
-    "dateModified": "Fri Aug 10 2018 12:32:53 GMT+0800",
+    "mainEntityOfPage": "https://i7xy.cn/Linux学习笔记-3（vim编辑器学习）/index.html",
+    "headline": "Linux学习笔记-3（vim编辑器学习）",
+    "datePublished": "Fri Aug 10 2018 15:22:29 GMT+0800",
+    "dateModified": "Fri Aug 10 2018 16:07:57 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "Arley",
@@ -362,7 +362,7 @@
     </button>
 
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#man-获取帮助"><span class="post-toc-number">1.</span> <span class="post-toc-text">man 获取帮助</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#echo-输出命令"><span class="post-toc-number">2.</span> <span class="post-toc-text">echo 输出命令</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#date-时间命令"><span class="post-toc-number">3.</span> <span class="post-toc-text">date 时间命令</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#系统电源"><span class="post-toc-number">4.</span> <span class="post-toc-text">系统电源</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#wget-下载操作"><span class="post-toc-number">5.</span> <span class="post-toc-text">wget 下载操作</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#进程管理显示"><span class="post-toc-number">6.</span> <span class="post-toc-text">进程管理显示</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#系统状态检测命令"><span class="post-toc-number">7.</span> <span class="post-toc-text">系统状态检测命令</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#工作目录切换命令"><span class="post-toc-number">8.</span> <span class="post-toc-text">工作目录切换命令</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#文本编辑命令"><span class="post-toc-number">9.</span> <span class="post-toc-text">文本编辑命令</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#文件目录管理命令"><span class="post-toc-number">10.</span> <span class="post-toc-text">文件目录管理命令</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#打包压缩"><span class="post-toc-number">11.</span> <span class="post-toc-text">打包压缩</span></a></li></ol>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#vim三种模式的操作区别以及模式之间的切换方法："><span class="post-toc-number">1.</span> <span class="post-toc-text">vim三种模式的操作区别以及模式之间的切换方法：</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#命令模式常用命令"><span class="post-toc-number">2.</span> <span class="post-toc-text">命令模式常用命令</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#末行模式中可用的命令"><span class="post-toc-number">3.</span> <span class="post-toc-text">末行模式中可用的命令</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#vim实操"><span class="post-toc-number">4.</span> <span class="post-toc-text">vim实操</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#vim编写简单的shell-sh-脚本"><span class="post-toc-number">5.</span> <span class="post-toc-text">vim编写简单的shell(.sh)脚本</span></a></li></ol>
     </ul>
     
 
@@ -394,7 +394,7 @@
         
     
             <p class="article-headline-p">
-                Linux学习笔记-2
+                Linux学习笔记-3（vim编辑器学习）
             </p>
         </div>
 
@@ -413,7 +413,7 @@
     <!-- Author Name & Date -->
     <div>
         <strong>Arley</strong>
-        <span>8月 09, 2018</span>
+        <span>8月 10, 2018</span>
     </div>
 
     <div class="section-spacer"></div>
@@ -435,7 +435,7 @@
 <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
     <li class="mdl-menu__item">在其它设备中阅读本文章</li>
     
-        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACYUlEQVR42u3aQXLjMAwEQP//09kXmDsAKIpJtU4pla2wdSDgIT4/f/r64OHh4eHh4eHhXcb7xNd/Hrr8VvLMb3eqa8PDw8M7w0uWntxPlv6Nvf5kvjY8PDy8k7z1tt5baFIM8peyXhseHh7e/bx8618Xj/z/4uHh4f1eXhWc3LmoMODh4eFtDSPW23rSKPcKzKGsBQ8PDy/m5YdM5/8+er6Hh4eHF/DKI03Fw62kDCQFoDl0hYeHh/cAL9+Ic3zedk8KAx4eHt5bvOo2XQ0XqoMCveADDw8P7zyvOhqVb9bVUYDeURkeHh7eSV4hHh1HvUkRSj6Ph4eHdw8vHwXoNd+TCDiPRfDw8PDO8PKf+nksO2ma89fRnMbFw8PDG/MmLfKGAdPWoNXXV4+Hh4d3kDdZ4nrp1QC3F3Dg4eHhneFNHl0tHnmTPToqw8PDw3uYl/y8r4YXvQi4V1Tw8PDwbuOtS0VSSKImuPXKNhQGPDw8vBYvDyCqsWx1Q+99Fw8PD+9dXl4S8sGCPJjIi1BhdAAPDw/vAV5vg64GwfPGOh9WwMPDwzvPizbfuGz0jruqrwMPDw/vLV41kJ0XlepreiSlxsPDw9vUc+Zb/K4XkccTozACDw8Pb8zrHXftinfnAQQeHh7eed7mTbkYOvRaZzw8PLwbePlY1aQJrpaK/GgNDw8P7y1e71irt8QkCslLFB4eHt7v4iWb/mTEqtzE4+Hh4V3Jqx50zRv0wvPx8PDwDvKSBeWHZL0Wufrq8fDw8N7i7d2aq0FtXnii+3h4eHgP8/7ehYeHh4eHh4eHd8H1D36qFhFfc+fCAAAAAElFTkSuQmCC">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPYAAAD2CAAAAADAeSUUAAAC10lEQVR42u3aS24bQQwFQN3/0s42QGL5PVIwpO6alSGNZ7q4MM3P4+vK64GNjY2NjY2NjY39luxHfP3nQcE9f9+Zf/LvM7/7Nj8zNjY29tnsH/70P2Ungcg/yb9tz4yNjY19A/v5oWfJJglc/t7VmbGxsbGx49/6oSSI0w82NjY29u+w9/jn97RBx8bGxr6ZnTRoktSVlxxJE2qTArGxsbHvYbcHeoeff3W+jY2Njf3G7NmVp5ZklWcz0C3OjI2NjX0oe78E2Tb0N+2hTVCwsbGx72Hn4dgctw1QO4QY9tKwsbGxP5CdFAabhs5ssXITprqphI2Njf3h7PYf/dmqzWYMnL/rh+SHjY2NfTQ7WZFpD5S3pdrnD1c5sbGxsS9gJ+kqKTDyhtSrxsNJMsPGxsY+lT0bDLwqTC0sT431phI2Njb2x7LbcWw+BmjHBklR9EvjAWxsbOyPYrek5PVJQZK3tNo3YmNjY9/Mzoe1m6FCvsQzG0JjY2Nj38bOF27249s8FbVj4FUFho2Njf3h7LycSF6c8zaD23ahBxsbG/sG9mwMkBQDs2WdPLh5ssTGxsY+m70JRFuifI2uWdLCxsbGvoedYJI2UFtmJGVPfk5sbGzsm9mzZLNJYy1snwixsbGxT2XPSot2HDsbJLclUDEewMbGxj6InbT425TW4tsiZBZ0bGxs7FPZm+Q0W9aZjW/z+79NitjY2NiHsvNWTn7oWSBeRS3yNjY2NvYR7LxZPyst8mT5PHx5EsXGxsa+jV2PS0dNn1c9eTbAwMbGxj6b/YivTZjykiMfLSdBwcbGxr6HvT960kKaHX0zMMbGxsa+jd2WE236yZ+5GTljY2NjY+fJJhn0tmVDUVrEYGxsbGzstjWfB6IdAM+aUNjY2Nj3sJOmUptU9oPbVw0JsLGxsc9mtwuObYM+KT/yQM+WRLGxsbFPZd9zYWNjY2NjY2NjY7/N9QcH8SpcfsC27gAAAABJRU5ErkJggg==">
     
 </ul>
 
@@ -466,7 +466,7 @@
 
     <!-- Share Weibo -->
     
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=Linux学习笔记-2&url=https://i7xy.cn/Linux学习笔记-2/index.html&pic=https://i7xy.cn/img/favicon.png&searchPic=false&style=simple" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=Linux学习笔记-3（vim编辑器学习）&url=https://i7xy.cn/Linux学习笔记-3（vim编辑器学习）/index.html&pic=https://i7xy.cn/img/favicon.png&searchPic=false&style=simple" target="_blank">
             <li class="mdl-menu__item">
                 分享到微博
             </li>
@@ -487,7 +487,7 @@
 
     <!-- Share QQ -->
     
-        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=Arley&#39;s Blog (小磊同学博客)&title=Linux学习笔记-2&summary=小程序全栈开发者/伪极客/灵魂摄影师，热爱技术&amp;生活，很高兴能在这里与你分享我对技术和生活的思考。&pics=https://i7xy.cn/img/favicon.png&url=https://i7xy.cn/Linux学习笔记-2/index.html" target="_blank">
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=Arley&#39;s Blog (小磊同学博客)&title=Linux学习笔记-3（vim编辑器学习）&summary=小程序全栈开发者/伪极客/灵魂摄影师，热爱技术&amp;生活，很高兴能在这里与你分享我对技术和生活的思考。&pics=https://i7xy.cn/img/favicon.png&url=https://i7xy.cn/Linux学习笔记-3（vim编辑器学习）/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 QQ
             </li>
@@ -507,427 +507,149 @@
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
         <p><strong>学习参考书籍：<a href="https://www.linuxprobe.com/" target="_blank" rel="noopener">《Linux就该这么学》</a></strong></p>
+<h4 id="vim三种模式的操作区别以及模式之间的切换方法："><a href="#vim三种模式的操作区别以及模式之间的切换方法：" class="headerlink" title="vim三种模式的操作区别以及模式之间的切换方法："></a>vim三种模式的操作区别以及模式之间的切换方法：</h4><ul>
+<li>命令模式：控制光标移动，可对文本进行复制、粘贴、删除和查找等工作。</li>
+<li>输入模式：正常的文本录入。</li>
+<li>末行模式：保存或退出文档，以及设置编辑环境。</li>
+</ul>
+<p><img src="https://i.loli.net/2018/08/10/5b6d3e4084012.png" alt="切换快捷键"></p>
 <blockquote>
-<p>新手必须掌握的Linux命令：本章首先介绍系统内核和Shell终端的关系与作用，然后介绍bash解释器的4大优势并学习Linux命令的执行方法。本章还精挑细选了数十个Linux命令，它们与系统工作、系统状态、工作目录、文件、目录、打包压缩与搜索等主题相关。学习这些最基础的Linux命令，可以为今后学习更复杂的命令和服务做好必备知识铺垫。</p>
+<p>　在每次运行 Vim 编辑器时，默认进入命令模式，此时需要先切换到输入模式后再进行文档编写工作，而每次在编写完文档后需要先返回命令模式，然后再进入末行模式，执行文档的保存或退出操作。在 Vim 中，无法直接从输入模式切换到末行模式。</p>
 </blockquote>
-<h4 id="man-获取帮助"><a href="#man-获取帮助" class="headerlink" title="man 获取帮助"></a>man 获取帮助</h4><blockquote>
-<p>man +命令  <code>获取某条命令的帮助，比如 man ls</code></p>
-</blockquote>
-<ol>
-<li>帮助文档快捷键操作</li>
-</ol>
-<table>
+<h4 id="命令模式常用命令"><a href="#命令模式常用命令" class="headerlink" title="命令模式常用命令"></a>命令模式常用命令</h4><table>
 <thead>
 <tr>
-<th>按键</th>
-<th>功能</th>
+<th>命令</th>
+<th>作用</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>空格键</td>
-<td>向下翻一页</td>
+<td>dd</td>
+<td>删除（剪切）光标所在整行</td>
 </tr>
 <tr>
-<td>PaGe down</td>
-<td>向下翻一页</td>
+<td>5dd</td>
+<td>删除（剪切）从光标处开始的 5 行</td>
 </tr>
 <tr>
-<td>PaGe up</td>
-<td>向上翻一页</td>
+<td>yy</td>
+<td>复制光标所在整行</td>
 </tr>
 <tr>
-<td>home</td>
-<td>直接前往首页</td>
-</tr>
-<tr>
-<td>end</td>
-<td>直接前往尾页</td>
-</tr>
-<tr>
-<td>/</td>
-<td>从上至下搜索某个关键词，如“ /linux”</td>
-</tr>
-<tr>
-<td>?</td>
-<td>从下至上搜索某个关键词，如“ ?linux”</td>
+<td>5yy</td>
+<td>复制从光标处开始的 5 行</td>
 </tr>
 <tr>
 <td>n</td>
-<td>定位到下一个搜索到的关键词</td>
+<td>显示搜索命令定位到的下一个字符串</td>
 </tr>
 <tr>
 <td>N</td>
-<td>定位到上一个搜索到的关键词</td>
+<td>显示搜索命令定位到的上一个字符串</td>
 </tr>
 <tr>
-<td>q</td>
-<td>退出帮助文档</td>
+<td>u</td>
+<td>撤销上一步的操作</td>
+</tr>
+<tr>
+<td>p</td>
+<td>将之前删除（dd）或复制（yy）过的数据粘贴到光标后面</td>
 </tr>
 </tbody>
 </table>
-<ol start="2">
-<li>帮助文档翻译</li>
-</ol>
-<table>
+<h4 id="末行模式中可用的命令"><a href="#末行模式中可用的命令" class="headerlink" title="末行模式中可用的命令"></a>末行模式中可用的命令</h4><table>
 <thead>
 <tr>
-<th>字符串</th>
-<th>翻译</th>
+<th>命令</th>
+<th>作用</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>NAME</td>
-<td>命令的名称</td>
+<td>:w</td>
+<td>保存</td>
 </tr>
 <tr>
-<td>SYNOPSIS</td>
-<td>参数的大致使用方法</td>
+<td>:q</td>
+<td>退出</td>
 </tr>
 <tr>
-<td>DESCRIPTION</td>
-<td>介绍说明</td>
+<td>:q!</td>
+<td>强制退出（放弃对文档的修改内容）</td>
 </tr>
 <tr>
-<td>EXAMPLES</td>
-<td>演示（附带简单说明）</td>
+<td>:wq!</td>
+<td>强制保存退出</td>
 </tr>
 <tr>
-<td>OVERVIEW</td>
-<td>概述</td>
+<td>:set nu</td>
+<td>显示行号</td>
 </tr>
 <tr>
-<td>DEFAULTS</td>
-<td>默认的功能</td>
+<td>:set nonu</td>
+<td>不显示行号</td>
 </tr>
 <tr>
-<td>OPTIONS</td>
-<td>具体的可用选项（带介绍）</td>
+<td>:命令</td>
+<td>执行该命令</td>
 </tr>
 <tr>
-<td>ENVIRONMENT</td>
-<td>环境变量</td>
+<td>:整数</td>
+<td>跳转到该行</td>
 </tr>
 <tr>
-<td>FILES</td>
-<td>用到的文件</td>
+<td>:ｓ/one/two</td>
+<td>将当前光标所在行的第一个 one 替换成 two</td>
 </tr>
 <tr>
-<td>SEE ALSO</td>
-<td>相关的资料</td>
+<td>:ｓ/one/two/g</td>
+<td>将当前光标所在行的所有 one 替换成 two</td>
 </tr>
 <tr>
-<td>HISTORY</td>
-<td>维护历史与联系方式</td>
+<td>:%s/one/two/g</td>
+<td>将全文中的所有 one 替换成 two</td>
+</tr>
+<tr>
+<td>?字符串</td>
+<td>在文本中从下至上搜索该字符串</td>
+</tr>
+<tr>
+<td>/字符串</td>
+<td>在文本中从上至下搜索该字符串</td>
 </tr>
 </tbody>
 </table>
-<h4 id="echo-输出命令"><a href="#echo-输出命令" class="headerlink" title="echo 输出命令"></a>echo 输出命令</h4><blockquote>
-<p>命令用于在终端输出字符串或变量提取后的值，格式为“ echo [字符串 | \$变量]”。<br>例如，把指定字符串“ i7xy.cn”输出到终端屏幕的命令为：<br>[root@linuxprobe ~]# echo i7xy.cn<br>该命令会在终端屏幕上显示如下信息：<br>i7xy.cn<br>下面，我们使用$变量的方式提取变量 SHELL 的值，并将其输出到屏幕上：<br>[root@linuxprobe ~]# echo \$SHELL  (区分大小写)<br>/bin/bash</p>
-</blockquote>
-<h4 id="date-时间命令"><a href="#date-时间命令" class="headerlink" title="date 时间命令"></a>date 时间命令</h4><table>
-<thead>
-<tr>
-<th>参数</th>
-<th>功能</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>%t</td>
-<td>跳格[Tab 键]</td>
-</tr>
-<tr>
-<td>%H</td>
-<td>小时（00～23）</td>
-</tr>
-<tr>
-<td>%I</td>
-<td>小时（00～12）</td>
-</tr>
-<tr>
-<td>%M</td>
-<td>分钟（00～59）</td>
-</tr>
-<tr>
-<td>%S</td>
-<td>秒（00～59）</td>
-</tr>
-<tr>
-<td>%j</td>
-<td>今年中的第几天</td>
-</tr>
-</tbody>
-</table>
-<ol>
-<li>现在的时间</li>
-</ol>
+<h4 id="vim实操"><a href="#vim实操" class="headerlink" title="vim实操"></a>vim实操</h4><ol>
+<li><p>vim xxx.txt (创建或打开xxx.txt) - practice.txt</p>
 <blockquote>
-<p>arley@arley-PC:~$ date<br>2018年 08月 09日 星期四 20:51:17 CST</p>
-</blockquote>
-<ol start="2">
-<li>按照“年-月-日 小时:分钟:秒”的格式查看当前系统时间</li>
-</ol>
-<blockquote>
-<p>arley@arley-PC:~$ date “+%Y-%m-%d %H:%M:%S 今年中的第%j天”<br>2018-08-09 20:53:55 今年中的第221天</p>
-</blockquote>
-<ol start="3">
-<li>将系统的当前时间设置为 2017 年 9 月 1 日 8 点 30 分的 date 命令如下所示：</li>
-</ol>
-<blockquote>
-<p>arley@arley-PC:~$ date -s “20170901 8:30:00”<br>Fri Sep 1 08:30:00 CST 2017</p>
-</blockquote>
-<h4 id="系统电源"><a href="#系统电源" class="headerlink" title="系统电源"></a>系统电源</h4><ol>
-<li>重启 reboot</li>
-<li>关机 poweroff</li>
-</ol>
-<h4 id="wget-下载操作"><a href="#wget-下载操作" class="headerlink" title="wget 下载操作"></a>wget 下载操作</h4><blockquote>
-<p>arley@arley-PC:~/Downloads$ wget <a href="http://www.linuxprobe.com/docs/LinuxProbe.pdf" target="_blank" rel="noopener">http://www.linuxprobe.com/docs/LinuxProbe.pdf</a><br>–2018-08-09 21:01:17–  <a href="http://www.linuxprobe.com/docs/LinuxProbe.pdf" target="_blank" rel="noopener">http://www.linuxprobe.com/docs/LinuxProbe.pdf</a><br>正在解析主机 <a href="http://www.linuxprobe.com" target="_blank" rel="noopener">www.linuxprobe.com</a> (<a href="http://www.linuxprobe.com).." target="_blank" rel="noopener">www.linuxprobe.com)..</a>. 124.193.226.211, 124.193.226.219, 124.193.226.220, …<br>正在连接 <a href="http://www.linuxprobe.com" target="_blank" rel="noopener">www.linuxprobe.com</a> (<a href="http://www.linuxprobe.com)|124.193.226.211|:80.." target="_blank" rel="noopener">www.linuxprobe.com)|124.193.226.211|:80..</a>. 已连接。<br>已发出 HTTP 请求，正在等待回应… 301 Moved Permanently<br>位置：<a href="https://www.linuxprobe.com/docs/LinuxProbe.pdf" target="_blank" rel="noopener">https://www.linuxprobe.com/docs/LinuxProbe.pdf</a> [跟随至新的 URL]<br>–2018-08-09 21:01:17–  <a href="https://www.linuxprobe.com/docs/LinuxProbe.pdf" target="_blank" rel="noopener">https://www.linuxprobe.com/docs/LinuxProbe.pdf</a><br>正在连接 <a href="http://www.linuxprobe.com" target="_blank" rel="noopener">www.linuxprobe.com</a> (<a href="http://www.linuxprobe.com)|124.193.226.211|:443.." target="_blank" rel="noopener">www.linuxprobe.com)|124.193.226.211|:443..</a>. 已连接。<br>已发出 HTTP 请求，正在等待回应… 200 OK<br>长度：20105266 (19M) [application/pdf]<br>正在保存至: “LinuxProbe.pdf”<br>LinuxProbe.pdf             100%[========================================&gt;]  19.17M  2.06MB/s  用时 8.6s<br>2018-08-09 21:01:26 (2.24 MB/s) - 已保存 “LinuxProbe.pdf” [20105266/20105266])</p>
-</blockquote>
-<blockquote>
-<p>接下来，我们使用 wget 命令递归下载 <a href="http://www.linuxprobe.com" target="_blank" rel="noopener">www.linuxprobe.com</a> 网站内的所有页面数据以及<br>文件，下载完后会自动保存到当前路径下一个名为 <a href="http://www.linuxprobe.com" target="_blank" rel="noopener">www.linuxprobe.com</a> 的目录中。执行该操<br>作的命令为 wget -r -p <a href="http://www.linuxprobe.com，该命令的执行结果如下。" target="_blank" rel="noopener">http://www.linuxprobe.com，该命令的执行结果如下。</a><br>[root@linuxprobe ~]# wget -r -p <a href="http://www.linuxprobe.com" target="_blank" rel="noopener">http://www.linuxprobe.com</a><br>–2017-08-24 19:31:41– <a href="http://www.linuxprobe.com/" target="_blank" rel="noopener">http://www.linuxprobe.com/</a><br>Resolving <a href="http://www.linuxprobe.com.." target="_blank" rel="noopener">www.linuxprobe.com..</a>. 106.185.25.197<br>Connecting to <a href="http://www.linuxprobe.com|106.185.25.197|:80.." target="_blank" rel="noopener">www.linuxprobe.com|106.185.25.197|:80..</a>. connected.<br>HTTP request sent, awaiting response… 200 OK<br>Length: unspecified [text/html]<br>Saving to: ‘<a href="http://www.linuxprobe.com/index.html&#39;" target="_blank" rel="noopener">www.linuxprobe.com/index.html&#39;</a><br>………………省略下载过程………………</p>
-</blockquote>
-<table>
-<thead>
-<tr>
-<th>参数</th>
-<th>功能</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>-b</td>
-<td>后台下载模式</td>
-</tr>
-<tr>
-<td>-P</td>
-<td>下载到指定目录</td>
-</tr>
-<tr>
-<td>-t</td>
-<td>最大尝试次数</td>
-</tr>
-<tr>
-<td>-c</td>
-<td>断点续传</td>
-</tr>
-<tr>
-<td>-p</td>
-<td>下载页面内所有资源，包括图片、视频等</td>
-</tr>
-<tr>
-<td>-r</td>
-<td>递归下载</td>
-</tr>
-</tbody>
-</table>
-<h4 id="进程管理显示"><a href="#进程管理显示" class="headerlink" title="进程管理显示"></a>进程管理显示</h4><ol>
-<li>初级：ps</li>
-<li>类似win的进程管理：top</li>
-<li>pidof 命令<blockquote>
-<p>用于查询某个指定服务进程的 PID 值，格式为“ pidof [参数] [服务名称]”。<br>每个进程的进程号码值（PID）是唯一的，因此可以通过 PID 来区分不同的进程。例如，<br>可以使用如下命令来查询本机上 sshd 服务程序的 PID：<br>[root@linuxprobe ~]# pidof sshd<br>2156</p>
+<p>打开 practice.txt 文档后，默认进入的是 Vim 编辑器的命令模式。此时只能执行该模式下的命令，而不能随意输入文本内容，我们需要切换到输入模式才可以编写文档。<br>可以分别使用 a、 i、 o 三个键从命令模式切换到输入模式。其中， a 键<br>与 i 键分别是在光标后面一位和光标当前位置切换到输入模式，而 o 键则是在光标的下面再创建一个空行，此时可敲击 a 键进入到编辑器的输入模式。</p>
 </blockquote>
 </li>
-<li>kill：</li>
+<li><p>在编写完之后，想要保存并退出，必须先敲击键盘 Esc 键从输入模式返回命令模式。然后再输入:wq!切换到末行模式才能完成保存退出操作。</p>
+</li>
 </ol>
-<blockquote>
-<p>kill 命令用于终止某个指定 PID 的服务进程，格式为“ kill [参数] [进程 PID]”。<br>接下来，我们使用 kill 命令把上面用 pidof 命令查询到的 PID 所代表的进程终止掉，其命<br>令如下所示。这种操作的效果等同于强制停止 sshd 服务。</p>
+<p><img src="https://i.loli.net/2018/08/10/5b6d424f71159.png" alt="操作截图]"></p>
+<h4 id="vim编写简单的shell-sh-脚本"><a href="#vim编写简单的shell-sh-脚本" class="headerlink" title="vim编写简单的shell(.sh)脚本"></a>vim编写简单的shell(.sh)脚本</h4><p><img src="https://i.loli.net/2018/08/10/5b6d44a83f65c.png" alt="文件里的内容"></p>
+<pre><code>#!/bin/bash
+#For Example BY linuxprobe.com
+pwd
+ls -al
+</code></pre><blockquote>
+<p>Shell 脚本文件的名称可以任意，但为了避免被误以为是普通文件，建议将.sh 后缀加上，以表示是一个脚本文件。在上面的这个 example.sh 脚本中实际上出现了三种不同的元素：第一行的脚本声明（#!）用来告诉系统使用哪种 Shell 解释器来执行该脚本；第二行的注释信息（#）是对脚本功能和某些命令的介绍信息，使得自己或他人在日后看到这个脚本内容时，可以快速知道该脚本的作用或一些警告信息；第三、四行的可执行语句也就是我们平时执行的 Linux 命令了。</p>
 </blockquote>
-<ol start="5">
-<li>killall</li>
-</ol>
+<p>执行脚本：bash example.sh<br><img src="https://i.loli.net/2018/08/10/5b6d452f0718a.png" alt="脚本执行"></p>
+<p>给shell脚本存入参数：</p>
 <blockquote>
-<p>killall 命令用于终止某个指定名称的服务所对应的全部进程，格式为：“ killall [参数] [服<br>务名称]”。<br>通常来讲，复杂软件的服务程序会有多个进程协同为用户提供服务，如果逐个去结束这<br>些进程会比较麻烦，此时可以使用 killall 命令来批量结束某个服务程序带有的全部进程。</p>
+<p>例如\$0 对应的是当前 Shell 脚本程序的名称， \$#对应的是总共<br>有几个参数， \$*对应的是所有位置的参数值， \$?对应的是显示上一次命令的执行返回值，而\$1、\$2、 \$3……则分别对应着第 N 个位置的参数值</p>
 </blockquote>
-<p>例如：</p>
+<pre><code>#!/bin/bash
+echo &quot;当前脚本名称为$0&quot;
+echo &quot;总共有$#个参数，分别是$*。 &quot;
+echo &quot;第 1 个参数为$1，第 5 个为$5。 &quot;
+</code></pre><p><img src="https://i.loli.net/2018/08/10/5b6d46ddb8396.png" alt="深度截图_deepin-terminal_20180810160325"></p>
 <blockquote>
-<p>[root@linuxprobe ~]# pidof httpd<br>13581 13580 13579 13578 13577 13576<br>[root@linuxprobe ~]# killall httpd<br>[root@linuxprobe ~]# pidof httpd<br>[root@linuxprobe ~]#</p>
-</blockquote>
-<h4 id="系统状态检测命令"><a href="#系统状态检测命令" class="headerlink" title="系统状态检测命令"></a>系统状态检测命令</h4><table>
-<thead>
-<tr>
-<th>命令</th>
-<th>功能</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>ifconfig</td>
-<td>获取获取网卡配置与网络状态</td>
-</tr>
-<tr>
-<td>uname</td>
-<td>查看系统内核与系统版本（附录1）</td>
-</tr>
-<tr>
-<td>uptime</td>
-<td>系统负载（附录2）</td>
-</tr>
-<tr>
-<td>free -h</td>
-<td>用于显示当前系统中内存的使用量信息</td>
-</tr>
-<tr>
-<td>who</td>
-<td>查看当前登入主机的用户终端信息</td>
-</tr>
-<tr>
-<td>history</td>
-<td>运行的命令历史 ！+num 可以执行指定</td>
-</tr>
-<tr>
-<td>history -c</td>
-<td>　情况命令历史</td>
-</tr>
-</tbody>
-</table>
-<p>附录1</p>
-<blockquote>
-<p>arley@arley-PC:~/Downloads$ uname -a<br>Linux arley-PC 4.15.0-21deepin-generic #21 SMP Mon May 21 05:20:09 UTC 2018 x86_64 GNU/Linux</p>
-</blockquote>
-<p>附录2</p>
-<blockquote>
-<p>uptime 命令真的很棒，它可以显示当前系统时间、系统已运行时间、启用终端数量以<br>及平均负载值等信息。平均负载值指的是系统在最近 1 分钟、 5 分钟、 15 分钟内的压力情<br>况（下面加粗的信息部分）；负载值越低越好，尽量不要长期超过 1，在生产环境中不要超<br>过 5。</p>
-</blockquote>
-<p><code>Linux 系统中以点（.）开
-头的文件均代表隐藏文件，这些文件大多数为系统服务文件，可以用 cat 命令查看其文件
-内容。</code></p>
-<h4 id="工作目录切换命令"><a href="#工作目录切换命令" class="headerlink" title="工作目录切换命令"></a>工作目录切换命令</h4><table>
-<thead>
-<tr>
-<th>命令</th>
-<th>功能</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>pwd</td>
-<td>当前工作目录</td>
-</tr>
-<tr>
-<td>cd -</td>
-<td>返回上一次目录</td>
-</tr>
-<tr>
-<td>cd ..</td>
-<td>上级目录</td>
-</tr>
-<tr>
-<td>cd ~</td>
-<td>家目录</td>
-</tr>
-<tr>
-<td>ls -al</td>
-<td>查看目录下的文件及信息</td>
-</tr>
-</tbody>
-</table>
-<h4 id="文本编辑命令"><a href="#文本编辑命令" class="headerlink" title="文本编辑命令"></a>文本编辑命令</h4><blockquote>
-<p>暂时用不到，省略　－　ｄｉｆｆ可以比较文本差异</p>
-</blockquote>
-<h4 id="文件目录管理命令"><a href="#文件目录管理命令" class="headerlink" title="文件目录管理命令"></a>文件目录管理命令</h4><table>
-<thead>
-<tr>
-<th>命令</th>
-<th>功能</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>touch</td>
-<td>新建文件或者修改文件的某些参数[附录１]</td>
-</tr>
-<tr>
-<td>mkdir</td>
-<td>创建目录（附录2）</td>
-</tr>
-<tr>
-<td>cp [选项] 源文件 目标文件</td>
-<td>复制文件</td>
-</tr>
-<tr>
-<td>mv [选项] 源文件 [目标路径 目标文件名]</td>
-<td>剪切文件或将文件重命名</td>
-</tr>
-<tr>
-<td>rm</td>
-<td>删除文件</td>
-</tr>
-<tr>
-<td>dd (没深入研究)</td>
-<td>照指定大小和个数的数据块来复制文件或转换文件</td>
-</tr>
-<tr>
-<td>file</td>
-<td>查看文件类型 </td>
-</tr>
-</tbody>
-</table>
-<p>附录１</p>
-<blockquote>
-<p>touch -d “2017-05-04 15:44” anaconda-ks.cfg<br>-a 仅修改“读取时间”（atime）<br>-m 仅修改“修改时间”（mtime）<br>-d 同时修改 atime 与 mtime</p>
-</blockquote>
-<p>附录2</p>
-<blockquote>
-<p>在 Linux 系统中，文件夹是最常见的文件类型之一。除了能创建单个空白目录外， mkdir<br>命令还可以结合-p 参数来递归创建出具有嵌套叠层关系的文件目录。<br>mkdir -p a/b/c/d/e</p>
-</blockquote>
-<h4 id="打包压缩"><a href="#打包压缩" class="headerlink" title="打包压缩"></a>打包压缩</h4><ol>
-<li>tar 命令用于对文件进行打包压缩或解压，格式为“ tar [选项] [文件]”。<br>在 Linux 系统中，常见的文件格式比较多，其中主要使用的是.tar 或.tar.gz 或.tar.bz2 格式</li>
-</ol>
-<table>
-<thead>
-<tr>
-<th>参数</th>
-<th>功能</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>-c</td>
-<td>创建压缩文件</td>
-</tr>
-<tr>
-<td>-x</td>
-<td>解开压缩文件</td>
-</tr>
-<tr>
-<td>-t</td>
-<td>查看压缩包内有哪些文件</td>
-</tr>
-<tr>
-<td>-z</td>
-<td>用 Gzip 压缩或解压</td>
-</tr>
-<tr>
-<td>-j</td>
-<td>用 bzip2 压缩或解压</td>
-</tr>
-<tr>
-<td>-v</td>
-<td>显示压缩或解压的过程</td>
-</tr>
-<tr>
-<td>-f</td>
-<td>目标文件名</td>
-</tr>
-<tr>
-<td>-p</td>
-<td>保留原始的权限与属性</td>
-</tr>
-<tr>
-<td>-P</td>
-<td>使用绝对路径来压缩</td>
-</tr>
-<tr>
-<td>-C</td>
-<td>指定解压到的目录</td>
-</tr>
-</tbody>
-</table>
-<p>压缩：<strong>tar -czvf 压缩包名称.tar.gz 要打包的目录</strong><br>解压：<strong>tar -xzvf 压缩包名称.tar.gz</strong></p>
-<blockquote>
-<p>首先， -c 参数用于创建压缩文件， -x 参数用于解压文件，因此这两个参数不能同时使用。<br>其次， -z 参数指定使用 Gzip 格式来压缩或解压文件， -j 参数指定使用 bzip2 格式来压缩或解压文件。用户使用时则是根据文件的后缀来决定应使用何种格式参数进行解压。在执行某些压缩或解压操作时，可能需要花费数个小时，如果屏幕一直没有输出，您一方面不好判断打包的进度情况，另一方面也会怀疑电脑死机了，因此非常推荐使用-v 参数向用户不断显示压缩或解压的过程。 -C 参数用于指定要解压到哪个指定的目录。 -f 参数特别重要，它必须放到参数的最后一位，代表要压缩或解压的软件包名称。一般使用“ <strong>tar -czvf 压缩包名称.tar.gz 要打包的目录</strong>”命令把指定的文件进行打包压缩；相应的解压命令为“<strong>tar -xzvf 压缩包名称.tar.gz</strong>”。</p>
+<p>书中第四章（p100+）有很多ｓｈｅｌｌ编程知识[if、for、定时任务执行……]，不做深入。</p>
 </blockquote>
 
         
@@ -937,7 +659,7 @@
                             本文作者：<a href="https://i7xy.cn" target="_blank">Arley</a> <br> 本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/deed.zh" target="_blank">CC BY-NC-SA 3.0 Unported License</a> 协议进行许可
                         </strong>
                         <br>
-                        <strong>本文链接：</strong><a href="https://i7xy.cn/Linux学习笔记-2/">https://i7xy.cn/Linux学习笔记-2/</a>
+                        <strong>本文链接：</strong><a href="https://i7xy.cn/Linux学习笔记-3（vim编辑器学习）/">https://i7xy.cn/Linux学习笔记-3（vim编辑器学习）/</a>
                     </p>
                 </blockquote>
         
@@ -955,7 +677,7 @@
     <!-- 使用 changyan -->
 <div id="changyan-comment">
     <!--PC和WAP自适应版-->
-<div id="SOHUCS" sid="Linux学习笔记-2/"  ></div>
+<div id="SOHUCS" sid="Linux学习笔记-3（vim编辑器学习）/"  ></div>
 <script type="text/javascript">
 (function(){
 var appid = 'cytKUOEJj';
@@ -985,7 +707,7 @@ window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="tex
 
     <!-- Next Nav -->
     
-        <a href="/Linux学习笔记-常用/" id="post_nav-older" class="next-content">
+        <a href="/Linux学习笔记-2（常用命令）/" id="post_nav-older" class="next-content">
             旧篇
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
@@ -1077,7 +799,7 @@ window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="tex
             </a>
             <ul class="dropdown-menu">
             <li>
-                <a class="sidebar_archives-link" href="/archives/2018/08/">八月 2018<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/07/">七月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/06/">六月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/09/">九月 2016<span class="sidebar_archives-count">1</span></a>
+                <a class="sidebar_archives-link" href="/archives/2018/08/">八月 2018<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/07/">七月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/06/">六月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/09/">九月 2016<span class="sidebar_archives-count">1</span></a>
             </ul>
         </li>
         
@@ -1095,7 +817,7 @@ window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="tex
             </a>
             <ul class="dropdown-menu">
                 <li>
-                <a class="sidebar_archives-link" href="/categories/学习笔记/">学习笔记<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/技巧备份/">技巧备份<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/课设/">课设<span class="sidebar_archives-count">2</span></a>
+                <a class="sidebar_archives-link" href="/categories/学习笔记/">学习笔记<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/categories/技巧备份/">技巧备份<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/课设/">课设<span class="sidebar_archives-count">2</span></a>
             </ul>
         </li>
         
@@ -1151,7 +873,7 @@ window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="tex
         <li>
             <a href="/archives">
                 文章总数
-                <span class="sidebar-badge">8</span>
+                <span class="sidebar-badge">9</span>
             </a>
         </li>
         
