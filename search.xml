@@ -3,6 +3,27 @@
   
     
     <entry>
+      <title>scrapy学习笔记</title>
+      <link href="/scrapy%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+      <url>/scrapy%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
+      <content type="html"><![CDATA[<h4 id="scrapy的安装以及项目新建"><a href="#scrapy的安装以及项目新建" class="headerlink" title="scrapy的安装以及项目新建"></a>scrapy的安装以及项目新建</h4><pre><code>  mkvte spider  pip install scrapy  cd /media/arley/软件/bag/Twisted-18.7.0  python setup.py install  pip install scrapy  cd ../编程/python/venv/spider/  scrapy startproject SpiderTest  cd SpiderTest/  scrapy genspider erya erya.i7xy.cn</code></pre>]]></content>
+      
+      <categories>
+          
+          <category> 学习笔记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> python </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
       <title>python的虚拟环境virtualenv/virtualenvwrapper的安装和配置</title>
       <link href="/python%E7%9A%84%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83virtualenv-virtualenvwrapper%E7%9A%84%E5%AE%89%E8%A3%85%E5%92%8C%E9%85%8D%E7%BD%AE/"/>
       <url>/python%E7%9A%84%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83virtualenv-virtualenvwrapper%E7%9A%84%E5%AE%89%E8%A3%85%E5%92%8C%E9%85%8D%E7%BD%AE/</url>
@@ -253,16 +274,16 @@
   
     
     <entry>
-      <title>Arley&#39;s About</title>
-      <link href="/about/index.html"/>
-      <url>/about/index.html</url>
+      <title>Arley&#39;s Inc</title>
+      <link href="/gallery/index.html"/>
+      <url>/gallery/index.html</url>
       <content type="html"><![CDATA[]]></content>
     </entry>
     
     <entry>
-      <title>Arley&#39;s Inc</title>
-      <link href="/gallery/index.html"/>
-      <url>/gallery/index.html</url>
+      <title>Arley&#39;s About</title>
+      <link href="/about/index.html"/>
+      <url>/about/index.html</url>
       <content type="html"><![CDATA[]]></content>
     </entry>
     
