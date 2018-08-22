@@ -6,7 +6,7 @@
       <title>scrapy学习笔记</title>
       <link href="/scrapy%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
       <url>/scrapy%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
-      <content type="html"><![CDATA[<h4 id="scrapy的安装以及项目新建"><a href="#scrapy的安装以及项目新建" class="headerlink" title="scrapy的安装以及项目新建"></a>scrapy的安装以及项目新建</h4><pre><code>  mkvte spider  pip install scrapy  cd /media/arley/软件/bag/Twisted-18.7.0  python setup.py install  pip install scrapy  cd ../编程/python/venv/spider/  scrapy startproject SpiderTest  cd SpiderTest/  scrapy genspider erya erya.i7xy.cn</code></pre>]]></content>
+      <content type="html"><![CDATA[<h4 id="scrapy的安装以及项目新建"><a href="#scrapy的安装以及项目新建" class="headerlink" title="scrapy的安装以及项目新建"></a>scrapy的安装以及项目新建</h4><pre><code>  mkvte spider  pip install scrapy  cd /media/arley/软件/bag/Twisted-18.7.0  python setup.py install  pip install scrapy  cd ../编程/python/venv/spider/  scrapy startproject SpiderTest  cd SpiderTest/  scrapy genspider erya erya.i7xy.cn</code></pre><h4 id="scrapy在python3-7下安装Twisted关键字冲突报错问题"><a href="#scrapy在python3-7下安装Twisted关键字冲突报错问题" class="headerlink" title="scrapy在python3.7下安装Twisted关键字冲突报错问题"></a>scrapy在python3.7下安装Twisted关键字冲突报错问题</h4><p><img src="" alt="Uploading 深度截图_deepin-terminal_20180822205944.png… (4jwnynx3g)"></p><h5 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h5><blockquote><p>最近学Scrapy，想着用最新的python版本赶个时髦，毕竟官网发布的版本显示是支持了py37的，然鹅，没想到我还是太年轻，就算scrapy支持了，但是twisted还是凉着的，于是在运行官网tutorial的时候，有了下面的错误：</p></blockquote><pre><code>  return _bootstrap._gcd_import(name[level:], package, level)  File &quot;&lt;frozen importlib._bootstrap&gt;&quot;, line 1006, in _gcd_import  File &quot;&lt;frozen importlib._bootstrap&gt;&quot;, line 983, in _find_and_load  File &quot;&lt;frozen importlib._bootstrap&gt;&quot;, line 967, in _find_and_load_unlocked  File &quot;&lt;frozen importlib._bootstrap&gt;&quot;, line 677, in _load_unlocked  File &quot;&lt;frozen importlib._bootstrap_external&gt;&quot;, line 728, in exec_module  File &quot;&lt;frozen importlib._bootstrap&gt;&quot;, line 219, in _call_with_frames_removed  File &quot;/media/arley/编程/python/venv/spider/lib/python3.7/site-packages/scrapy/extensions/telnet.py&quot;, line 12, in &lt;module&gt;    from twisted.conch import manhole, telnet  File &quot;/media/arley/编程/python/venv/spider/lib/python3.7/site-packages/Twisted-18.7.0-py3.7-linux-x86_64.egg/twisted/conch/manhole.py&quot;, line 154    def write(self, data, async=False):                              ^</code></pre><h5 id="问题解决"><a href="#问题解决" class="headerlink" title="问题解决"></a>问题解决</h5><p>在上面的报错中，可以看到，错误来源很是奇怪，报的是语法错误，辛亏我早先有看过py37的新特性，早先在py35发行时就提出的PEP 492提案，终于在py37中正式生效（以前的版本中也有，但是得from <strong>future</strong> import generator_stop）。在这个提案中，有一条就是：将协程的概念从生成器中拎了出来，并添加了新的关键词async\await。到这里终于明白了，错误就来自这：async是py37的关键词，不能作为关键字参数。修改方法也很简单，把Python37\lib\site-packages\twisted\conch\manhole.py中全部的async修改为其他非py37关键词的名称。</p>]]></content>
       
       <categories>
           
@@ -274,13 +274,6 @@
   
     
     <entry>
-      <title>Arley&#39;s Inc</title>
-      <link href="/gallery/index.html"/>
-      <url>/gallery/index.html</url>
-      <content type="html"><![CDATA[]]></content>
-    </entry>
-    
-    <entry>
       <title>Arley&#39;s About</title>
       <link href="/about/index.html"/>
       <url>/about/index.html</url>
@@ -288,9 +281,9 @@
     </entry>
     
     <entry>
-      <title>标签云</title>
-      <link href="/tags/index.html"/>
-      <url>/tags/index.html</url>
+      <title>Arley&#39;s Inc</title>
+      <link href="/gallery/index.html"/>
+      <url>/gallery/index.html</url>
       <content type="html"><![CDATA[]]></content>
     </entry>
     
@@ -298,6 +291,13 @@
       <title>时间轴</title>
       <link href="/timeline/index.html"/>
       <url>/timeline/index.html</url>
+      <content type="html"><![CDATA[]]></content>
+    </entry>
+    
+    <entry>
+      <title>标签云</title>
+      <link href="/tags/index.html"/>
+      <url>/tags/index.html</url>
       <content type="html"><![CDATA[]]></content>
     </entry>
     
