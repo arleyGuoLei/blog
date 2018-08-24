@@ -251,7 +251,7 @@
 
     
         <meta property="article:published_time" content="Tue Aug 21 2018 13:30:33 GMT+0800">
-        <meta property="article:modified_time" content="Wed Aug 22 2018 21:02:41 GMT+0800">
+        <meta property="article:modified_time" content="Fri Aug 24 2018 23:24:10 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -274,7 +274,7 @@
     "mainEntityOfPage": "https://i7xy.cn/scrapy学习笔记/index.html",
     "headline": "scrapy学习笔记",
     "datePublished": "Tue Aug 21 2018 13:30:33 GMT+0800",
-    "dateModified": "Wed Aug 22 2018 21:02:41 GMT+0800",
+    "dateModified": "Fri Aug 24 2018 23:24:10 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "Arley",
@@ -362,7 +362,7 @@
     </button>
 
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#scrapy的安装以及项目新建"><span class="post-toc-number">1.</span> <span class="post-toc-text">scrapy的安装以及项目新建</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#scrapy在python3-7下安装Twisted关键字冲突报错问题"><span class="post-toc-number">2.</span> <span class="post-toc-text">scrapy在python3.7下安装Twisted关键字冲突报错问题</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#问题描述"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">问题描述</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#问题解决"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">问题解决</span></a></li></ol></li></ol>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#scrapy的安装以及项目新建"><span class="post-toc-number">1.</span> <span class="post-toc-text">scrapy的安装以及项目新建</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#scrapy在python3-7下安装Twisted关键字冲突报错问题"><span class="post-toc-number">2.</span> <span class="post-toc-text">scrapy在python3.7下安装Twisted关键字冲突报错问题</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#问题描述"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">问题描述</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#问题解决"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">问题解决</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#切换版本为3-6-gt-scrapy流程梳理"><span class="post-toc-number">3.</span> <span class="post-toc-text">切换版本为3.6 -&gt; scrapy流程梳理</span></a></li></ol>
     </ul>
     
 
@@ -532,6 +532,13 @@
     def write(self, data, async=False):
                               ^
 </code></pre><h5 id="问题解决"><a href="#问题解决" class="headerlink" title="问题解决"></a>问题解决</h5><p>在上面的报错中，可以看到，错误来源很是奇怪，报的是语法错误，辛亏我早先有看过py37的新特性，早先在py35发行时就提出的PEP 492提案，终于在py37中正式生效（以前的版本中也有，但是得from <strong>future</strong> import generator_stop）。在这个提案中，有一条就是：将协程的概念从生成器中拎了出来，并添加了新的关键词async\await。到这里终于明白了，错误就来自这：async是py37的关键词，不能作为关键字参数。修改方法也很简单，把Python37\lib\site-packages\twisted\conch\manhole.py中全部的async修改为其他非py37关键词的名称。</p>
+<hr>
+<h4 id="切换版本为3-6-gt-scrapy流程梳理"><a href="#切换版本为3-6-gt-scrapy流程梳理" class="headerlink" title="切换版本为3.6 -&gt; scrapy流程梳理"></a>切换版本为3.6 -&gt; scrapy流程梳理</h4><p><div id="flowchart-0" class="flow-chart"></div><script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/flowchart/1.6.5/flowchart.min.js"></script><textarea id="flowchart-0-code" style="display: none">st=>start: 新建scrapy项目-> scrapy startproject SpiderTest
+e=>end: 存储完毕
+op1=>operation: 项目根目录下新建爬虫->  scrapy genspider [爬虫名称] [爬虫链接]
+op2=>operation: 进入新建的类（爬虫名称中）设置一系列的爬取规则 将爬取的数据通过yield [item.py下的某个Item类]
+op3=>operation: pipelines根据setting对item进行处理，存储
+st->op1->op2->op3</textarea><textarea id="flowchart-0-options" style="display: none">{"scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12}</textarea><script>  var code = document.getElementById("flowchart-0-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("flowchart-0-options").value));  var diagram = flowchart.parse(code);  diagram.drawSVG("flowchart-0", options);</script></p>
 
         
                 <blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;">
@@ -581,6 +588,14 @@ window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="tex
             <!-- Post Prev & Next Nav -->
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
+    
+        <a href="/xpath和css的selecter的scrapy的笔记/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            新篇
+        </a>
     
 
     <!-- Section Spacer -->
@@ -680,7 +695,7 @@ window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="tex
             </a>
             <ul class="dropdown-menu">
             <li>
-                <a class="sidebar_archives-link" href="/archives/2018/08/">八月 2018<span class="sidebar_archives-count">9</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/07/">七月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/06/">六月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/09/">九月 2016<span class="sidebar_archives-count">1</span></a>
+                <a class="sidebar_archives-link" href="/archives/2018/08/">八月 2018<span class="sidebar_archives-count">10</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/07/">七月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/06/">六月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/09/">九月 2016<span class="sidebar_archives-count">1</span></a>
             </ul>
         </li>
         
@@ -698,7 +713,7 @@ window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="tex
             </a>
             <ul class="dropdown-menu">
                 <li>
-                <a class="sidebar_archives-link" href="/categories/学习笔记/">学习笔记<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/categories/实战开发/">实战开发<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/技巧备份/">技巧备份<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/杂谈/">杂谈<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/课设/">课设<span class="sidebar_archives-count">2</span></a>
+                <a class="sidebar_archives-link" href="/categories/学习笔记/">学习笔记<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/categories/实战开发/">实战开发<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/技巧备份/">技巧备份<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/杂谈/">杂谈<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/课设/">课设<span class="sidebar_archives-count">2</span></a>
             </ul>
         </li>
         
@@ -754,7 +769,7 @@ window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="tex
         <li>
             <a href="/archives">
                 文章总数
-                <span class="sidebar-badge">12</span>
+                <span class="sidebar-badge">13</span>
             </a>
         </li>
         

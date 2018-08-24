@@ -3,10 +3,31 @@
   
     
     <entry>
+      <title>xpath和css的selecter的scrapy的笔记</title>
+      <link href="/xpath%E5%92%8Ccss%E7%9A%84selecter%E7%9A%84scrapy%E7%9A%84%E7%AC%94%E8%AE%B0/"/>
+      <url>/xpath%E5%92%8Ccss%E7%9A%84selecter%E7%9A%84scrapy%E7%9A%84%E7%AC%94%E8%AE%B0/</url>
+      <content type="html"><![CDATA[<h4 id="xpath"><a href="#xpath" class="headerlink" title="xpath"></a>xpath</h4><h5 id="教程中的例子："><a href="#教程中的例子：" class="headerlink" title="教程中的例子："></a>教程中的例子：</h5><ul><li>class为xxx的NODE节点</li></ul><blockquote><p>response.xpath(“//NODE[@class=’xxx’]/text()”)</p></blockquote><ul><li>class包含xxx的的NODE节点</li></ul><blockquote><p>“//NODE[contains(@class,’xxx’)]”</p></blockquote><ul><li>a标签链接为#xxx下的span</li></ul><blockquote><p>“//a[@href=’#xxx’]/span/text()”</p></blockquote><h5 id="常用表达式实例："><a href="#常用表达式实例：" class="headerlink" title="常用表达式实例："></a>常用表达式实例：</h5>]]></content>
+      
+      <categories>
+          
+          <category> 学习笔记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> python </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
       <title>scrapy学习笔记</title>
       <link href="/scrapy%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
       <url>/scrapy%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
-      <content type="html"><![CDATA[<h4 id="scrapy的安装以及项目新建"><a href="#scrapy的安装以及项目新建" class="headerlink" title="scrapy的安装以及项目新建"></a>scrapy的安装以及项目新建</h4><pre><code>  mkvte spider  pip install scrapy  cd /media/arley/软件/bag/Twisted-18.7.0  python setup.py install  pip install scrapy  cd ../编程/python/venv/spider/  scrapy startproject SpiderTest  cd SpiderTest/  scrapy genspider erya erya.i7xy.cn</code></pre><h4 id="scrapy在python3-7下安装Twisted关键字冲突报错问题"><a href="#scrapy在python3-7下安装Twisted关键字冲突报错问题" class="headerlink" title="scrapy在python3.7下安装Twisted关键字冲突报错问题"></a>scrapy在python3.7下安装Twisted关键字冲突报错问题</h4><p><img src="https://i.loli.net/2018/08/22/5b7d5ee5a8134.png" alt="截图"></p><h5 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h5><blockquote><p>最近学Scrapy，想着用最新的python版本赶个时髦，毕竟官网发布的版本显示是支持了py37的，然鹅，没想到我还是太年轻，就算scrapy支持了，但是twisted还是凉着的，于是在运行官网tutorial的时候，有了下面的错误：</p></blockquote><pre><code>  return _bootstrap._gcd_import(name[level:], package, level)  File &quot;&lt;frozen importlib._bootstrap&gt;&quot;, line 1006, in _gcd_import  File &quot;&lt;frozen importlib._bootstrap&gt;&quot;, line 983, in _find_and_load  File &quot;&lt;frozen importlib._bootstrap&gt;&quot;, line 967, in _find_and_load_unlocked  File &quot;&lt;frozen importlib._bootstrap&gt;&quot;, line 677, in _load_unlocked  File &quot;&lt;frozen importlib._bootstrap_external&gt;&quot;, line 728, in exec_module  File &quot;&lt;frozen importlib._bootstrap&gt;&quot;, line 219, in _call_with_frames_removed  File &quot;/media/arley/编程/python/venv/spider/lib/python3.7/site-packages/scrapy/extensions/telnet.py&quot;, line 12, in &lt;module&gt;    from twisted.conch import manhole, telnet  File &quot;/media/arley/编程/python/venv/spider/lib/python3.7/site-packages/Twisted-18.7.0-py3.7-linux-x86_64.egg/twisted/conch/manhole.py&quot;, line 154    def write(self, data, async=False):                              ^</code></pre><h5 id="问题解决"><a href="#问题解决" class="headerlink" title="问题解决"></a>问题解决</h5><p>在上面的报错中，可以看到，错误来源很是奇怪，报的是语法错误，辛亏我早先有看过py37的新特性，早先在py35发行时就提出的PEP 492提案，终于在py37中正式生效（以前的版本中也有，但是得from <strong>future</strong> import generator_stop）。在这个提案中，有一条就是：将协程的概念从生成器中拎了出来，并添加了新的关键词async\await。到这里终于明白了，错误就来自这：async是py37的关键词，不能作为关键字参数。修改方法也很简单，把Python37\lib\site-packages\twisted\conch\manhole.py中全部的async修改为其他非py37关键词的名称。</p>]]></content>
+      <content type="html"><![CDATA[<h4 id="scrapy的安装以及项目新建"><a href="#scrapy的安装以及项目新建" class="headerlink" title="scrapy的安装以及项目新建"></a>scrapy的安装以及项目新建</h4><pre><code>  mkvte spider  pip install scrapy  cd /media/arley/软件/bag/Twisted-18.7.0  python setup.py install  pip install scrapy  cd ../编程/python/venv/spider/  scrapy startproject SpiderTest  cd SpiderTest/  scrapy genspider erya erya.i7xy.cn</code></pre><h4 id="scrapy在python3-7下安装Twisted关键字冲突报错问题"><a href="#scrapy在python3-7下安装Twisted关键字冲突报错问题" class="headerlink" title="scrapy在python3.7下安装Twisted关键字冲突报错问题"></a>scrapy在python3.7下安装Twisted关键字冲突报错问题</h4><p><img src="https://i.loli.net/2018/08/22/5b7d5ee5a8134.png" alt="截图"></p><h5 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h5><blockquote><p>最近学Scrapy，想着用最新的python版本赶个时髦，毕竟官网发布的版本显示是支持了py37的，然鹅，没想到我还是太年轻，就算scrapy支持了，但是twisted还是凉着的，于是在运行官网tutorial的时候，有了下面的错误：</p></blockquote><pre><code>  return _bootstrap._gcd_import(name[level:], package, level)  File &quot;&lt;frozen importlib._bootstrap&gt;&quot;, line 1006, in _gcd_import  File &quot;&lt;frozen importlib._bootstrap&gt;&quot;, line 983, in _find_and_load  File &quot;&lt;frozen importlib._bootstrap&gt;&quot;, line 967, in _find_and_load_unlocked  File &quot;&lt;frozen importlib._bootstrap&gt;&quot;, line 677, in _load_unlocked  File &quot;&lt;frozen importlib._bootstrap_external&gt;&quot;, line 728, in exec_module  File &quot;&lt;frozen importlib._bootstrap&gt;&quot;, line 219, in _call_with_frames_removed  File &quot;/media/arley/编程/python/venv/spider/lib/python3.7/site-packages/scrapy/extensions/telnet.py&quot;, line 12, in &lt;module&gt;    from twisted.conch import manhole, telnet  File &quot;/media/arley/编程/python/venv/spider/lib/python3.7/site-packages/Twisted-18.7.0-py3.7-linux-x86_64.egg/twisted/conch/manhole.py&quot;, line 154    def write(self, data, async=False):                              ^</code></pre><h5 id="问题解决"><a href="#问题解决" class="headerlink" title="问题解决"></a>问题解决</h5><p>在上面的报错中，可以看到，错误来源很是奇怪，报的是语法错误，辛亏我早先有看过py37的新特性，早先在py35发行时就提出的PEP 492提案，终于在py37中正式生效（以前的版本中也有，但是得from <strong>future</strong> import generator_stop）。在这个提案中，有一条就是：将协程的概念从生成器中拎了出来，并添加了新的关键词async\await。到这里终于明白了，错误就来自这：async是py37的关键词，不能作为关键字参数。修改方法也很简单，把Python37\lib\site-packages\twisted\conch\manhole.py中全部的async修改为其他非py37关键词的名称。</p><hr><h4 id="切换版本为3-6-gt-scrapy流程梳理"><a href="#切换版本为3-6-gt-scrapy流程梳理" class="headerlink" title="切换版本为3.6 -&gt; scrapy流程梳理"></a>切换版本为3.6 -&gt; scrapy流程梳理</h4><p><div id="flowchart-0" class="flow-chart"></div><script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/flowchart/1.6.5/flowchart.min.js"></script><textarea id="flowchart-0-code" style="display: none">st=>start: 新建scrapy项目-> scrapy startproject SpiderTeste=>end: 存储完毕op1=>operation: 项目根目录下新建爬虫->  scrapy genspider [爬虫名称] [爬虫链接]op2=>operation: 进入新建的类（爬虫名称中）设置一系列的爬取规则 将爬取的数据通过yield [item.py下的某个Item类]op3=>operation: pipelines根据setting对item进行处理，存储st->op1->op2->op3</textarea><textarea id="flowchart-0-options" style="display: none">{"scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12}</textarea><script>  var code = document.getElementById("flowchart-0-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("flowchart-0-options").value));  var diagram = flowchart.parse(code);  diagram.drawSVG("flowchart-0", options);</script></p>]]></content>
       
       <categories>
           
@@ -288,16 +309,16 @@
     </entry>
     
     <entry>
-      <title>时间轴</title>
-      <link href="/timeline/index.html"/>
-      <url>/timeline/index.html</url>
+      <title>标签云</title>
+      <link href="/tags/index.html"/>
+      <url>/tags/index.html</url>
       <content type="html"><![CDATA[]]></content>
     </entry>
     
     <entry>
-      <title>标签云</title>
-      <link href="/tags/index.html"/>
-      <url>/tags/index.html</url>
+      <title>时间轴</title>
+      <link href="/timeline/index.html"/>
+      <url>/timeline/index.html</url>
       <content type="html"><![CDATA[]]></content>
     </entry>
     
