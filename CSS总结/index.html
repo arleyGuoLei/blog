@@ -50,7 +50,7 @@
     
     <title>
         
-            CSS总结 | 
+            CSS填坑记录 - position篇 | 
         
         Arley&#39;s Blog (小磊同学博客)
     </title>
@@ -244,14 +244,14 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="https://i7xy.cn/CSS总结/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="CSS总结 | Arley&#39;s Blog (小磊同学博客)">
+    <meta property="og:title" content="CSS填坑记录 - position篇 | Arley&#39;s Blog (小磊同学博客)">
     <meta property="og:image" content="/img/logo.png">
     <meta property="og:description" content="小程序全栈开发者/伪极客/灵魂摄影师，热爱技术&amp;生活，很高兴能在这里与你分享我对技术和生活的思考。">
     <meta property="og:article:tag" content="CSS"> <meta property="og:article:tag" content="学习笔记"> 
 
     
         <meta property="article:published_time" content="Tue Sep 11 2018 21:41:43 GMT+0800">
-        <meta property="article:modified_time" content="Tue Sep 11 2018 21:53:58 GMT+0800">
+        <meta property="article:modified_time" content="Thu Sep 13 2018 11:08:58 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -272,9 +272,9 @@
     "@context": "https://schema.org",
     "@type": "BlogPosting",
     "mainEntityOfPage": "https://i7xy.cn/CSS总结/index.html",
-    "headline": "CSS总结",
+    "headline": "CSS填坑记录 - position篇",
     "datePublished": "Tue Sep 11 2018 21:41:43 GMT+0800",
-    "dateModified": "Tue Sep 11 2018 21:53:58 GMT+0800",
+    "dateModified": "Thu Sep 13 2018 11:08:58 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "Arley",
@@ -385,7 +385,7 @@
         
     
             <p class="article-headline-p">
-                CSS总结
+                CSS填坑记录 - position篇
             </p>
         </div>
 
@@ -457,7 +457,7 @@
 
     <!-- Share Weibo -->
     
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=CSS总结&url=https://i7xy.cn/CSS总结/index.html&pic=https://i7xy.cn/img/favicon.png&searchPic=false&style=simple" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=CSS填坑记录 - position篇&url=https://i7xy.cn/CSS总结/index.html&pic=https://i7xy.cn/img/favicon.png&searchPic=false&style=simple" target="_blank">
             <li class="mdl-menu__item">
                 分享到微博
             </li>
@@ -478,7 +478,7 @@
 
     <!-- Share QQ -->
     
-        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=Arley&#39;s Blog (小磊同学博客)&title=CSS总结&summary=小程序全栈开发者/伪极客/灵魂摄影师，热爱技术&amp;生活，很高兴能在这里与你分享我对技术和生活的思考。&pics=https://i7xy.cn/img/favicon.png&url=https://i7xy.cn/CSS总结/index.html" target="_blank">
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=Arley&#39;s Blog (小磊同学博客)&title=CSS填坑记录 - position篇&summary=小程序全栈开发者/伪极客/灵魂摄影师，热爱技术&amp;生活，很高兴能在这里与你分享我对技术和生活的思考。&pics=https://i7xy.cn/img/favicon.png&url=https://i7xy.cn/CSS总结/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 QQ
             </li>
@@ -503,8 +503,79 @@
 <ul>
 <li>默认为<code>static</code>，这个时候top，left等四个设置不会影响位置。</li>
 <li><code>relative</code>，在元素本来该在的位置，通过四个定位偏移属性进行偏移。</li>
-<li><code>absolute</code>，</li>
+<li><code>absolute</code>，父元素如果为relative | absolute | fixed ，则在父元素的内部进行偏移，否则最终可以追溯到body结点。</li>
 </ul>
+<blockquote>
+<p>一些position的研究：</p>
+</blockquote>
+<p>a. 当父元素定位为<code>relative</code>，子元素定位也为<code>relative</code>时，父元素的margin设置将可能被子元素改变。</p>
+<pre><code class="HTML">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;relative&lt;/title&gt;
+    &lt;style type=&quot;text/css&quot;&gt;
+        .parent{
+            position: relative;
+            height: 500px;
+            width: 500px;
+            background: red;
+        }
+
+        .son{
+            position: relative;
+            height: 200px;
+            width: 200px;
+            background: gold;
+            margin: 100px;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div class=&quot;parent&quot;&gt;
+    &lt;div class=&quot;son&quot;&gt;修改son的 margin ,父元素将生成margin-top，子元素相对于父元素垂直位置不变，水平位置生成margin。&lt;/div&gt;
+&lt;/div&gt;
+
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p><img src="https://i.loli.net/2018/09/13/5b99d26f0fc78.png" alt="代码演示"></p>
+<p>b. 利用<code>position</code>来实现div垂直居中:父元素设置为<code>relative</code>,子元素设置为<code>absolute</code>。子元素top为：50%，margin-top：子元素高度的一半。</p>
+<pre><code class="HTML">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;positionMiddle&lt;/title&gt;
+    &lt;style type=&quot;text/css&quot;&gt;
+        .parent{
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            background: red;
+
+        }
+        .son{
+            position: absolute;
+            height: 200px;
+            width: 200px;
+            background: yellow;
+
+            /*关键代码*/
+            top: 50%;
+            margin-top: -100px;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div class=&quot;parent&quot;&gt;
+    &lt;div class=&quot;son&quot;&gt;垂直居中&lt;/div&gt;
+&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+
+</code></pre>
+<p><img src="https://i.loli.net/2018/09/13/5b99d4bf7d2c2.png" alt="子元素垂直居中于父元素"></p>
 
         
                 <blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;">
