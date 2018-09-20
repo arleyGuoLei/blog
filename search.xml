@@ -3,6 +3,50 @@
   
     
     <entry>
+      <title>Vscode的Git使用及记录</title>
+      <link href="/Vscode%E7%9A%84Git%E4%BD%BF%E7%94%A8%E5%8F%8A%E8%AE%B0%E5%BD%95/"/>
+      <url>/Vscode%E7%9A%84Git%E4%BD%BF%E7%94%A8%E5%8F%8A%E8%AE%B0%E5%BD%95/</url>
+      <content type="html"><![CDATA[<ul><li>git init</li><li>git remote add origin <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>:arleyGuoLei/Travel.git</li></ul>]]></content>
+      
+      <categories>
+          
+          <category> 杂谈 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 技巧 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
+      <title>Vue项目预热-框架模块的准备</title>
+      <link href="/Vue%E9%A1%B9%E7%9B%AE%E9%A2%84%E7%83%AD-%E6%A1%86%E6%9E%B6%E6%A8%A1%E5%9D%97%E7%9A%84%E5%87%86%E5%A4%87/"/>
+      <url>/Vue%E9%A1%B9%E7%9B%AE%E9%A2%84%E7%83%AD-%E6%A1%86%E6%9E%B6%E6%A8%A1%E5%9D%97%E7%9A%84%E5%87%86%E5%A4%87/</url>
+      <content type="html"><![CDATA[<ol><li>vue-cli脚手架安装 及 环境配置</li></ol><ul><li>nodeJs(npm) / Git等</li><li><code>vue init webpack Travel</code></li><li>安装之后 <code>npm run dev</code>运行项目 </li></ul><ol start="2"><li>引入reset.css(重置不同浏览器的默认样式) 和 border.css (移动设备1像素边框问题)</li><li><code>npm install fastclick --save</code>:去除移动端click点击300ms延迟问题</li></ol>]]></content>
+      
+      <categories>
+          
+          <category> 学习笔记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 学习笔记 </tag>
+            
+            <tag> Vue </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
       <title>Vue中的动画特效</title>
       <link href="/Vue%E4%B8%AD%E7%9A%84%E5%8A%A8%E7%94%BB%E7%89%B9%E6%95%88/"/>
       <url>/Vue%E4%B8%AD%E7%9A%84%E5%8A%A8%E7%94%BB%E7%89%B9%E6%95%88/</url>
