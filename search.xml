@@ -3,31 +3,10 @@
   
     
     <entry>
-      <title>Vscode的Git使用及记录</title>
-      <link href="/Vscode%E7%9A%84Git%E4%BD%BF%E7%94%A8%E5%8F%8A%E8%AE%B0%E5%BD%95/"/>
-      <url>/Vscode%E7%9A%84Git%E4%BD%BF%E7%94%A8%E5%8F%8A%E8%AE%B0%E5%BD%95/</url>
-      <content type="html"><![CDATA[<ul><li>git init</li><li>git remote add origin <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>:arleyGuoLei/Travel.git</li></ul>]]></content>
-      
-      <categories>
-          
-          <category> 杂谈 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 技巧 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    <entry>
       <title>Vue项目预热-框架模块的准备</title>
       <link href="/Vue%E9%A1%B9%E7%9B%AE%E9%A2%84%E7%83%AD-%E6%A1%86%E6%9E%B6%E6%A8%A1%E5%9D%97%E7%9A%84%E5%87%86%E5%A4%87/"/>
       <url>/Vue%E9%A1%B9%E7%9B%AE%E9%A2%84%E7%83%AD-%E6%A1%86%E6%9E%B6%E6%A8%A1%E5%9D%97%E7%9A%84%E5%87%86%E5%A4%87/</url>
-      <content type="html"><![CDATA[<ol><li>vue-cli脚手架安装 及 环境配置</li></ol><ul><li>nodeJs(npm) / Git等</li><li><code>vue init webpack Travel</code></li><li>安装之后 <code>npm run dev</code>运行项目 </li></ul><ol start="2"><li>引入reset.css(重置不同浏览器的默认样式) 和 border.css (移动设备1像素边框问题)</li><li><code>npm install fastclick --save</code>:去除移动端click点击300ms延迟问题</li></ol>]]></content>
+      <content type="html"><![CDATA[<ol><li>vue-cli脚手架安装 及 环境配置</li></ol><ul><li>nodeJs(npm) / Git等</li><li><code>vue init webpack Travel</code></li><li>安装之后 <code>npm run dev</code>运行项目 </li></ul><ol start="2"><li>默认代码的修改,以及插件的引用  </li></ol><ul><li>禁止用户缩放:<code>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no&quot;&gt;</code> — index.html</li><li>引入reset.css(重置不同浏览器的默认样式) 和 border.css (移动设备1像素边框问题),在main.js里<pre><code class="javascript">import &#39;./assets/styles/reset.css&#39;import &#39;./assets/styles/border.css&#39;</code></pre></li></ul><ol start="3"><li><p><code>npm install fastclick --save</code>:去除移动端click点击300ms延迟问题</p><pre><code class="javascript">import fastClick from &#39;fastclick&#39;fastClick.attach(document.body)</code></pre></li><li><p>stylus的安装</p></li></ol><ul><li><code>npm install stylus --save</code></li><li><code>npm install stylus-loader --save</code></li></ul><ol start="5"><li>vscode写vue对html没有代码提示的解决:<br>设置setting</li></ol><pre><code class="json">&quot;files.associations&quot;: {    &quot;*.vue&quot;:&quot;html&quot;}</code></pre>]]></content>
       
       <categories>
           
