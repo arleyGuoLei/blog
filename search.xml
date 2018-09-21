@@ -3,6 +3,29 @@
   
     
     <entry>
+      <title>css随笔记</title>
+      <link href="/css%E9%9A%8F%E7%AC%94%E8%AE%B0/"/>
+      <url>/css%E9%9A%8F%E7%AC%94%E8%AE%B0/</url>
+      <content type="html"><![CDATA[<h4 id="比例block"><a href="#比例block" class="headerlink" title="比例block"></a>比例block</h4><p>display block<br>height 0<br>width 100px //设置宽度<br>padding-bottom 50% //设置比例,比如50%,则高:宽 = 1:2</p><h4 id="box-sizing"><a href="#box-sizing" class="headerlink" title="box-sizing"></a>box-sizing</h4><blockquote><p>在CSS中，你设置一个元素的 width 与 height 只会应用到这个元素的内容区。如果这个元素有任何的 border 或 padding ，绘制到屏幕上时的盒子宽度和高度会加上设置的边框和内边距值。这意味着当你调整一个元素的宽度和高度时需要时刻注意到这个元素的边框和内边距。当我们实现响应式布局时，这个特点尤其烦人。</p></blockquote><h5 id="box-sizing-属性可以被用来调整这些表现"><a href="#box-sizing-属性可以被用来调整这些表现" class="headerlink" title="box-sizing 属性可以被用来调整这些表现:"></a>box-sizing 属性可以被用来调整这些表现:</h5><ul><li><p>content-box  是默认值。如果你设置一个元素的宽为100px，那么这个元素的内容区会有100px宽，并且任何边框和内边距的宽度都会被增加到最后绘制出来的元素宽度中。</p></li><li><p>border-box 告诉浏览器去理解你设置的边框和内边距的值是包含在width内的。也就是说，如果你将一个元素的width设为100px,那么这100px会包含其它的border和padding，内容区的实际宽度会是width减去border + padding的计算值。大多数情况下这使得我们更容易的去设定一个元素的宽高。</p></li></ul><pre><code class="html">&lt;template&gt;  &lt;div class=&quot;icons-box&quot;&gt;    &lt;div class=&quot;icon-item&quot;&gt;      &lt;div class=&quot;icon-img-box&quot;&gt;        &lt;img class=&quot;icon-img&quot; src=&quot;http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png&quot; alt=&quot;&quot;&gt;      &lt;/div&gt;      &lt;p class=&quot;icon-text&quot;&gt;热门景点&lt;/p&gt;    &lt;/div&gt;  &lt;/div&gt;&lt;/template&gt;&lt;script&gt;  export default{    name: &#39;HomeIcons&#39;  }&lt;/script&gt;&lt;style lang=&quot;stylus&quot; scoped&gt;.icons-box  height 0  width 100%  padding-bottom 50%  // background red  .icon-item    width 25%    height 0    padding-bottom 25%    overflow hidden    position relative    // background green    float left    .icon-img-box      position absolute      top 0      left 0      right 0      bottom .44rem      padding .1rem      box-sizing border-box      .icon-img        height 100%        margin 0 auto         display block    .icon-text      position absolute      bottom 0      left 0      right 0      width 100%      height .44rem      line-height .44rem      text-align center&lt;/style&gt;</code></pre>]]></content>
+      
+      <categories>
+          
+          <category> 学习笔记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> CSS </tag>
+            
+            <tag> 学习笔记 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
       <title>vscode配置备份</title>
       <link href="/vscode%E9%85%8D%E7%BD%AE%E5%A4%87%E4%BB%BD/"/>
       <url>/vscode%E9%85%8D%E7%BD%AE%E5%A4%87%E4%BB%BD/</url>
@@ -29,7 +52,7 @@
       <title>Vscode的Git使用及记录</title>
       <link href="/Vscode%E7%9A%84Git%E4%BD%BF%E7%94%A8%E5%8F%8A%E8%AE%B0%E5%BD%95/"/>
       <url>/Vscode%E7%9A%84Git%E4%BD%BF%E7%94%A8%E5%8F%8A%E8%AE%B0%E5%BD%95/</url>
-      <content type="html"><![CDATA[<ul><li>git init</li><li>git remote add origin <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>:arleyGuoLei/Travel.git</li></ul><hr><ul><li>git add .</li><li>git commit -m ‘xxxx’</li><li>git push</li></ul><hr><ul><li>git pull</li><li>git checkout FenZhi</li><li>git status</li></ul><hr><ol><li>在<code>swiper</code>分支上提交并且push</li><li>本地切换到<code>master</code>分支:<code>git checkout master</code></li><li>git merge origin/swiper</li><li>git push</li></ol>]]></content>
+      <content type="html"><![CDATA[<ul><li>git init</li><li>git remote add origin <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>:arleyGuoLei/Travel.git</li></ul><hr><ul><li>git add .</li><li>git commit -m ‘xxxx’</li><li>git push</li></ul><hr><ul><li>git pull</li><li>git checkout FenZhi</li><li>git status</li></ul><hr><ol><li>在<code>swiper</code>分支上提交并且push</li><li>本地切换到<code>master</code>分支:<code>git checkout master</code></li><li>git merge origin/swiper</li><li>git push</li></ol><hr><h4 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h4><ol><li>在github上手动创建分支</li><li>本地 <code>git pull</code> 同步拉取线上分支</li><li>本地切换分支 <code>git checkout [新分支]</code></li><li></li></ol>]]></content>
       
       <categories>
           
@@ -507,16 +530,16 @@
     </entry>
     
     <entry>
-      <title>标签云</title>
-      <link href="/tags/index.html"/>
-      <url>/tags/index.html</url>
+      <title>Arley&#39;s Inc</title>
+      <link href="/gallery/index.html"/>
+      <url>/gallery/index.html</url>
       <content type="html"><![CDATA[]]></content>
     </entry>
     
     <entry>
-      <title>Arley&#39;s Inc</title>
-      <link href="/gallery/index.html"/>
-      <url>/gallery/index.html</url>
+      <title>标签云</title>
+      <link href="/tags/index.html"/>
+      <url>/tags/index.html</url>
       <content type="html"><![CDATA[]]></content>
     </entry>
     
