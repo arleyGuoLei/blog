@@ -3,6 +3,27 @@
   
     
     <entry>
+      <title>Css - BFC 神奇背后的原理</title>
+      <link href="/Css-BFC-%E7%A5%9E%E5%A5%87%E8%83%8C%E5%90%8E%E7%9A%84%E5%8E%9F%E7%90%86/"/>
+      <url>/Css-BFC-%E7%A5%9E%E5%A5%87%E8%83%8C%E5%90%8E%E7%9A%84%E5%8E%9F%E7%90%86/</url>
+      <content type="html"><![CDATA[<h4 id="BFC是什么？"><a href="#BFC是什么？" class="headerlink" title="BFC是什么？"></a>BFC是什么？</h4><h5 id="在一个Web页面的CSS渲染中，块级格式化上下文-Block-Fromatting-Context-是按照块级盒子布局的。W3C对BFC的定义如下："><a href="#在一个Web页面的CSS渲染中，块级格式化上下文-Block-Fromatting-Context-是按照块级盒子布局的。W3C对BFC的定义如下：" class="headerlink" title="在一个Web页面的CSS渲染中，块级格式化上下文 (Block Fromatting Context)是按照块级盒子布局的。W3C对BFC的定义如下："></a>在一个Web页面的CSS渲染中，块级格式化上下文 (Block Fromatting Context)是按照块级盒子布局的。W3C对BFC的定义如下：</h5><p>浮动元素和绝对定位元素，非块级盒子的块级容器（例如 inline-blocks, table-cells, 和 table-captions），以及overflow值不为“visiable”的块级盒子，都会为他们的内容创建新的BFC（块级格式上下文）。</p><h5 id="为了便于理解，我们换一种方式来重新定义BFC。一个HTML元素要创建BFC，则满足下列的任意一个或多个条件即可："><a href="#为了便于理解，我们换一种方式来重新定义BFC。一个HTML元素要创建BFC，则满足下列的任意一个或多个条件即可：" class="headerlink" title="为了便于理解，我们换一种方式来重新定义BFC。一个HTML元素要创建BFC，则满足下列的任意一个或多个条件即可："></a>为了便于理解，我们换一种方式来重新定义BFC。一个HTML元素要创建BFC，则满足下列的任意一个或多个条件即可：</h5><p>1、<code>float</code>的值不是<code>none</code>。<br>2、<code>position</code>的值不是<code>static</code>或者<code>relative</code>。<br>3、<code>display</code>的值是<code>inline-block</code>、<code>table-cell</code>、<code>flex</code>、<code>table-caption</code>或者<code>inline-flex</code><br>4、<code>overflow</code>的值不是<code>visible</code></p><p><strong>BFC是一个独立的布局环境，其中的元素布局是不受外界的影响，并且在一个BFC中，块盒与行盒（行盒由一行中所有的内联元素所组成）都会垂直的沿着其父元素的边框排列。</strong></p><blockquote><p>BFC(Block formatting context)直译为”块级格式化上下文”。它是一个独立的渲染区域，只有Block-level box参与， 它规定了内部的Block-level Box如何布局，并且与这个区域外部毫不相干。<code>BFC就是页面上的一个隔离的独立容器，容器里面的子元素不会影响到外面的元素。反之也如此。</code></p></blockquote><h4 id="BFC的作用及原理"><a href="#BFC的作用及原理" class="headerlink" title="BFC的作用及原理"></a>BFC的作用及原理</h4><ol><li>自适应两栏布局</li></ol><pre><code class="html">&lt;!DOCTYPE html&gt;&lt;html lang=&quot;en&quot;&gt;&lt;head&gt;  &lt;meta charset=&quot;UTF-8&quot;&gt;  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;  &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;ie=edge&quot;&gt;  &lt;title&gt;BFC&lt;/title&gt;  &lt;style&gt;    .aside {      width: 100px;      height: 150px;      /* 生成第一个BFC */      float: left;      background: #f66;    }    .main {      height: 200px;      background: #fcc;    }    .text-2&gt;.main {      /* 通过overflow 也生成BFC */      /* overflow: hidden;  */      overflow: hidden;    }  &lt;/style&gt;&lt;/head&gt;&lt;body&gt;  &lt;div class=&quot;text-1&quot;&gt;    &lt;div class=&quot;aside&quot;&gt;&lt;/div&gt;    &lt;div class=&quot;main&quot;&gt;&lt;/div&gt;  &lt;/div&gt;  &lt;div class=&quot;text-2&quot;&gt;    &lt;div class=&quot;aside&quot;&gt;&lt;/div&gt;    &lt;div class=&quot;main&quot;&gt;&lt;/div&gt;  &lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</code></pre><p><img src="https://i.loli.net/2018/09/22/5ba654c70cbf9.png" alt="未设置"></p><p><img src="https://i.loli.net/2018/09/22/5ba654dae125a.png" alt="设置之后的"></p><ol start="2"><li>清除内部浮动</li></ol><pre><code class="html">&lt;!DOCTYPE html&gt;&lt;html lang=&quot;en&quot;&gt;&lt;head&gt;  &lt;meta charset=&quot;UTF-8&quot;&gt;  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;  &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;ie=edge&quot;&gt;  &lt;title&gt;Document&lt;/title&gt;  &lt;style&gt;    .par {      border: 5px solid #fcc;      width: 300px;      /* 设置一条即可清除浮动,撑满div */      /* overflow: hidden; */      /* display: inline-block; */      /* float:left; */      /* position为absolute或fixed */      position: absolute;    }    .child {      border: 5px solid #f66;      width: 100px;      height: 100px;      float: left;    }  &lt;/style&gt;&lt;/head&gt;&lt;body&gt;  &lt;div class=&quot;par&quot;&gt;    &lt;div class=&quot;child&quot;&gt;&lt;/div&gt;    &lt;div class=&quot;child&quot;&gt;&lt;/div&gt;  &lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</code></pre><p><img src="https://i.loli.net/2018/09/22/5ba6587f8ba71.png" alt="img"></p><ol start="3"><li>防止垂直 margin 重叠</li></ol><blockquote><p>两个p之间的距离为100px，发生了margin重叠。</p></blockquote><pre><code class="html">&lt;!DOCTYPE html&gt;&lt;html lang=&quot;en&quot;&gt;&lt;head&gt;  &lt;meta charset=&quot;UTF-8&quot;&gt;  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;  &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;ie=edge&quot;&gt;  &lt;title&gt;3. 防止垂直 margin 重叠&lt;/title&gt;  &lt;style&gt;    p {      color: #f55;      background: #fcc;      width: 200px;      line-height: 100px;      text-align: center;      margin: 100px;    }    .wrapper{      /* 防止垂直 margin 重叠 */      overflow: hidden;    }  &lt;/style&gt;&lt;/head&gt;&lt;body&gt;  &lt;p&gt;Haha&lt;/p&gt;  &lt;div class=&quot;wrapper&quot;&gt;    &lt;p&gt;Hehe&lt;/p&gt;  &lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</code></pre><p><img src="https://i.loli.net/2018/09/22/5ba658997ce06.png" alt="img"></p>]]></content>
+      
+      <categories>
+          
+          <category> 杂谈 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> CSS </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
       <title>css随笔记</title>
       <link href="/css%E9%9A%8F%E7%AC%94%E8%AE%B0/"/>
       <url>/css%E9%9A%8F%E7%AC%94%E8%AE%B0/</url>
