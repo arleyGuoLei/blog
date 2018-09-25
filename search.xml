@@ -3,6 +3,29 @@
   
     
     <entry>
+      <title>Javascript的String对象整理</title>
+      <link href="/Javascript%E7%9A%84String%E5%AF%B9%E8%B1%A1%E6%95%B4%E7%90%86/"/>
+      <url>/Javascript%E7%9A%84String%E5%AF%B9%E8%B1%A1%E6%95%B4%E7%90%86/</url>
+      <content type="html"><![CDATA[<h4 id="String-对象属性"><a href="#String-对象属性" class="headerlink" title="String 对象属性"></a>String 对象属性</h4><table><thead><tr><th>属性</th><th>解释</th></tr></thead><tbody><tr><td>length</td><td>　字符串的长度</td></tr><tr><td>prototype</td><td>给对象添加属性和方法</td></tr><tr><td>constructor</td><td>对创建该对象的函数的引用(没研究)</td></tr></tbody></table><h4 id="String-对象方法"><a href="#String-对象方法" class="headerlink" title="String 对象方法"></a>String 对象方法</h4><table><thead><tr><th>方法(-)</th><th>描述</th></tr></thead><tbody><tr><td>charAt</td><td>返回字符串第n-1个字符,从0开始</td></tr><tr><td>charCodeAt()</td><td>同上,返回字符的 Unicode 编码</td></tr><tr><td>concat</td><td>新串 = 老串1.concat(老串2)</td></tr><tr><td>fromCharCode</td><td>字符 = fromCharCode(Unicode 编码)</td></tr><tr><td>indexOf</td><td>str.indexOf(“xxx”) 返回xxx在str中串首字母出现的位置,从0开始记,没有返回-1</td></tr><tr><td>lastIndexOf</td><td>从后往前找,indexOf从前往后,在串第一个字都是0</td></tr><tr><td>search</td><td>类似indexOf,search可传入正则,所需资源更多</td></tr><tr><td>match</td><td>查找找到一个或多个正则表达式的匹配。</td></tr><tr><td>replace</td><td>str.replace(“老串里的字符”,”替换成的字符”);</td></tr><tr><td>slice</td><td>str.slice(start,end) “hello”.slice(1,3) = “el”</td></tr><tr><td>split</td><td>将字符串分割成数组 数组 = 字符串.split(“分隔符”)</td></tr><tr><td>substr</td><td>从起始索引号提取字符串中指定数目的字符。</td></tr><tr><td>substring</td><td>提取字符串中两个指定的索引号之间的字符。</td></tr></tbody></table><h4 id="slice、substr、substring区别"><a href="#slice、substr、substring区别" class="headerlink" title="slice、substr、substring区别"></a>slice、substr、substring区别</h4><ul><li>正数参数含义上的区别</li></ul><pre><code class="js">var strValue = &quot;javascript programing&quot;;//都是从0开始数,然后截取strValue.slice(3)//&quot;ascript programing&quot;strValue.substring(3)//&quot;ascript programing&quot;strValue.substr(3)//&quot;ascript programing&quot;//开始和结束位置strValue.slice(3,13)//&quot;ascript pr&quot;strValue.substring(3,13)//&quot;ascript pr&quot;// 第二个参数是截取的长度strValue.substr(3,13)//&quot;ascript progr&quot;</code></pre><ul><li>负数参数含义上的区别</li></ul><pre><code class="js">var strValue = &quot;javascript programing&quot;;strValue.slice(-3) =&gt; strValue.slice(18) //&quot;ing&quot;strValue.substr(-3) =&gt; strValue.substr(18)//&quot;ing&quot;strValue.substring(-3) =&gt; strValue.substring(0)//&quot;javascript programing&quot;strValue.slice(3,-13) =&gt; strValue.slice(3,8)//&quot;ascri&quot; strValue.substr(3,-13) =&gt; strValue.substr(3,0)//“”strValue.substring(3,-13) =&gt; strValue.substring(0,3)//&quot;jav&quot;</code></pre><h5 id="substring自身对比"><a href="#substring自身对比" class="headerlink" title="substring自身对比"></a>substring自身对比</h5><pre><code class="js">//都是从0开始数//从第三个字符截取到最后&quot;hello&quot;.substring(3);&gt; &quot;lo&quot;//截取第3个字符以前的&quot;hello&quot;.substring(3,-1);&gt; &quot;hel&quot;</code></pre>]]></content>
+      
+      <categories>
+          
+          <category> 学习笔记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 学习笔记 </tag>
+            
+            <tag> JavaScript </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
       <title>Javascript DOM and BOM 整理</title>
       <link href="/Javascript-DOM-and-BOM-%E6%95%B4%E7%90%86/"/>
       <url>/Javascript-DOM-and-BOM-%E6%95%B4%E7%90%86/</url>
@@ -620,16 +643,16 @@
     </entry>
     
     <entry>
-      <title>标签云</title>
-      <link href="/tags/index.html"/>
-      <url>/tags/index.html</url>
+      <title>Arley&#39;s About</title>
+      <link href="/about/index.html"/>
+      <url>/about/index.html</url>
       <content type="html"><![CDATA[]]></content>
     </entry>
     
     <entry>
-      <title>Arley&#39;s About</title>
-      <link href="/about/index.html"/>
-      <url>/about/index.html</url>
+      <title>标签云</title>
+      <link href="/tags/index.html"/>
+      <url>/tags/index.html</url>
       <content type="html"><![CDATA[]]></content>
     </entry>
     
