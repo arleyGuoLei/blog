@@ -3,6 +3,29 @@
   
     
     <entry>
+      <title>Javascript DOM and BOM 整理</title>
+      <link href="/Javascript-DOM-and-BOM-%E6%95%B4%E7%90%86/"/>
+      <url>/Javascript-DOM-and-BOM-%E6%95%B4%E7%90%86/</url>
+      <content type="html"><![CDATA[<h3 id="DOM"><a href="#DOM" class="headerlink" title="DOM"></a>DOM</h3><h4 id="获取元素"><a href="#获取元素" class="headerlink" title="获取元素"></a>获取元素</h4><p>id: <code>document.getElementById(&quot;xxxx&quot;);</code></p><blockquote><p>getElementById</p></blockquote><p>标签名: <code>document.getElementsByTagName(&quot;p&quot;);</code></p><blockquote><p>getElementsByTagName</p></blockquote><p>类名: <code>document.getElementsByClassName(&quot;intro&quot;);</code></p><blockquote><p>getElementsByClassName</p></blockquote><p>NodeList对象: <code>document.querySelectorAll(&quot;p&quot;);</code></p><blockquote><p>querySelectorAll</p></blockquote><h4 id="操作HTML"><a href="#操作HTML" class="headerlink" title="操作HTML"></a>操作HTML</h4><ul><li><p>改变 HTML 输出流: <code>document.write()</code></p></li><li><p>改变 HTML 内容: <code>document.getElementById(id).innerHTML=新的 HTML</code></p><blockquote><p>innerHTML</p></blockquote></li><li><p>改变 HTML 属性: <code>document.getElementById(id).attribute=新属性值</code></p><blockquote><p>document.getElementById(“image”).src=”landscape.jpg”;</p></blockquote></li></ul><h4 id="操作CSS"><a href="#操作CSS" class="headerlink" title="操作CSS"></a>操作CSS</h4><p>改变样式: <code>document.getElementById(id).style.property=新样式</code></p><blockquote><p>document.getElementById(“p2”).style.color=”blue”;</p></blockquote><h4 id="DOM事件-略"><a href="#DOM事件-略" class="headerlink" title="DOM事件(略)"></a>DOM事件(略)</h4><ul><li><p>点击: <code>onclick</code></p><blockquote><p>\</p><h1 onclick="this.innerHTML='Ooops!'">点击文本!\</h1><br>\<button onclick="displayDate()">点这里\</button><br>document.getElementById(“myBtn”).onclick=function(){displayDate()};<p></p></blockquote></li><li><p>HTML DOM EventListener</p><blockquote><p>使用 addEventListener() 方法时, JavaScript 从 HTML 标记中分离开来，可读性更强， 在没有控制HTML标记时也可以添加事件监听。</p></blockquote></li></ul><pre><code class="js">element.addEventListener(&quot;mouseover&quot;, myFunction);element.addEventListener(&quot;click&quot;, mySecondFunction);element.addEventListener(&quot;mouseout&quot;, myThirdFunction);//删除监听element.removeEventListener(&quot;mousemove&quot;, myFunction);//传递参数element.addEventListener(&quot;click&quot;, function(){ myFunction(p1, p2); });</code></pre><blockquote><p>DOM参考手册 :<a href="http://www.runoob.com/jsref/dom-obj-event.html" target="_blank" rel="noopener">http://www.runoob.com/jsref/dom-obj-event.html</a> (菜鸟教程)</p></blockquote><h4 id="JavaScript-HTML-DOM-元素-节点-创建标签"><a href="#JavaScript-HTML-DOM-元素-节点-创建标签" class="headerlink" title="JavaScript HTML DOM 元素 (节点) - 创建标签"></a>JavaScript HTML DOM 元素 (节点) - 创建标签</h4><ul><li>创建新的 HTML 元素 (节点) - appendChild()</li></ul><pre><code class="html">&lt;div id=&quot;div1&quot;&gt;&lt;p id=&quot;p1&quot;&gt;这是一个段落。&lt;/p&gt;&lt;p id=&quot;p2&quot;&gt;这是另外一个段落。&lt;/p&gt;&lt;/div&gt;&lt;script&gt;//创建 &lt;p&gt; 元素:var para = document.createElement(&quot;p&quot;);// 为 &lt;p&gt; 元素添加文本节点：var node = document.createTextNode(&quot;这是一个新的段落。&quot;);//将文本节点添加到 &lt;p&gt; 元素中：para.appendChild(node);var element = document.getElementById(&quot;div1&quot;);//添加到已存在的元素中:element.appendChild(para);// // element.insertBefore(插入的内容, 插入到哪个元素之前);&lt;/script&gt;</code></pre><p><code>createElement</code>,<code>createTextNode</code>,<code>appendChild</code>,<br><code>insertBefore()</code></p><ul><li>移除已存在的元素<br><code>`</code>html<div id="div1"><br><p id="p1">这是一个段落。</p><br><p id="p2">这是另外一个段落。</p><br></div></li></ul><p><script><br>var parent = document.getElementById(“div1”);<br>var child = document.getElementById(“p1”);<br>//父元素里面移除子元素<br>parent.removeChild(child);<br></script></p><pre><code>* 替换 HTML 元素 - replaceChild()```html&lt;div id=&quot;div1&quot;&gt;&lt;p id=&quot;p1&quot;&gt;这是一个段落。&lt;/p&gt;&lt;p id=&quot;p2&quot;&gt;这是另外一个段落。&lt;/p&gt;&lt;/div&gt;&lt;script&gt;var para = document.createElement(&quot;p&quot;);var node = document.createTextNode(&quot;这是一个新的段落。&quot;);para.appendChild(node);var parent = document.getElementById(&quot;div1&quot;);var child = document.getElementById(&quot;p1&quot;);//父元素.replaceChild(新元素,老元素)parent.replaceChild(para, child);&lt;/script&gt;</code></pre><ul><li>HTMLCollection 对象 length 属性</li></ul><pre><code class="js">var myCollection = document.getElementsByTagName(&quot;p&quot;);var i;for (i = 0; i &lt; myCollection.length; i++) {    myCollection[i].style.backgroundColor = &quot;red&quot;;}</code></pre><blockquote><p>HTMLCollection 不是一个数组！<br>HTMLCollection 看起来可能是一个数组，但其实不是。<br>你可以像数组一样，使用索引来获取元素。<br>HTMLCollection 无法使用数组的方法： valueOf(), pop(), push(), 或 join() 。</p></blockquote><h3 id="BOM"><a href="#BOM" class="headerlink" title="BOM"></a>BOM</h3><p><code>windows</code>,<code>screen</code>,<code>location</code>,<code>navigator</code></p><p><img src="https://i.loli.net/2018/09/25/5ba9cb4025add.png" alt="localtion"></p><p><img src="https://i.loli.net/2018/09/25/5ba9cbf37d9dc.png" alt="navigator"></p><p><code>confirm</code>,<code>alert</code>,<code>prompt</code></p><p><code>setInterval()</code>,<code>clearInterval()</code>,<code>setTimeout()</code></p>]]></content>
+      
+      <categories>
+          
+          <category> 学习笔记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 学习笔记 </tag>
+            
+            <tag> Javascript </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
       <title>js正则表达式</title>
       <link href="/js%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/"/>
       <url>/js%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/</url>
@@ -590,16 +613,9 @@
   
     
     <entry>
-      <title>Arley&#39;s About</title>
-      <link href="/about/index.html"/>
-      <url>/about/index.html</url>
-      <content type="html"><![CDATA[]]></content>
-    </entry>
-    
-    <entry>
-      <title>时间轴</title>
-      <link href="/timeline/index.html"/>
-      <url>/timeline/index.html</url>
+      <title>Arley&#39;s Inc</title>
+      <link href="/gallery/index.html"/>
+      <url>/gallery/index.html</url>
       <content type="html"><![CDATA[]]></content>
     </entry>
     
@@ -611,9 +627,16 @@
     </entry>
     
     <entry>
-      <title>Arley&#39;s Inc</title>
-      <link href="/gallery/index.html"/>
-      <url>/gallery/index.html</url>
+      <title>Arley&#39;s About</title>
+      <link href="/about/index.html"/>
+      <url>/about/index.html</url>
+      <content type="html"><![CDATA[]]></content>
+    </entry>
+    
+    <entry>
+      <title>时间轴</title>
+      <link href="/timeline/index.html"/>
+      <url>/timeline/index.html</url>
       <content type="html"><![CDATA[]]></content>
     </entry>
     
