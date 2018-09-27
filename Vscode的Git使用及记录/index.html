@@ -251,7 +251,7 @@
 
     
         <meta property="article:published_time" content="Thu Sep 20 2018 18:31:19 GMT+0800">
-        <meta property="article:modified_time" content="Thu Sep 27 2018 23:24:47 GMT+0800">
+        <meta property="article:modified_time" content="Thu Sep 27 2018 23:52:34 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -274,7 +274,7 @@
     "mainEntityOfPage": "https://i7xy.cn/Vscode的Git使用及记录/index.html",
     "headline": "Vscode的Git使用及记录",
     "datePublished": "Thu Sep 20 2018 18:31:19 GMT+0800",
-    "dateModified": "Thu Sep 27 2018 23:24:47 GMT+0800",
+    "dateModified": "Thu Sep 27 2018 23:52:34 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "Arley",
@@ -551,7 +551,7 @@
 <p>3、fatal: refusing to merge unrelated histories”//本地的和GitHub上没有共同祖先</p>
 <p> 解决方法：执行git pull origin master –allow-unrelater-histories</p>
 <p>git其它：<br>1.切换分支后要将本地与线上关联起来<br>   ①切换分支 git checkout -b 分支名；<br>   ②关联  git branch –set-upstream-to=origin/远程分支名 本地分支名（不关联进行git操作时则提示  If you wish to set tracking information for this branch you can do so with:<br>    git branch –set-upstream-to=origin/<branch> ***<br>）</branch></p>
-<p>2.拒绝合并无关的历史<br>git branch –set-upstream-to=origin/master master<br>然后使用git pull整合远程仓库和本地仓库，<br>git pull –allow-unrelated-histories    (忽略版本不同造成的影响)</p>
+<p>2.拒绝合并无关的历史<br><code>git branch --set-upstream-to=origin/master master</code><br>然后使用git pull整合远程仓库和本地仓库，<br><code>git pull --allow-unrelated-histories</code>    (忽略版本不同造成的影响)</p>
 
         
                 <blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;">
