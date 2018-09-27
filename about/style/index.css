@@ -1,0 +1,196 @@
+*{
+  margin: 0;
+}
+/* 头部 */
+.header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  z-index: 3;
+}
+.header-left{
+  float: left;
+  height: 40px;
+  margin: 30px 0 0 82px;
+}
+.header__logo-title{
+  margin: 0;
+  font-size: 20px;
+  color: #ffffff;
+  text-shadow: 0 0 1px #000000;
+  line-height: 40px;
+}
+.header__logo-title>span:first-child{
+  letter-spacing: 2px;
+  color: #0C9695;
+}
+.header-right{
+  float: right;
+  margin: 30px 82px 0 0;
+  height: 40px;
+}
+.header__nav{
+  height: 40px;
+  position: relative;
+}
+.header__nav-a{
+  color: #0C9695;
+  text-decoration: none;
+  float: left;
+  line-height: 40px;
+  font-size: 17px;
+  padding: 0 20px;
+}
+
+.header__nav-item-tip{
+  width: 60px;
+  height: 2px;
+  background: #0C9695;
+  /* #0C9695 #f01414 */
+  position: absolute;
+  bottom: -2px;
+  left: 8px;
+}
+
+/* 第一屏 */
+.screen-1{
+  height: 860px;
+  background-image: url('../images/screen-1-back.png');
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  
+}
+/* 700-120*2 = 460 */
+.screen-1__wrap{
+  background: rgb(00,00,00,.4);
+  height: 460px;
+  margin: 240px 230px 0 230px;
+  border-radius: 2px;
+  /* 460-120=340 */
+  padding: 60px 50px;
+  box-sizing: border-box;
+  overflow: hidden;
+  position: relative;
+}
+
+
+.screen-1__wrap-left{
+  width: 70%;
+  height: 340px;
+  float: left;
+}
+
+.screen-1__wrap-title{
+  margin: 0;
+  font-size: 18px;
+  color: #ffffff;
+}
+
+.screen-1__wrap-title::after{
+  content: ' ';
+  display: block;
+  height: 2px;
+  background: #ffffff;
+  width: 90%;
+  margin-top: 10px;
+}
+
+.screen-1__wrap-info{
+  /* 340 - 48 = 296*/
+  height: 296px;
+  padding: 20px;
+  box-sizing: border-box;
+  color: #ffffff;
+  font-size: 18px;
+  overflow: hidden;
+}
+
+.screen-1__wrap-info-left{
+  height: 256px;
+  width: 20%;
+  float: left;
+  overflow: hidden;
+}
+
+.screen-1__info-key{
+  font-weight: 600;
+  text-shadow: 0 0 2px #000000;
+  margin: 24px;
+  overflow: hidden;
+}
+.screen-1__info-value{
+  font-weight: 600;
+  color: #ffffffd3;
+  margin: 24px;
+  overflow: hidden;
+  /* text-shadow: 0 0 1px #ffffff; */
+}
+
+.screen-1__wrap-info-right{
+  height: 256px;
+  width: 80%;
+  float: right;
+}
+
+.screen-1__wrap-right{
+  width: 30%;
+  height: 0;
+  padding-bottom: 24%;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 4%;
+  border-radius: 2px;
+
+  background-image: url('../images/screen-1-logo.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+
+/* 第二屏 */
+.screen-2{
+  height: 860px;
+}
+
+.screen2-left{
+  width: 50%;
+  background: yellow;
+  height: 860px;
+  float: left;
+}
+.screen2-right{
+  width: 50%;
+  background: green;
+  height: 860px;
+  float: right;
+}
+
+/* .swiper-container {
+  width: 100%;
+  height: 100%;
+} */
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
