@@ -67,7 +67,7 @@
 .screen-1__wrap{
   background: rgb(00,00,00,.4);
   height: 460px;
-  margin: 240px 230px 0 230px;
+  margin: 240px 10% 0 10%;
   border-radius: 2px;
   /* 460-120=340 */
   padding: 60px 50px;
