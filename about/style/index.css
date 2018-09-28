@@ -485,3 +485,10 @@
   z-index: 1;
   opacity: .99;
 }
+
+/* 第五屏 */
+.screen-5{
+  height: 780px;
+  background-color: #F4F4F4;
+  
+}
