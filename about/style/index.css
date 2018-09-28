@@ -155,7 +155,7 @@
 
 /* 第二屏 */
 .screen-2{
-  height: 860px;
+  height: 780px;
   overflow: hidden;
 }
 
@@ -178,28 +178,33 @@
   background-color: #0C9695;
   margin: -20px auto 50px auto;
 }
-/* 860 - 120 - 30 = 710 */
+/* 780 - 120 - 30 = 630 ------------------------------*/
 .screen2-left{
   width: 50%;
-  background: yellow;
-  height: 710px;
+  /* background: yellow; */
+  height: 520px;
   float: left;
+  margin-bottom: 120px!important;
 }
 .screen2-right{
   width: 50%;
-  /* background: green; */
-  height: 710px;
+  height: 520px;
   float: right;
+  margin-bottom: 120px;
+  padding: 0 30px 20px 50px;
+  box-sizing: border-box;
 }
 
-/* .swiper-container {
-  width: 100%;
-  height: 100%;
-} */
+.screen2-left,.swiper-container {
+  /* width: 100%;
+  height: 100%; */
+  overflow: visible!important;
+}
 .swiper-slide {
   text-align: center;
   font-size: 18px;
   background: #fff;
+  /* overflow: hidden; */
 
   /* Center slide text vertically */
   display: -webkit-box;
@@ -214,4 +219,35 @@
   -ms-flex-align: center;
   -webkit-align-items: center;
   align-items: center;
+}
+.swiper-slide>img{
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+}
+.swiper-pagination{
+  /* color:  */
+}
+.swiper-pagination-bullet-active{
+  background-color: #0C9695!important;
+}
+.swiper-pagination-bullet{
+  width: 12px!important;
+  height: 12px!important;
+}
+.swiper-container-vertical>.swiper-pagination-bullets{
+  right: -20px!important;
+}
+
+/* -------------------------- */
+
+.screen2__info>h2{
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.screen2__info>p{
+  text-indent: 2em;
+  line-height: 40px;
+  font-size: 20px;
 }
