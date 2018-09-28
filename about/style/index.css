@@ -409,7 +409,7 @@
 
 .screen-4__item-right{
   width: 45%;
-  padding: 0 300px 0 12px;
+  padding: 0 10% 0 12px;
   /* background-color: salmon; */
   box-sizing: border-box;
 }
@@ -431,7 +431,7 @@
   display: block;
   position: absolute;
   /* background: hotpink; */
-  left: -12px;
+  left: -11px;
   top: 14px;
   width:0;
   height:0;
