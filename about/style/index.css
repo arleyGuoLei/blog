@@ -193,6 +193,7 @@
   margin-bottom: 120px;
   padding: 0 30px 20px 50px;
   box-sizing: border-box;
+  overflow: hidden;
 }
 
 .screen2-left,.swiper-container {
@@ -248,6 +249,6 @@
 
 .screen2__info>p{
   text-indent: 2em;
-  line-height: 40px;
+  line-height: 32px;
   font-size: 20px;
 }
