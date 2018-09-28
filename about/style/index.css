@@ -156,18 +156,39 @@
 /* 第二屏 */
 .screen-2{
   height: 860px;
+  overflow: hidden;
 }
 
+.screen-2__title{
+  margin-top: 20px;
+  text-align: center;
+}
+.screen-2__title>p{
+  height: 100px;
+  line-height: 100px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.screen-2__title::after{
+  content: ' ';
+  display: block;
+  width: 100px;
+  height: 3px;
+  background-color: #0C9695;
+  margin: -20px auto 50px auto;
+}
+/* 860 - 120 - 30 = 710 */
 .screen2-left{
   width: 50%;
   background: yellow;
-  height: 860px;
+  height: 710px;
   float: left;
 }
 .screen2-right{
   width: 50%;
-  background: green;
-  height: 860px;
+  /* background: green; */
+  height: 710px;
   float: right;
 }
 
