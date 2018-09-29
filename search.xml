@@ -3,7 +3,28 @@
   
     
     <entry>
-      <title>Javascript - 数组整理</title>
+      <title>Idea 导出单个类为jar包,并在其他类中import使用</title>
+      <link href="/Idea-%E5%AF%BC%E5%87%BA%E5%8D%95%E4%B8%AA%E7%B1%BB%E4%B8%BAjar%E5%8C%85-%E5%B9%B6%E5%9C%A8%E5%85%B6%E4%BB%96%E7%B1%BB%E4%B8%ADimport%E4%BD%BF%E7%94%A8/"/>
+      <url>/Idea-%E5%AF%BC%E5%87%BA%E5%8D%95%E4%B8%AA%E7%B1%BB%E4%B8%BAjar%E5%8C%85-%E5%B9%B6%E5%9C%A8%E5%85%B6%E4%BB%96%E7%B1%BB%E4%B8%ADimport%E4%BD%BF%E7%94%A8/</url>
+      <content type="html"><![CDATA[<h4 id="导出某个类为jar包"><a href="#导出某个类为jar包" class="headerlink" title="导出某个类为jar包"></a>导出某个类为jar包</h4><ol><li>新建了一个叫<code>i7xy</code>的parkage,放入了一个叫<code>HelloJar</code>的类.</li></ol><p><img src="https://i.loli.net/2018/09/29/5baf2653d66d7.png" alt="创建包,新建类"></p><blockquote><p>注意了:必须有一个包,不然后期导入import的时候不知道怎么导入默认包封装的jar</p></blockquote><ol start="2"><li>编译<code>HelloJar</code>类为<code>Class</code>文件,jar导入的是<code>.class</code>,不是<code>.java</code></li></ol><blockquote><p>怎么编译,用其他类去调用这个类,用idea自动编译;或者用终端直接运行<code>javac HelloJar.java</code>编译</p></blockquote><p><img src="https://i.loli.net/2018/09/29/5baf270971021.png" alt="编译"></p><ol start="3"><li><code>File</code> -&gt; <code>Project Structure</code> -&gt; <code>Artifacts</code> -&gt; <code>+</code> -&gt; 其他看图</li></ol><p><img src="https://i.loli.net/2018/09/29/5baf2a447316f.png" alt="Project Structure"></p><p><img src="https://i.loli.net/2018/09/29/5baf2a5ed1d47.png" alt="3.2"></p><p><img src="https://i.loli.net/2018/09/29/5baf2a92a125d.png" alt="3.3"></p><p><img src="https://i.loli.net/2018/09/29/5baf2aae6e113.png" alt="3.4"></p><p><img src="https://i.loli.net/2018/09/29/5baf2acf424b3.png" alt="3.5"></p><ol start="4"><li>现在<code>class</code>文件以及添加进去了,然后需要<code>build</code>,不然没有jar生成.</li></ol><p><img src="https://i.loli.net/2018/09/29/5baf2b13768f2.png" alt="4.1"></p><p><img src="https://i.loli.net/2018/09/29/5baf2b2fc88df.png" alt="4.2"></p><h4 id="import包"><a href="#import包" class="headerlink" title="import包"></a>import包</h4><ol><li><code>File</code> -&gt; <code>Project Structure</code> -&gt; <code>Modules</code></li></ol><p><img src="https://i.loli.net/2018/09/29/5baf2c82b65c4.png" alt="5.1"></p><ol start="2"><li>选择编译之后的<code>class</code>文件</li></ol><p><img src="https://i.loli.net/2018/09/29/5baf2ccd38ac2.png" alt="5.2"></p><ol start="3"><li>打上勾之后应用</li></ol><p><img src="https://i.loli.net/2018/09/29/5baf2cf5da919.png" alt="5.3"></p><ol start="4"><li>成功导入,并实例化</li></ol><p><img src="https://i.loli.net/2018/09/29/5baf2d23b0acd.png" alt="5.4"></p>]]></content>
+      
+      <categories>
+          
+          <category> 学习笔记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> JavaScript </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
+      <title>JavaScript - 数组整理</title>
       <link href="/Javascript-%E6%95%B0%E7%BB%84%E6%95%B4%E7%90%86/"/>
       <url>/Javascript-%E6%95%B0%E7%BB%84%E6%95%B4%E7%90%86/</url>
       <content type="html"><![CDATA[<h4 id="定义方法"><a href="#定义方法" class="headerlink" title="定义方法"></a>定义方法</h4><pre><code class="js">// 一var mycars = new Array();mycars[0] = &quot;Saab&quot;;mycars[1] = &quot;Volvo&quot;;    mycars[2] = &quot;BMW&quot;;//二var myCars=new Array(&quot;Saab&quot;,&quot;Volvo&quot;,&quot;BMW&quot;);// 三var myCars=[&quot;Saab&quot;,&quot;Volvo&quot;,&quot;BMW&quot;];</code></pre><h4 id="数组属性"><a href="#数组属性" class="headerlink" title="数组属性"></a>数组属性</h4><blockquote><p>和String对象一样的.</p></blockquote><p>主要记录两个:<code>prototype</code>/<code>length</code></p><h4 id="Array-对象属性"><a href="#Array-对象属性" class="headerlink" title="Array 对象属性"></a>Array 对象属性</h4><table><thead><tr><th>函数</th><th>功能</th></tr></thead><tbody><tr><td>concat</td><td>连接数组,返回连接之后的新数组</td></tr><tr><td>copyWithin</td><td>复制数组中的元素到指定位置</td></tr><tr><td>every</td><td>方法用于检测数组所有元素是否都符合指定条件（通过函数提供）</td></tr><tr><td>filter</td><td>检测数值元素，并返回符合条件所有元素的数组</td></tr><tr><td>forEach</td><td>数组每个元素都执行一次回调函数</td></tr><tr><td>from</td><td>通过给定的对象中创建一个数组</td></tr><tr><td>map</td><td>类似from,结果返回到一个新数组</td></tr><tr><td>indexOf</td><td>搜索数组中的元素，并返回它所在的位置</td></tr><tr><td>lastIndexOf</td><td>↑</td></tr><tr><td>isArray</td><td>判断对象是否为数组</td></tr><tr><td>join(“x”)</td><td>把数组中的所有元素转换一个字符串,用x连接</td></tr><tr><td>push</td><td>在尾加</td></tr><tr><td>unshift</td><td>在头加</td></tr><tr><td>pop</td><td>删尾</td></tr><tr><td>shift</td><td>删头</td></tr><tr><td>reverse</td><td>反转数组的元素顺序,改变原数组</td></tr><tr><td>slice</td><td>提取数组中的元素</td></tr><tr><td>splice</td><td>插入、删除或替换数组的元素</td></tr><tr><td>sort</td><td>排序</td></tr></tbody></table><p><code>fill</code>,<code>entries</code>,<code>find</code>,<code>findIndex</code>,<code>includes</code>,<code>keys</code>,<code>reduce</code>,<code>reduceRight</code>,<code>some</code></p><h5 id="splice"><a href="#splice" class="headerlink" title="splice"></a>splice</h5><pre><code class="js">var fruits = [&quot;Banana&quot;, &quot;Orange&quot;, &quot;Apple&quot;, &quot;Mango&quot;];//从1开始,先删除一个,然后再插入a//位置:先删除后插入fruits.splice(1,1,&quot;a&quot;);</code></pre><h5 id="sort"><a href="#sort" class="headerlink" title="sort"></a>sort</h5><pre><code class="js">//return 的小于0 小到大//&gt;0 大到小var points = [40,100,1,5,25,10];points.sort(function(a,b){return a-b});console.log(points)// [1, 5, 10, 25, 40, 100]var points = [40,100,1,5,25,10];points.sort(function(a,b){return b-a});console.log(points)// [100, 40, 25, 10, 5, 1]</code></pre><blockquote><p>以前做随机抽取题目时候,用到一个随机排序,随机抽取题目数组,记录一下.</p></blockquote><pre><code class="js">function randomsort(a, b) {  var x = Math.random() &gt; .5 ? -1 : 1; //通过随机产生0到1的数，然后判断是否大于0.5从而影响排序，产生随机性的效果。  console.log(x)  return x}var arr = [1, 2, 3, 4, 5];arr.sort(randomsort);console.log(arr)</code></pre><h5 id="slice"><a href="#slice" class="headerlink" title="slice"></a>slice</h5><pre><code class="js">var fruits = [&quot;Banana&quot;, &quot;Orange&quot;, &quot;Lemon&quot;, &quot;Apple&quot;, &quot;Mango&quot;];var myBest = fruits.slice(-3,-1); //2,4//Lemon,Apple</code></pre><h5 id="map"><a href="#map" class="headerlink" title="map"></a>map</h5><pre><code class="js">var nums = [1,2,3,4,5,6,7,8,9];var tmp = nums.map(function(val){  return val * 10;})console.log(tmp)//[10, 20, 30, 40, 50, 60, 70, 80, 90]</code></pre><h5 id="from"><a href="#from" class="headerlink" title="from"></a>from</h5><pre><code class="js">var nums = [1,2,3,4,5,6,7,8,9];var arr = Array.from(nums,x =&gt; x * 10);console.log(arr)//[10, 20, 30, 40, 50, 60, 70, 80, 90]</code></pre><h5 id="concat"><a href="#concat" class="headerlink" title="concat"></a>concat</h5><pre><code class="js">var arrA = [&quot;a&quot;, &quot;aa&quot;, &quot;aaa&quot;]var arrB = [&quot;b&quot;, &quot;bb&quot;, &quot;bbb&quot;]var tmp = []tmp = arrA.concat(arrB)console.log(tmp.join(&quot; &quot;))</code></pre><h5 id="copyWithin"><a href="#copyWithin" class="headerlink" title="copyWithin"></a>copyWithin</h5><blockquote><p>x = a.copyWithin(<code>在第几个位置开始插入[从0开始数]</code>,<code>a中的第几位开始</code>,<code>复制到第几位结束</code>)<br>PS:复制之后 <code>x=a</code> ,并且长度不变</p></blockquote><pre><code class="js">var arrA = [&quot;a&quot;,&quot;b&quot;,&quot;c&quot;,&quot;d&quot;]var tmp = [&quot;x&quot;,&quot;x&quot;,&quot;x&quot;,&quot;x&quot;]tmp = arrA.copyWithin(2,1,4)// a,b,b,c  从第二个位置开始插入,并且覆盖后面的成员,数组长度会被截取成和以前一样的长度</code></pre><h5 id="every"><a href="#every" class="headerlink" title="every"></a>every</h5><pre><code class="js">var nums = [1,2,3,4,5,6,7,8,9];//遍历是否每一项都&lt;2,成立返回true,不成立为false.var check = nums.every(function(val,index,arr){  document.write(index+&quot; - &quot;+arr+&quot;&lt;br&gt;&quot;);  return val&lt;2;})console.log(check) //false// 0 - 1,2,3,4,5,6,7,8,9// 1 - 1,2,3,4,5,6,7,8,9</code></pre><h5 id="filter"><a href="#filter" class="headerlink" title="filter"></a>filter</h5><pre><code class="js">var nums = [1,2,3,4,5,6,7,8,9];var tmp = nums.filter((val)=&gt;{  return val&lt;=8;})document.write(tmp);//nums不变//tmp为满足条件的新数组</code></pre><h5 id="forEach"><a href="#forEach" class="headerlink" title="forEach"></a>forEach</h5><blockquote><p>array.forEach(function(currentValue, index, arr), thisValue)</p></blockquote><pre><code class="js">var nums = [1,2,3,4,5,6,7,8,9];nums.forEach(function(currentValue, index, arr){  document.write(&quot;num[&quot;+index+&quot;] = &quot;+currentValue+&quot;&lt;BR&gt;&quot;)})// num[0] = 1// num[1] = 2// num[2] = 3// num[3] = 4// num[4] = 5// num[5] = 6// num[6] = 7// num[7] = 8// num[8] = 9</code></pre><h4 id="对是否改变原数组做整理"><a href="#对是否改变原数组做整理" class="headerlink" title="对是否改变原数组做整理"></a>对是否改变原数组做整理</h4><ul><li><p>改变原数组：<br>pop()<br>push()<br>reverse()<br>shift()<br>sort()<br>splice()<br>unshift()</p></li><li><p>不改变原数组：<br>concat()<br>jion()<br>slice()</p></li></ul>]]></content>
@@ -19,7 +40,7 @@
             
             <tag> 学习笔记 </tag>
             
-            <tag> Javascript </tag>
+            <tag> JavaScript </tag>
             
         </tags>
       
@@ -49,7 +70,7 @@
     </entry>
     
     <entry>
-      <title>Javascript DOM and BOM 整理</title>
+      <title>JavaScript DOM and BOM 整理</title>
       <link href="/Javascript-DOM-and-BOM-%E6%95%B4%E7%90%86/"/>
       <url>/Javascript-DOM-and-BOM-%E6%95%B4%E7%90%86/</url>
       <content type="html"><![CDATA[<h3 id="DOM"><a href="#DOM" class="headerlink" title="DOM"></a>DOM</h3><h4 id="获取元素"><a href="#获取元素" class="headerlink" title="获取元素"></a>获取元素</h4><p>id: <code>document.getElementById(&quot;xxxx&quot;);</code></p><blockquote><p>getElementById</p></blockquote><p>标签名: <code>document.getElementsByTagName(&quot;p&quot;);</code></p><blockquote><p>getElementsByTagName</p></blockquote><p>类名: <code>document.getElementsByClassName(&quot;intro&quot;);</code></p><blockquote><p>getElementsByClassName</p></blockquote><p>NodeList对象: <code>document.querySelectorAll(&quot;p&quot;);</code></p><blockquote><p>querySelectorAll</p></blockquote><h4 id="操作HTML"><a href="#操作HTML" class="headerlink" title="操作HTML"></a>操作HTML</h4><ul><li><p>改变 HTML 输出流: <code>document.write()</code></p></li><li><p>改变 HTML 内容: <code>document.getElementById(id).innerHTML=新的 HTML</code></p><blockquote><p>innerHTML</p></blockquote></li><li><p>改变 HTML 属性: <code>document.getElementById(id).attribute=新属性值</code></p><blockquote><p>document.getElementById(“image”).src=”landscape.jpg”;</p></blockquote></li></ul><h4 id="操作CSS"><a href="#操作CSS" class="headerlink" title="操作CSS"></a>操作CSS</h4><p>改变样式: <code>document.getElementById(id).style.property=新样式</code></p><blockquote><p>document.getElementById(“p2”).style.color=”blue”;</p></blockquote><h4 id="DOM事件-略"><a href="#DOM事件-略" class="headerlink" title="DOM事件(略)"></a>DOM事件(略)</h4><ul><li><p>点击: <code>onclick</code></p><blockquote><p>&lt;//h1 onclick=”this.innerHTML=’Ooops!’”&gt;点击文本!&lt;//h1&gt;<br>&lt;//button onclick=”displayDate()”&gt;点这里&lt;//button&gt;<br>document.getElementById(“myBtn”).onclick=function(){displayDate()};</p></blockquote></li><li><p>HTML DOM EventListener</p><blockquote><p>使用 addEventListener() 方法时, JavaScript 从 HTML 标记中分离开来，可读性更强， 在没有控制HTML标记时也可以添加事件监听。</p></blockquote></li></ul><pre><code class="js">element.addEventListener(&quot;mouseover&quot;, myFunction);element.addEventListener(&quot;click&quot;, mySecondFunction);element.addEventListener(&quot;mouseout&quot;, myThirdFunction);//删除监听element.removeEventListener(&quot;mousemove&quot;, myFunction);//传递参数element.addEventListener(&quot;click&quot;, function(){ myFunction(p1, p2); });</code></pre><blockquote><p>DOM参考手册 :<a href="http://www.runoob.com/jsref/dom-obj-event.html" target="_blank" rel="noopener">http://www.runoob.com/jsref/dom-obj-event.html</a> (菜鸟教程)</p></blockquote><h4 id="JavaScript-HTML-DOM-元素-节点-创建标签"><a href="#JavaScript-HTML-DOM-元素-节点-创建标签" class="headerlink" title="JavaScript HTML DOM 元素 (节点) - 创建标签"></a>JavaScript HTML DOM 元素 (节点) - 创建标签</h4><ul><li>创建新的 HTML 元素 (节点) - appendChild()</li></ul><pre><code class="html">&lt;div id=&quot;div1&quot;&gt;&lt;p id=&quot;p1&quot;&gt;这是一个段落。&lt;/p&gt;&lt;p id=&quot;p2&quot;&gt;这是另外一个段落。&lt;/p&gt;&lt;/div&gt;&lt;script&gt;//创建 &lt;p&gt; 元素:var para = document.createElement(&quot;p&quot;);// 为 &lt;p&gt; 元素添加文本节点：var node = document.createTextNode(&quot;这是一个新的段落。&quot;);//将文本节点添加到 &lt;p&gt; 元素中：para.appendChild(node);var element = document.getElementById(&quot;div1&quot;);//添加到已存在的元素中:element.appendChild(para);// // element.insertBefore(插入的内容, 插入到哪个元素之前);&lt;/script&gt;</code></pre><p><code>createElement</code>,<code>createTextNode</code>,<code>appendChild</code>,<br><code>insertBefore()</code></p><ul><li>移除已存在的元素<br><code>`</code>html<div id="div1"><br><p id="p1">这是一个段落。</p><br><p id="p2">这是另外一个段落。</p><br></div></li></ul><p><script><br>var parent = document.getElementById(“div1”);<br>var child = document.getElementById(“p1”);<br>//父元素里面移除子元素<br>parent.removeChild(child);<br></script></p><pre><code>* 替换 HTML 元素 - replaceChild()```html&lt;div id=&quot;div1&quot;&gt;&lt;p id=&quot;p1&quot;&gt;这是一个段落。&lt;/p&gt;&lt;p id=&quot;p2&quot;&gt;这是另外一个段落。&lt;/p&gt;&lt;/div&gt;&lt;script&gt;var para = document.createElement(&quot;p&quot;);var node = document.createTextNode(&quot;这是一个新的段落。&quot;);para.appendChild(node);var parent = document.getElementById(&quot;div1&quot;);var child = document.getElementById(&quot;p1&quot;);//父元素.replaceChild(新元素,老元素)parent.replaceChild(para, child);&lt;/script&gt;</code></pre><ul><li>HTMLCollection 对象 length 属性</li></ul><pre><code class="js">var myCollection = document.getElementsByTagName(&quot;p&quot;);var i;for (i = 0; i &lt; myCollection.length; i++) {    myCollection[i].style.backgroundColor = &quot;red&quot;;}</code></pre><blockquote><p>HTMLCollection 不是一个数组！<br>HTMLCollection 看起来可能是一个数组，但其实不是。<br>你可以像数组一样，使用索引来获取元素。<br>HTMLCollection 无法使用数组的方法： valueOf(), pop(), push(), 或 join() 。</p></blockquote><h3 id="BOM"><a href="#BOM" class="headerlink" title="BOM"></a>BOM</h3><p><code>windows</code>,<code>screen</code>,<code>location</code>,<code>navigator</code></p><p><img src="https://i.loli.net/2018/09/25/5ba9cb4025add.png" alt="localtion"></p><p><img src="https://i.loli.net/2018/09/25/5ba9cbf37d9dc.png" alt="navigator"></p><p><code>confirm</code>,<code>alert</code>,<code>prompt</code></p><p><code>setInterval()</code>,<code>clearInterval()</code>,<code>setTimeout()</code></p>]]></content>
@@ -65,7 +86,7 @@
             
             <tag> 学习笔记 </tag>
             
-            <tag> Javascript </tag>
+            <tag> JavaScript </tag>
             
         </tags>
       
@@ -95,7 +116,7 @@
     </entry>
     
     <entry>
-      <title>Javascript var let const区别总结</title>
+      <title>JavaScript var let const区别总结</title>
       <link href="/Javascript-var-let-const%E5%8C%BA%E5%88%AB%E6%80%BB%E7%BB%93/"/>
       <url>/Javascript-var-let-const%E5%8C%BA%E5%88%AB%E6%80%BB%E7%BB%93/</url>
       <content type="html"><![CDATA[<h4 id="var、let、const的区别"><a href="#var、let、const的区别" class="headerlink" title="var、let、const的区别"></a>var、let、const的区别</h4><ol><li><p>var定义的变量，没有块的概念，可以跨块访问, 不能跨函数访问。</p></li><li><p>let定义的变量，只能在块作用域里访问，不能跨块访问，也不能跨函数访问。</p></li><li><p>const用来定义常量，使用时必须初始化(即必须赋值)，只能在块作用域里访问，而且不能修改。</p></li></ol><pre><code class="js">&lt;script type=&quot;text/javascript&quot;&gt;    // 块作用域    {        var a = 1;        let b = 2;        const c = 3;        // c = 4; // 报错        var aa;        let bb;        // const cc; // 报错        console.log(a); // 1        console.log(b); // 2        console.log(c); // 3        console.log(aa); // undefined        console.log(bb); // undefined    }    console.log(a); // 1    // console.log(b); // 报错    // console.log(c); // 报错    // 函数作用域    (function A() {        var d = 5;        let e = 6;        const f = 7;        console.log(d); // 5        console.log(e); // 6  (在同一个{ }中,也属于同一个块，可以正常访问到)        console.log(f); // 7  (在同一个{ }中,也属于同一个块，可以正常访问到)    })();    // console.log(d); // 报错    // console.log(e); // 报错    // console.log(f); // 报错&lt;/script&gt;</code></pre>]]></content>
@@ -111,7 +132,7 @@
             
             <tag> 学习笔记 </tag>
             
-            <tag> Javascript </tag>
+            <tag> JavaScript </tag>
             
         </tags>
       
@@ -153,9 +174,9 @@
       
         <tags>
             
-            <tag> CSS </tag>
-            
             <tag> 学习笔记 </tag>
+            
+            <tag> CSS </tag>
             
         </tags>
       
@@ -312,9 +333,9 @@
       
         <tags>
             
-            <tag> CSS </tag>
-            
             <tag> 学习笔记 </tag>
+            
+            <tag> CSS </tag>
             
         </tags>
       
@@ -358,9 +379,9 @@
       
         <tags>
             
-            <tag> CSS </tag>
-            
             <tag> 学习笔记 </tag>
+            
+            <tag> CSS </tag>
             
         </tags>
       
@@ -659,9 +680,16 @@
   
     
     <entry>
-      <title>标签云</title>
-      <link href="/tags/index.html"/>
-      <url>/tags/index.html</url>
+      <title>Arley&#39;s About</title>
+      <link href="/about/index.html"/>
+      <url>/about/index.html</url>
+      <content type="html"><![CDATA[]]></content>
+    </entry>
+    
+    <entry>
+      <title>Arley&#39;s Inc</title>
+      <link href="/gallery/index.html"/>
+      <url>/gallery/index.html</url>
       <content type="html"><![CDATA[]]></content>
     </entry>
     
@@ -673,16 +701,9 @@
     </entry>
     
     <entry>
-      <title>Arley&#39;s About</title>
-      <link href="/about/index.html"/>
-      <url>/about/index.html</url>
-      <content type="html"><![CDATA[]]></content>
-    </entry>
-    
-    <entry>
-      <title>Arley&#39;s Inc</title>
-      <link href="/gallery/index.html"/>
-      <url>/gallery/index.html</url>
+      <title>标签云</title>
+      <link href="/tags/index.html"/>
+      <url>/tags/index.html</url>
       <content type="html"><![CDATA[]]></content>
     </entry>
     
