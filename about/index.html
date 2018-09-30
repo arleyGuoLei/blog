@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="./style/swiper.min.css">
   <link rel="stylesheet" href="./style/animate.min.css">
   <link rel="stylesheet" href="./style/iconfont.css">
+  <link rel="stylesheet" href="./style/myAnimate.css">
 </head>
 
 <body>
@@ -20,11 +21,11 @@
 
     <div class="header-right">
       <nav class="header__nav">
-        <a href="" class="header__nav-a ">首页</a>
-        <a href="" class="header__nav-a">关于我</a>
-        <a href="" class="header__nav-a">我的技能</a>
-        <a href="" class="header__nav-a">获奖/经验</a>
-        <a href="" class="header__nav-a">我的作品</a>
+        <a href="#screen-1" class="header__nav-a nav-list-1">首页</a>
+        <a href="#screen-2" class="header__nav-a nav-list-2">关于我</a>
+        <a href="#screen-3" class="header__nav-a nav-list-3">我的技能</a>
+        <a href="#screen-4" class="header__nav-a nav-list-4">获奖/经验</a>
+        <a href="#screen-5" class="header__nav-a nav-list-5">我的作品</a>
         <div class="header__nav-item-tip"></div>
       </nav>
     </div>
@@ -32,19 +33,19 @@
   </header>
 
   <div class="container">
-    <section class="screen-1">
+    <section class="screen-1" id="screen-1">
       <div class="screen-1__wrap">
         <div class="screen-1__wrap-left">
-          <h2 class="screen-1__wrap-title animated slideInLeft">全栈开发攻城狮&nbsp;&nbsp;-&nbsp;&nbsp;前端兼PHP后端</h2>
+          <h2 class="screen-1__wrap-title">全栈开发攻城狮&nbsp;&nbsp;-&nbsp;&nbsp;前端兼PHP后端</h2>
           <div class="screen-1__wrap-info">
-            <div class="screen-1__wrap-info-left animated slideInRight">
+            <div class="screen-1__wrap-info-left">
               <p class="screen-1__info-key">姓名</p>
               <p class="screen-1__info-key">生日</p>
               <p class="screen-1__info-key">邮箱</p>
               <p class="screen-1__info-key">地址</p>
               <p class="screen-1__info-key">博客</p>
             </div>
-            <div class="screen-1__wrap-info-right  animated slideInLeft">
+            <div class="screen-1__wrap-info-right">
               <p class="screen-1__info-value">郭&nbsp;磊 (arley)</p>
               <p class="screen-1__info-value">1997 - 11 (属牛 天蝎)</p>
               <p class="screen-1__info-value">34805850@qq.com</p>
@@ -53,17 +54,17 @@
             </div>
           </div>
         </div>
-        <div class="screen-1__wrap-right animated jackInTheBox">
+        <div class="screen-1__wrap-right">
 
         </div>
       </div>
     </section>
 
-    <section class="screen-2">
-      <div class="screen-2__title animated fadeInDown">
+    <section class="screen-2" id="screen-2">
+      <div class="screen-2__title">
         <p>关于我 - 我的简历</p>
       </div>
-      <div class="screen2-left swiper-container animated fadeInRight">
+      <div class="screen2-left swiper-container">
         <div class="swiper-wrapper">
 
           <div class="swiper-slide">
@@ -82,9 +83,9 @@
         </div>
         <div class="swiper-pagination"></div>
       </div>
-      <div class="screen2-right animated fadeInLeft">
+      <div class="screen2-right">
         <div class="screen2__info">
-          <h2>hi! I'am Arley.</h2>
+          <h2 id="my-name">hi! I'am Arley.</h2>
           <p>
             本人性格热情开朗，待人友好，为人诚实谦虚。工作勤奋，认真负责，能吃苦耐劳，尽职尽责，有耐心。具有亲和力，平易近人，善于与人沟通。
             学习刻苦认真，成绩优秀，名列前茅。品学兼优，连续三年获得学院奖学金。
@@ -94,7 +95,7 @@
       </div>
     </section>
 
-    <section class="screen-3">
+    <section class="screen-3" id="screen-3">
       <div class="screen-3__title">
         <p>我的技能</p>
       </div>
@@ -200,8 +201,8 @@
       </ul>
     </section>
 
-    <section class="screen-4">
-      <div class="screen-4__title animated fadeInDown">
+    <section class="screen-4" id="screen-4">
+      <div class="screen-4__title">
         <p>获奖/经验</p>
       </div>
       <ul class="screen-4__wrap">
@@ -264,8 +265,8 @@
       </ul>
     </section>
 
-    <section class="screen-5">
-      <div class="screen-5__title animated fadeInDown">
+    <section class="screen-5" id="screen-5">
+      <div class="screen-5__title">
         <p>我的作品</p>
       </div>
       <div class="screen-5__wrap">
