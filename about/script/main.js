@@ -1,10 +1,13 @@
 tipLeft = 8;
 
-var addClass = function (_selector, _className, all = true, n = -1) {
+var addClass = function (_selector, _className, all, n) {
   // var selectorDom = document.querySelector(selector);
   // selectorDom.className = selectorDom.className + " " + className;
   // 上面这样写会导致无限添加class名在标签上
   // n = -1 所有的dom都操作,不然操作 element[n]
+  all = all || true;
+  n = n || -1;
+
   var elements = [];
   if (all == false) {
     elements.push(document.querySelector(_selector));
@@ -31,7 +34,10 @@ var addClass = function (_selector, _className, all = true, n = -1) {
 
 }
 
-var delClass = function (_selector, _className, all = true, n = -1) {
+var delClass = function (_selector, _className, all, n) {
+  all = all || true;
+  n = n || -1;
+  
   var elements = [];
   if (all == false) {
     elements.push(document.querySelector(_selector));
