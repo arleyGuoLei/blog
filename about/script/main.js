@@ -230,8 +230,8 @@ window.onscroll = function () {
     delClass(".header__nav-a", "header__nav-a-active", true, 0);
 
 
-    addAnimate(".screen-5__title", "fadeInDown");
-    addAnimate(".screen-5__wrap", "fadeInUp");
+    addAnimate(".screen-5__title", "fadeInUp");
+    addAnimate(".screen-5__wrap", "fadeInDown");
 
   }
   tipLeft = navTipLeft;
