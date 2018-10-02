@@ -251,7 +251,7 @@
 
     
         <meta property="article:published_time" content="Tue Oct 02 2018 17:32:49 GMT+0800">
-        <meta property="article:modified_time" content="Tue Oct 02 2018 20:32:52 GMT+0800">
+        <meta property="article:modified_time" content="Tue Oct 02 2018 21:06:54 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -274,7 +274,7 @@
     "mainEntityOfPage": "https://i7xy.cn/慕课-所向披靡的响应式-学习笔记/index.html",
     "headline": "慕课 [所向披靡的响应式] 学习笔记",
     "datePublished": "Tue Oct 02 2018 17:32:49 GMT+0800",
-    "dateModified": "Tue Oct 02 2018 20:32:52 GMT+0800",
+    "dateModified": "Tue Oct 02 2018 21:06:54 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "Arley",
@@ -628,6 +628,24 @@ text-shadow: none;
 }
 </code></pre>
 <p><img src="https://i.loli.net/2018/10/02/5bb36569c0340.png" alt="解决方法"></p>
+<ol start="10">
+<li><p>文本一行显示,超过的省略号截断.</p>
+<pre><code class="css">text-overflow: ellipsis;
+overflow: hidden;
+white-space: nowrap;
+</code></pre>
+</li>
+<li><p>为css自动加入浏览器识别前缀:<a href="http://autoprefixer.github.io/" target="_blank" rel="noopener">autoprefixer</a></p>
+</li>
+<li><p>媒体查询</p>
+</li>
+</ol>
+<p>所以设置的常有：</p>
+<pre><code class="css">@media screen and (min-width:1200px)
+@media screen and (min-width:992px)
+@media screen and (min-width:768px)
+@media screen and (min-width:480px)
+</code></pre>
 
         
                 <blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;">
