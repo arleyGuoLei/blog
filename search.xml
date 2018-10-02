@@ -3,6 +3,73 @@
   
     
     <entry>
+      <title>display: inline-block 导致换行</title>
+      <link href="/display-inline-block-%E5%AF%BC%E8%87%B4%E6%8D%A2%E8%A1%8C/"/>
+      <url>/display-inline-block-%E5%AF%BC%E8%87%B4%E6%8D%A2%E8%A1%8C/</url>
+      <content type="html"><![CDATA[<p><code>display: inline-block</code>导致换行:标签与标签之间的换行会占据一定大小,导致换行:看下面的图就知道了.</p><p>比如:</p><pre><code class="html">&lt;!DOCTYPE html&gt;&lt;html lang=&quot;en&quot;&gt;&lt;head&gt;  &lt;meta charset=&quot;UTF-8&quot;&gt;  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;  &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;ie=edge&quot;&gt;  &lt;title&gt;`display: inline-block`导致换行&lt;/title&gt;  &lt;style&gt;    * {      margin: 0;    }    .containter .item:nth-child(1) {      display: inline-block;      width: 33.3333333333333333333%;      background-color: red;      height: 100px;    }    .containter .item:nth-child(2) {      display: inline-block;      width: 33.3333333333333333333%;      background-color: yellow;      height: 100px;    }    .containter .item:nth-child(3) {      display: inline-block;      width: 33.3333333333333333333%;      background-color: blue;      height: 100px;    }  &lt;/style&gt;&lt;/head&gt;&lt;body&gt;  &lt;div class=&quot;containter&quot;&gt;    &lt;div class=&quot;item&quot;&gt;&lt;/div&gt;    &lt;!-- 因为item div之后的换行导致 --&gt;    &lt;div class=&quot;item&quot;&gt;&lt;/div&gt;    &lt;div class=&quot;item&quot;&gt;&lt;/div&gt;  &lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</code></pre><p><img src="https://i.loli.net/2018/10/02/5bb364c011498.png" alt="显示结果"></p><p>解决方法:</p><pre><code class="css">.containter {  font-size: 0;}</code></pre><p><img src="https://i.loli.net/2018/10/02/5bb36569c0340.png" alt="解决方法"></p>]]></content>
+      
+      <categories>
+          
+          <category> 学习笔记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> CSS </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
+      <title>box-shadow 的参数（模糊距离与阴影尺寸的区别）</title>
+      <link href="/box-shadow-%E7%9A%84%E5%8F%82%E6%95%B0%EF%BC%88%E6%A8%A1%E7%B3%8A%E8%B7%9D%E7%A6%BB%E4%B8%8E%E9%98%B4%E5%BD%B1%E5%B0%BA%E5%AF%B8%E7%9A%84%E5%8C%BA%E5%88%AB%EF%BC%89/"/>
+      <url>/box-shadow-%E7%9A%84%E5%8F%82%E6%95%B0%EF%BC%88%E6%A8%A1%E7%B3%8A%E8%B7%9D%E7%A6%BB%E4%B8%8E%E9%98%B4%E5%BD%B1%E5%B0%BA%E5%AF%B8%E7%9A%84%E5%8C%BA%E5%88%AB%EF%BC%89/</url>
+      <content type="html"><![CDATA[<p><code>box-shadow: h-shadow v-shadow blur spread color inset;</code></p><p><code>box-shadow: 水平位移 垂直位移 模糊距离 阴影尺寸 color inset;</code></p><ol><li><p>阴影尺寸:增加边框的宽度(不占据k空间)</p></li><li><p>模糊距离:模糊的圆的半径</p></li></ol><pre><code class="html">&lt;!DOCTYPE html&gt;&lt;html lang=&quot;en&quot;&gt;&lt;head&gt;    &lt;meta charset=&quot;UTF-8&quot; /&gt;    &lt;title&gt;Document&lt;/title&gt;    &lt;style&gt;        .shadow {            box-shadow:green 0 0 100px ;            height: 100px;            width: 100px;            margin: 30px;            float: left;        }        .shadow_inset{            box-shadow:  0 0  100px red inset ;            height: 100px;            width: 100px;            margin: 30px;            float: left;        }    &lt;/style&gt;&lt;/head&gt;&lt;body&gt;    &lt;div class=&quot;shadow&quot;&gt;    &lt;/div&gt;    &lt;div class=&quot;shadow_inset&quot;&gt;    &lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</code></pre>]]></content>
+      
+      <categories>
+          
+          <category> 学习笔记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> CSS </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
+      <title>慕课 [所向披靡的响应式] 学习笔记</title>
+      <link href="/%E6%85%95%E8%AF%BE-%E6%89%80%E5%90%91%E6%8A%AB%E9%9D%A1%E7%9A%84%E5%93%8D%E5%BA%94%E5%BC%8F-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+      <url>/%E6%85%95%E8%AF%BE-%E6%89%80%E5%90%91%E6%8A%AB%E9%9D%A1%E7%9A%84%E5%93%8D%E5%BA%94%E5%BC%8F-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
+      <content type="html"><![CDATA[<ol><li>判断IE版本 -&gt; IE低版本提示兼容,更新浏览器</li></ol><pre><code class="html">&lt;!--[if lte IE8]&gt;&lt;p&gt;版本低&lt;/p&gt;&lt;![endif]--&gt;</code></pre><p><code>lte</code> 小于等于,<code>gte</code> 大于等于</p><ol start="2"><li><p><code>id</code>-&gt;首字母小写的驼峰命名,<code>class</code>-&gt; -连接单词</p></li><li><p>必不可少的图片<code>img</code>引入,k而有可无的装饰性图片<code>css</code>中用样式引入</p></li><li><p>选择文本之后的样式设置</p><pre><code class="css">::selection{background-color: red;text-shadow: none;}</code></pre></li><li><p>清除浮动的方法 - 触发BFC</p></li></ol><ul><li>尾部添加div</li></ul><pre><code class="html">&lt;div style=&quot;clear:both;&quot;&gt;&lt;/div&gt;</code></pre><ul><li>父元素设置样式(子元素设置了浮动)</li></ul><pre><code class="css">overfloat:hidden;//auto</code></pre><p>或</p><pre><code class="css">float:left;</code></pre><ul><li>最佳方法,在父元素结点上加入类<code>clearfix</code>,然后通过<code>after</code>除</li></ul><pre><code class="css">.clearfix:after{  content: &#39; &#39;;  display: block;  height: 0;  visibility: hidden;  clear: both;}</code></pre><p>改进:</p><pre><code class="css">.clearfix:after{  content: &#39; &#39;;  display: table;  clear: both;}</code></pre><ol start="6"><li>防止上下margin叠加</li></ol><pre><code class="css">.clearfix:after,.clearfix:before{  content: &#39; &#39;;  display: table;}.clearfix:after{  clear: both;}</code></pre><ol start="7"><li><p><code>line-height</code>设置高度为<code>rem</code>单位时候会出现高度不符合预期,尽量用px设置(因为浏览器有字体大小下限)</p></li><li><p>第一个li不设置左边框,后面的li设置:<code>+</code></p></li></ol><pre><code class="css">ul li + li{}</code></pre><ol start="9"><li><code>display: inline-block</code>导致换行:标签与标签之间的换行会占据一定大小,导致换行.</li></ol><p>比如:</p><pre><code class="html">&lt;!DOCTYPE html&gt;&lt;html lang=&quot;en&quot;&gt;&lt;head&gt;  &lt;meta charset=&quot;UTF-8&quot;&gt;  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;  &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;ie=edge&quot;&gt;  &lt;title&gt;`display: inline-block`导致换行&lt;/title&gt;  &lt;style&gt;    * {      margin: 0;    }    .containter .item:nth-child(1) {      display: inline-block;      width: 33.3333333333333333333%;      background-color: red;      height: 100px;    }    .containter .item:nth-child(2) {      display: inline-block;      width: 33.3333333333333333333%;      background-color: yellow;      height: 100px;    }    .containter .item:nth-child(3) {      display: inline-block;      width: 33.3333333333333333333%;      background-color: blue;      height: 100px;    }  &lt;/style&gt;&lt;/head&gt;&lt;body&gt;  &lt;div class=&quot;containter&quot;&gt;    &lt;div class=&quot;item&quot;&gt;&lt;/div&gt;    &lt;!-- 因为item div之后的换行导致 --&gt;    &lt;div class=&quot;item&quot;&gt;&lt;/div&gt;    &lt;div class=&quot;item&quot;&gt;&lt;/div&gt;  &lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</code></pre><p><img src="https://i.loli.net/2018/10/02/5bb364c011498.png" alt="显示结果"></p><p>解决方法:</p><pre><code class="css">.containter {  font-size: 0;}</code></pre><p><img src="https://i.loli.net/2018/10/02/5bb36569c0340.png" alt="解决方法"></p>]]></content>
+      
+      <categories>
+          
+          <category> 学习笔记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> CSS </tag>
+            
+            <tag> 学习笔记 </tag>
+            
+            <tag> html </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
       <title>Idea 导出单个类为jar包,并在其他类中import使用</title>
       <link href="/Idea-%E5%AF%BC%E5%87%BA%E5%8D%95%E4%B8%AA%E7%B1%BB%E4%B8%BAjar%E5%8C%85-%E5%B9%B6%E5%9C%A8%E5%85%B6%E4%BB%96%E7%B1%BB%E4%B8%ADimport%E4%BD%BF%E7%94%A8/"/>
       <url>/Idea-%E5%AF%BC%E5%87%BA%E5%8D%95%E4%B8%AA%E7%B1%BB%E4%B8%BAjar%E5%8C%85-%E5%B9%B6%E5%9C%A8%E5%85%B6%E4%BB%96%E7%B1%BB%E4%B8%ADimport%E4%BD%BF%E7%94%A8/</url>
@@ -174,9 +241,9 @@
       
         <tags>
             
-            <tag> 学习笔记 </tag>
-            
             <tag> CSS </tag>
+            
+            <tag> 学习笔记 </tag>
             
         </tags>
       
@@ -333,9 +400,9 @@
       
         <tags>
             
-            <tag> 学习笔记 </tag>
-            
             <tag> CSS </tag>
+            
+            <tag> 学习笔记 </tag>
             
         </tags>
       
@@ -379,9 +446,9 @@
       
         <tags>
             
-            <tag> 学习笔记 </tag>
-            
             <tag> CSS </tag>
+            
+            <tag> 学习笔记 </tag>
             
         </tags>
       
@@ -694,16 +761,16 @@
     </entry>
     
     <entry>
-      <title>时间轴</title>
-      <link href="/timeline/index.html"/>
-      <url>/timeline/index.html</url>
+      <title>标签云</title>
+      <link href="/tags/index.html"/>
+      <url>/tags/index.html</url>
       <content type="html"><![CDATA[]]></content>
     </entry>
     
     <entry>
-      <title>标签云</title>
-      <link href="/tags/index.html"/>
-      <url>/tags/index.html</url>
+      <title>时间轴</title>
+      <link href="/timeline/index.html"/>
+      <url>/timeline/index.html</url>
       <content type="html"><![CDATA[]]></content>
     </entry>
     
