@@ -251,7 +251,7 @@
 
     
         <meta property="article:published_time" content="Tue Oct 02 2018 17:32:49 GMT+0800">
-        <meta property="article:modified_time" content="Tue Oct 02 2018 21:56:43 GMT+0800">
+        <meta property="article:modified_time" content="Wed Oct 03 2018 22:20:46 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -274,7 +274,7 @@
     "mainEntityOfPage": "https://i7xy.cn/慕课-所向披靡的响应式-学习笔记/index.html",
     "headline": "慕课 [所向披靡的响应式] 学习笔记",
     "datePublished": "Tue Oct 02 2018 17:32:49 GMT+0800",
-    "dateModified": "Tue Oct 02 2018 21:56:43 GMT+0800",
+    "dateModified": "Wed Oct 03 2018 22:20:46 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "Arley",
@@ -498,7 +498,7 @@
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
         <p>1.判断IE版本 -&gt; IE低版本提示兼容,更新浏览器</p>
-<pre><code class="html">&lt;!--[if lte IE8]&gt;
+<pre><code class="html">&lt;!--[if lte IE 8]&gt;
 &lt;p&gt;版本低&lt;/p&gt;
 &lt;![endif]--&gt;
 </code></pre>
@@ -625,6 +625,23 @@ white-space: nowrap;
 @media screen and (min-width:768px)
 @media screen and (min-width:480px)
 </code></pre>
+<p>14.响应式图片</p>
+<blockquote>
+<p>为了兼容所有低版本浏览器,引入<a href="http://scottjehl.github.io/picturefill/" target="_blank" rel="noopener">picturefill</a>库</p>
+</blockquote>
+<pre><code class="html">&lt;picture&gt;
+  &lt;source srcset=&quot;bigest.png&quot; media=&quot;(min-width:50em)&quot;&gt;
+  &lt;source srcset=&quot;big.png&quot; media=&quot;(min-width:30em)&quot;&gt;
+  &lt;img srcset=&quot;other.png&quot; alt=&quot;&quot;&gt;
+&lt;/picture&gt;
+</code></pre>
+<p>15.在线压缩图片:<a href="http://pngtiny.com/" target="_blank" rel="noopener">pngtiny</a></p>
+<p>16.nodejs和npm</p>
+<p><code>npm install xxx</code> -&gt; <code>npm i xxx</code><br><code>npm i xxx -g</code><br><code>npm i xxx --save</code><br><code>npm i xxx --save-dev</code></p>
+<p>17.<a href="https://modernizr.com/" target="_blank" rel="noopener">modernizr</a></p>
+<p>18.<a href="https://caniuse.com/" target="_blank" rel="noopener">caniuse</a></p>
+<p>19.<a href="http://browsersync.cn/" target="_blank" rel="noopener">browsersync</a></p>
+<p>20.<a href="https://www.gulpjs.com.cn/" target="_blank" rel="noopener">gulpjs</a></p>
 
         
                 <blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;">
