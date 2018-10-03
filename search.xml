@@ -747,13 +747,6 @@
   
     
     <entry>
-      <title>Arley&#39;s About</title>
-      <link href="/about/index.html"/>
-      <url>/about/index.html</url>
-      <content type="html"><![CDATA[]]></content>
-    </entry>
-    
-    <entry>
       <title>Arley&#39;s Inc</title>
       <link href="/gallery/index.html"/>
       <url>/gallery/index.html</url>
@@ -771,6 +764,13 @@
       <title>时间轴</title>
       <link href="/timeline/index.html"/>
       <url>/timeline/index.html</url>
+      <content type="html"><![CDATA[]]></content>
+    </entry>
+    
+    <entry>
+      <title>Arley&#39;s About</title>
+      <link href="/about-hexo/index.html"/>
+      <url>/about-hexo/index.html</url>
       <content type="html"><![CDATA[]]></content>
     </entry>
     
