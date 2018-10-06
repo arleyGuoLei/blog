@@ -1,0 +1,223 @@
+/*
+* 大 >768px
+* 中 425 < x＜=768
+* 小 <=425px
+*/
+/*-----------------*/
+.cleanfix:before,
+.cleanfix:after {
+    display: table;
+    content: ' ';
+}
+
+.cleanfix:after {
+    clear: both;
+}
+
+/*-----------------*/
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+@media screen and (min-width: 768px) {
+    .container {
+        max-width: 1080px;
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .container{
+        box-sizing: border-box;
+        padding: 0 1rem;
+    }
+}
+
+
+.title {
+    color: #47a3da;
+    font-weight: 500;
+    margin-top: 2.5rem;
+}
+@media screen and (max-width: 768px){
+    .title{
+        text-align: center;
+        margin-top: 1.5rem;
+    }
+}
+
+.main {
+    margin-top: 5rem;
+    position: relative;
+}
+
+.item-all:before {
+    position: absolute;
+    content: ' ';
+    width: .5rem;
+    height: 100%;
+    background-color: #afdcf8;
+    left: 25%;
+    top: 0;
+    bottom: 0;
+}
+@media screen and (max-width: 768px) and  (min-width: 425px){
+    .item-all:before {
+        left: 22%;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .item-all:before {
+        display: none;
+    }
+    .main {
+        margin-top: 2rem;
+    }
+}
+.item-all .item:nth-child(2n) .right-wrap,
+.item-all .item:nth-child(2n) .item-right:before {
+    background-color: #3594CB;
+}
+
+.item-all .item:nth-child(2n+1) .right-wrap,
+.item-all .item:nth-child(2n+1) .item-right:before {
+    background-color: #6CBFEE;
+}
+.item-all{
+    padding: 0;
+}
+.item {
+    list-style: none;
+    position: relative;
+    margin-bottom: 2rem;
+}
+@media screen and (max-width: 768px) and (min-width: 425px){
+    .item {
+        margin-bottom: 1rem;
+    }
+}
+.item-left {
+    float: left;
+    width: 30%;
+    padding-right: 5rem;
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+}
+@media screen and (max-width: 768px) and (min-width: 425px){
+    .item-left {
+        padding-right: 10%;
+    }
+}
+.item-right {
+    float: right;
+    width: 70%;
+    position: relative;
+}
+
+.left-data {
+    font-size: 1rem;
+    color: #bdd0db;
+    display: block;
+    text-align: right;
+}
+@media screen and (max-width: 768px) and (min-width: 425px){
+    .left-data {
+        text-align: left;
+    }
+}
+.item-all .item:nth-child(2n) .left-time {
+    color: #3594CB;
+}
+.item-all .item:nth-child(2n+1) .left-time {
+    color: #6CBFEE;
+}
+.left-time {
+    display: block;
+    text-align: right;
+    font-size: 3rem;
+    font-weight: 400;
+    margin-top: .2rem;
+}
+@media screen and (max-width: 768px) and (min-width: 425px){
+    .left-time {
+        font-size: 2rem;
+        text-align: left;
+    }
+}
+
+
+.right-wrap {
+    /*background-color: #6CBFEE;*/
+    border-radius: .4rem;
+    padding: 2rem;
+}
+
+.item-right:before {
+    position: absolute;
+    content: ' ';
+    display: block;
+    width: 1.2rem;
+    height: 1.2rem;
+    /*background-color: #6CBFEE;*/
+    left: -.5rem;
+    top: 2rem;
+    transform: rotate(45deg);
+}
+
+.right-title {
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+.right-title:after {
+    content: ' ';
+    display: block;
+    height: 1px;
+    background-color: #ffffff;
+    margin-top: .8rem;
+}
+
+.right-desc {
+    color: #ffffff;
+    line-height: 1.5;
+}
+
+@media screen and (max-width: 425px) {
+    .item-left {
+        float: none;
+        width: 100%;
+        display: block;
+        position: relative;
+    }
+    .item-right {
+        float: none;
+        width: 100%;
+        display: block;
+        position: relative;
+        margin-top: 1rem;
+    }
+    .left-time{
+        text-align: left;
+        font-size: 2rem;
+    }
+    .left-data{
+        text-align: left;
+    }
+    .item-right:before {
+        position: absolute;
+        content: ' ';
+        display: block;
+        width: 1.2rem;
+        height: 1.2rem;
+        /* background-color: #6CBFEE; */
+        left: 2rem;
+        top: -.5rem;
+        transform: rotate(45deg);
+    }
+}

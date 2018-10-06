@@ -1,0 +1,2041 @@
+<!DOCTYPE html>
+<html style="display: none;" lang="zh">
+    <head>
+    <meta charset="utf-8">
+    <!--
+        © Material Theme
+        https://github.com/viosey/hexo-theme-material
+        Version: 1.5.6 -->
+    <script>
+        window.materialVersion = "1.5.6"
+        // Delete localstorage with these tags
+        window.oldVersion = [
+            'codestartv1',
+            '1.3.4',
+            '1.4.0',
+            '1.4.0b1',
+            '1.5.0',
+            '1.5.2',
+            '1.5.5'
+        ]
+    </script>
+
+    <!-- dns prefetch -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+
+
+
+
+
+    <link rel="dns-prefetch" href="https://changyan.sohu.com"/>
+
+
+
+    <link rel="dns-prefetch" href="https://s95.cnzz.com"/>
+
+
+
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com"/>
+
+
+
+
+
+    <!-- Meta & Info -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!-- Title -->
+    
+    <title>
+        
+            记一次原生css3实现响应式布局 - timeLine | 
+        
+        Arley&#39;s Blog (小磊同学博客)
+    </title>
+
+    <!-- Favicons -->
+    <link rel="icon shortcut" type="image/ico" href="/img/favicon.png">
+    <link rel="icon" href="/img/logo.png">
+
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="description" itemprop="description" content="小程序全栈开发者/伪极客/灵魂摄影师，热爱技术&amp;生活，很高兴能在这里与你分享我对技术和生活的思考。">
+    <meta name="keywords" content="Arley&#39;s Blog,小磊同学,郭磊博客,郭磊技术分享,小程序博客,前端技术博客,CSS,实战笔记">
+    <meta name="theme-color" content="#619DDE">
+
+    <!-- Disable Fucking Bloody Baidu Tranformation -->
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+
+        
+            <script src="/js/ie-blocker.zhCN.js"></script>
+        
+    <![endif]-->
+
+    <!-- Import lsloader -->
+    <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(a){try{localStorage.removeItem(a)}catch(b){}};lsloader.setLS=function(a,c){try{localStorage.setItem(a,c)}catch(b){}};lsloader.getLS=function(a){var c="";try{c=localStorage.getItem(a)}catch(b){c=""}return c};versionString="/*"+(window.materialVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var b=[];for(var a=0;a<localStorage.length;a++){b.push(localStorage.key(a))}b.forEach(function(e){var f=lsloader.getLS(e);if(window.oldVersion){var d=window.oldVersion.reduce(function(g,h){return g||f.indexOf("/*"+h+"*/")!==-1},false);if(d){lsloader.removeLS(e)}}})}catch(c){}};lsloader.clean();lsloader.load=function(f,a,b,d){if(typeof b==="boolean"){d=b;b=undefined}d=d||false;b=b||function(){};var e;e=this.getLS(f);if(e&&e.indexOf(versionString)===-1){this.removeLS(f);this.requestResource(f,a,b,d);return}if(e){var c=e.split(versionString)[0];if(c!=a){console.log("reload:"+a);this.removeLS(f);this.requestResource(f,a,b,d);return}e=e.split(versionString)[1];if(d){this.jsRunSequence.push({name:f,code:e});this.runjs(a,f,e)}else{document.getElementById(f).appendChild(document.createTextNode(e));b()}}else{this.requestResource(f,a,b,d)}};lsloader.requestResource=function(b,e,a,c){var d=this;if(c){this.iojs(e,b,function(h,f,g){d.setLS(f,h+versionString+g);d.runjs(h,f,g)})}else{this.iocss(e,b,function(f){document.getElementById(b).appendChild(document.createTextNode(f));d.setLS(b,e+versionString+f)},a)}};lsloader.iojs=function(d,b,g){var a=this;a.jsRunSequence.push({name:b,code:""});try{var f=new XMLHttpRequest();f.open("get",d,true);f.onreadystatechange=function(){if(f.readyState==4){if((f.status>=200&&f.status<300)||f.status==304){if(f.response!=""){g(d,b,f.response);return}}a.jsfallback(d,b)}};f.send(null)}catch(c){a.jsfallback(d,b)}};lsloader.iocss=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.iofonts=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.runjs=function(f,c,e){if(!!c&&!!e){for(var b in this.jsRunSequence){if(this.jsRunSequence[b].name==c){this.jsRunSequence[b].code=e}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var a=document.createElement("script");a.appendChild(document.createTextNode(this.jsRunSequence[0].code));a.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(a);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else{if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var d=this;var a=document.createElement("script");a.src=this.jsRunSequence[0].path;a.type="text/javascript";this.jsRunSequence[0].status="loading";a.onload=function(){d.jsRunSequence.shift();if(d.jsRunSequence.length>0){d.runjs()}};document.body.appendChild(a)}}};lsloader.tagLoad=function(b,a){this.jsRunSequence.push({name:a,code:"",path:b,status:"failed"});this.runjs()};lsloader.jsfallback=function(c,b){if(!!this.jsnamemap[b]){return}else{this.jsnamemap[b]=b}for(var a in this.jsRunSequence){if(this.jsRunSequence[a].name==b){this.jsRunSequence[a].code="";this.jsRunSequence[a].status="failed";this.jsRunSequence[a].path=c}}this.runjs()};lsloader.cssfallback=function(e,c,b){if(!!this.cssnamemap[c]){return}else{this.cssnamemap[c]=1}var d=document.createElement("link");d.type="text/css";d.href=e;d.rel="stylesheet";d.onload=d.onerror=b;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(d,a)};lsloader.runInlineScript=function(c,b){var a=document.getElementById(b).innerText;this.jsRunSequence.push({name:c,code:a});this.runjs()}})();</script>
+
+    <!-- Import queue -->
+    <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
+
+    <!-- Import CSS -->
+    
+        <style id="material_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_css","/css/material.min.css?Z7a72R1E4SxzBKR/WGctOA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+        <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?NKhlKQkXw/c66TR5p4wO+w==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+        
+            
+                <style id="prettify_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("prettify_css","/css/prettify.min.css?zp8STOU9v89XWFEnN+6YmQ==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+                <style id="prettify_theme"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("prettify_theme","/css/prettify/atelier-estuary-light.min.css?ZQObwZXHH6Mt8MNbyQJYfQ==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+            
+        
+
+    
+
+    
+
+    <!-- Config CSS -->
+
+<!-- Other Styles -->
+<style>
+  body, html {
+    font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    overflow-x: hidden !important;
+  }
+  
+  code {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  }
+
+  a {
+    color: #619DDE;
+  }
+
+  .mdl-card__media,
+  #search-label,
+  #search-form-label:after,
+  #scheme-Paradox .hot_tags-count,
+  #scheme-Paradox .sidebar_archives-count,
+  #scheme-Paradox .sidebar-colored .sidebar-header,
+  #scheme-Paradox .sidebar-colored .sidebar-badge{
+    background-color: #619DDE !important;
+  }
+
+  /* Sidebar User Drop Down Menu Text Color */
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
+    color: #619DDE !important;
+  }
+
+  #post_entry-right-info,
+  .sidebar-colored .sidebar-nav li:hover > a,
+  .sidebar-colored .sidebar-nav li:hover > a i,
+  .sidebar-colored .sidebar-nav li > a:hover,
+  .sidebar-colored .sidebar-nav li > a:hover i,
+  .sidebar-colored .sidebar-nav li > a:focus i,
+  .sidebar-colored .sidebar-nav > .open > a,
+  .sidebar-colored .sidebar-nav > .open > a:hover,
+  .sidebar-colored .sidebar-nav > .open > a:focus,
+  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
+    color: #619DDE !important;
+  }
+
+  .toTop {
+    background: #595959 !important;
+  }
+
+  .material-layout .material-post>.material-nav,
+  .material-layout .material-index>.material-nav,
+  .material-nav a {
+    color: #595959;
+  }
+
+  #scheme-Paradox .MD-burger-layer {
+    background-color: #595959;
+  }
+
+  #scheme-Paradox #post-toc-trigger-btn {
+    color: #595959;
+  }
+
+  .post-toc a:hover {
+    color: #619DDE;
+    text-decoration: underline;
+  }
+
+</style>
+
+
+<!-- Theme Background Related-->
+
+    <style>
+      body{
+        background-color: #f8f8f8;
+      }
+
+      /* blog_info bottom background */
+      #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text{
+        background-color: #fff;
+      }
+    </style>
+
+
+
+
+<!-- Fade Effect -->
+
+    <style>
+      .fade {
+        transition: all 800ms linear;
+        -webkit-transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        -o-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        opacity: 1;
+      }
+
+      .fade.out{
+        opacity: 0;
+      }
+    </style>
+
+
+<!-- Import Font -->
+<!-- Import Roboto -->
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+
+
+<!-- Import Material Icons -->
+
+
+    <style id="material_icons"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_icons","/css/material-icons.css?pqhB/Rd/ab0H2+kZp0RDmw==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+
+
+
+    <!-- Import jQuery -->
+    
+        <script>lsloader.load("jq_js","/js/jquery.min.js?qcusAULNeBksqffqUM2+Ig==", true)</script>
+    
+
+    <!-- WebAPP Icons -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="Arley&#39;s Blog (小磊同学博客)">
+    <meta name="msapplication-starturl" content="https://i7xy.cn/记一次原生css3实现响应式布局-timeLine/">
+    <meta name="msapplication-navbutton-color" content="#619DDE">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="Arley&#39;s Blog (小磊同学博客)">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon" href="/img/logo.png">
+
+    <!-- Site Verification -->
+    
+    <meta name="baidu-site-verification" content="RX4cJpJSKB" />
+
+    <!-- RSS -->
+    
+
+    <!-- The Open Graph protocol -->
+    <meta property="og:url" content="https://i7xy.cn/记一次原生css3实现响应式布局-timeLine/">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="记一次原生css3实现响应式布局 - timeLine | Arley&#39;s Blog (小磊同学博客)">
+    <meta property="og:image" content="/img/logo.png">
+    <meta property="og:description" content="小程序全栈开发者/伪极客/灵魂摄影师，热爱技术&amp;生活，很高兴能在这里与你分享我对技术和生活的思考。">
+    <meta property="og:article:tag" content="CSS"> <meta property="og:article:tag" content="实战笔记"> 
+
+    
+        <meta property="article:published_time" content="Sat Oct 06 2018 16:40:44 GMT+0800">
+        <meta property="article:modified_time" content="Sat Oct 06 2018 16:50:27 GMT+0800">
+    
+
+    <!-- The Twitter Card protocol -->
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Add canonical link for SEO -->
+    
+        <link rel="canonical" href="https://i7xy.cn/记一次原生css3实现响应式布局-timeLine/index.html" />
+    
+
+    <!-- Structured-data for SEO -->
+    
+        
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "https://i7xy.cn/记一次原生css3实现响应式布局-timeLine/index.html",
+    "headline": "记一次原生css3实现响应式布局 - timeLine",
+    "datePublished": "Sat Oct 06 2018 16:40:44 GMT+0800",
+    "dateModified": "Sat Oct 06 2018 16:50:27 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "Arley",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/avatar.png"
+        },
+        "description": "学不思罔，思不学殆"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "Arley&#39;s Blog (小磊同学博客)",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/logo.png"
+        }
+    },
+    "keywords": ",CSS,实战笔记Arley&#39;s Blog,小磊同学,郭磊博客,郭磊技术分享,小程序博客,前端技术博客",
+    "description": "小程序全栈开发者/伪极客/灵魂摄影师，热爱技术&amp;生活，很高兴能在这里与你分享我对技术和生活的思考。",
+}
+</script>
+
+
+    
+
+    <!-- Analytics -->
+    
+    
+    
+        <div style="display: none;">
+    <script src="//s95.cnzz.com/z_stat.php?id=1274340778&web_id=1274340778" language="JavaScript"></script>
+</div>
+    
+
+    <!-- Custom Head -->
+    
+
+</head>
+
+
+    
+        <body id="scheme-Paradox" class="lazy">
+            <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
+                
+
+                <!-- Main Container -->
+                <main class="material-layout__content" id="main">
+
+                    <!-- Top Anchor -->
+                    <div id="top"></div>
+
+                    
+                        <!-- Hamburger Button -->
+                        <button class="MD-burger-icon sidebar-toggle">
+                            <span id="MD-burger-id" class="MD-burger-layer"></span>
+                        </button>
+                    
+
+                    <!-- Post TOC -->
+
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#readme"><span class="post-toc-number">1.</span> <span class="post-toc-text">readme</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#我的代码"><span class="post-toc-number">2.</span> <span class="post-toc-text">我的代码</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#老师的代码"><span class="post-toc-number">3.</span> <span class="post-toc-text">老师的代码</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#normalize"><span class="post-toc-number">4.</span> <span class="post-toc-text">normalize</span></a></li></ol>
+    </ul>
+    
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
+    
+        
+            <!-- Random Thumbnail -->
+            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
+
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').addClass('lazy');
+</script>
+
+        
+    
+            <p class="article-headline-p">
+                记一次原生css3实现响应式布局 - timeLine
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/avatar.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>Arley</strong>
+        <span>10月 06, 2018</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+        <button id="article-functions-qrcode-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">devices other</i>
+    <span class="visuallyhidden">devices other</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
+    <li class="mdl-menu__item">在其它设备中阅读本文章</li>
+    
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPYAAAD2CAAAAADAeSUUAAAC0UlEQVR42u3aW1LjUAwFwOx/0zMbwM6RFMBctb8oMPZtpQqhx+vfyuuFjY2NjY2NjY2N/Uj2K76u7v/iBbf33z//6jmTM2NjY2NvYL/50397zxcvuGBHaWYQjjenwsbGxl7Avk9a1RBUn3CZeOKw3r8FGxsbGzs56Lw4SdIeNjY2NvZ3s5NyYpL2sLGxsbEnDZqkMPi+AP1aLw0bGxv78ezqoPcJX//CfBsbGxv7kezJlQ9iJwOGanq7fDI2Njb2oez5CDZp7vda/+ViY9JLw8bGxv6z7PxB99+pDgN6QcxDjI2Njb2Hnaw8FoapwU8/PL6NVzyxsbGxT2X3WkVJYusNepP01jwDNjY29qHsPG3kA+CkeTRPafmYARsbG3sDu7eCWQ1NtfiZBx0bGxt7A7s3fM0Xa+ZpbzKKxsbGxt7Drq7a5OPVanCryz1JKLGxsbHPZk/+6c8DMS9Rct4HxgPY2NjYf5bdG6wmmGpZ0is/3pwEGxsb+1B2wugND6oFxvwDKI8HsLGxsY9gT0qC+YpPddGnOmzAxsbG3sauUvMEkwcuKS2aIcPGxsY+lJ0cNGnW542hHq9aGmFjY2PvYfda/HnDKH9aHpTqh4GNjY19Njtp9/ca/T9ZukSnwsbGxj6UnazOJA+tBjFBzscY2NjY2BvY1WZQ9RD3ofzUelBzUwkbGxv7CPZ8+Jq/eFLA5OHDxsbG3sauDn2TRNULQS+N5b+FjY2NfSp7gumRJmOJUZiwsbGxD2VXr2ScUCX90J3Y2NjYh7J7TaXq0DdpTuXFTL7ciY2Njb2HPWkz5eVHnurmZ8DGxsbeyS4MTVsj2F44eu2kaL6NjY2NvZg9KTmSlZ2kCCmXQ9jY2NjY8f15udJrG/UGFdjY2Ngb2J8d0CYDgDwEvfSGjY2NvYc9bwBNlniqS59J+RElMGxsbOwj2HsubGxsbGxsbGxs7Mdc/wHuk0lLh/WTYAAAAABJRU5ErkJggg==">
+    
+</ul>
+
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/CSS/">CSS</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/实战笔记/">实战笔记</a>
+    </ul>
+    
+
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=记一次原生css3实现响应式布局 - timeLine&url=https://i7xy.cn/记一次原生css3实现响应式布局-timeLine/index.html&pic=https://i7xy.cn/img/favicon.png&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+
+    <!-- Share Facebook -->
+    
+
+    <!-- Share Google+ -->
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=Arley&#39;s Blog (小磊同学博客)&title=记一次原生css3实现响应式布局 - timeLine&summary=小程序全栈开发者/伪极客/灵魂摄影师，热爱技术&amp;生活，很高兴能在这里与你分享我对技术和生活的思考。&pics=https://i7xy.cn/img/favicon.png&url=https://i7xy.cn/记一次原生css3实现响应式布局-timeLine/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 QQ
+            </li>
+        </a>
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+    
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <h4 id="readme"><a href="#readme" class="headerlink" title="readme"></a>readme</h4><blockquote>
+<p>响应式感觉就是类似css样式覆盖,从上到下,如果下面的css的媒体查询满足,就生效覆盖以前的样式.看完慕课网的响应式布局教程一系列的,老师留下的timeLine响应页面布局,手动试了试,和老师代码出入很多,写完才看的老师代码.下面贴代码</p>
+</blockquote>
+<p>1.分大 - 中 - 小 三种样式</p>
+<ul>
+<li>大 &gt;768px</li>
+<li>中 425 &lt; x＜=768</li>
+<li>小 &lt;=425px</li>
+</ul>
+<p>2.老师给的设计图<br><img src="https://i.loli.net/2018/10/06/5bb876513e752.png" alt="大"></p>
+<p><img src="https://i.loli.net/2018/10/06/5bb87661e6cd2.png" alt="中"></p>
+<p><img src="https://i.loli.net/2018/10/06/5bb8767c2792b.png" alt="小"></p>
+<h4 id="我的代码"><a href="#我的代码" class="headerlink" title="我的代码"></a>我的代码</h4><pre><code class="html">&lt;!doctype html&gt;
+&lt;html lang=&quot;zh-CN&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot;
+          content=&quot;width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0&quot;&gt;
+    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;ie=edge&quot;&gt;
+    &lt;title&gt;Time-line&lt;/title&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;./css/normalize.css&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;./css/main.css&quot;&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div class=&quot;container&quot;&gt;
+    &lt;header&gt;
+        &lt;h1 class=&quot;title&quot;&gt;Responsive Timeline&lt;/h1&gt;
+    &lt;/header&gt;
+    &lt;section class=&quot;main&quot;&gt;
+        &lt;ul class=&quot;item-all&quot;&gt;
+            &lt;li class=&quot;item cleanfix&quot;&gt;
+                &lt;div class=&quot;item-left&quot;&gt;
+                    &lt;span class=&quot;left-data&quot;&gt;2018-10-05&lt;/span&gt;
+                    &lt;span class=&quot;left-time&quot;&gt;14:10&lt;/span&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;item-right&quot;&gt;
+                    &lt;div class=&quot;right-wrap&quot;&gt;
+                        &lt;p class=&quot;right-title&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque,
+                            iste.&lt;/p&gt;
+                        &lt;p class=&quot;right-desc&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur eius
+                            illum libero maiores nam optio, praesentium provident sit suscipit! Aliquam animi asperiores
+                            consequuntur eaque facere, fugiat ipsa, ipsum libero magni officiis praesentium provident
+                            sequi suscipit vitae voluptatem voluptates voluptatibus. Beatae commodi cumque dignissimos
+                            doloremque ea facere id impedit ipsum iure mollitia natus pariatur, possimus quidem tempora
+                            vero? Dolorem, enim eos esse et eveniet excepturi iste laboriosam laudantium odit sit
+                            temporibus velit, veritatis voluptatem. Alias animi dicta ducimus, ipsam quidem repudiandae
+                            sint? Architecto atque beatae, consequuntur debitis nihil odit quo similique tenetur
+                            voluptates! Ad beatae, commodi illo molestiae quisquam sed veniam.&lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/li&gt;
+
+            &lt;li class=&quot;item cleanfix&quot;&gt;
+                &lt;div class=&quot;item-left&quot;&gt;
+                    &lt;span class=&quot;left-data&quot;&gt;2018-10-05&lt;/span&gt;
+                    &lt;span class=&quot;left-time&quot;&gt;15:30&lt;/span&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;item-right&quot;&gt;
+                    &lt;div class=&quot;right-wrap&quot;&gt;
+                        &lt;p class=&quot;right-title&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque,
+                            odio.&lt;/p&gt;
+                        &lt;p class=&quot;right-desc&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur
+                            dolorum enim id maxime quas qui reprehenderit sequi unde voluptatum. Accusantium consectetur
+                            ea impedit ipsam laboriosam perspiciatis quam! Architecto asperiores dolores doloribus
+                            ducimus enim esse fuga, harum iste iure libero maiores odit, officiis quae quibusdam quis
+                            sint veniam. Aperiam cupiditate, enim esse eum exercitationem fuga iste iusto perspiciatis
+                            sequi voluptatem! Aliquid animi asperiores at corporis, dolores eligendi laudantium libero
+                            minus non nostrum odio porro quo rem repellat sapiente sed sint, unde?&lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/li&gt;
+
+            &lt;li class=&quot;item cleanfix&quot;&gt;
+                &lt;div class=&quot;item-left&quot;&gt;
+                    &lt;span class=&quot;left-data&quot;&gt;2018-10-05&lt;/span&gt;
+                    &lt;span class=&quot;left-time&quot;&gt;16:40&lt;/span&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;item-right&quot;&gt;
+                    &lt;div class=&quot;right-wrap&quot;&gt;
+                        &lt;p class=&quot;right-title&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit.&lt;/p&gt;
+                        &lt;p class=&quot;right-desc&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur autem
+                            cumque delectus, dolor doloribus ducimus eius error esse expedita explicabo hic incidunt
+                            laboriosam laudantium non obcaecati odio quae quam, quidem rem similique sit sunt temporibus
+                            ullam veritatis voluptate voluptatem, voluptatum. Aut commodi, debitis distinctio dolorum,
+                            ducimus eius eum excepturi facere fuga impedit molestias nam odio optio praesentium
+                            quibusdam quisquam reprehenderit repudiandae rerum saepe sint suscipit totam veniam. At
+                            dolores maxime officia quas repellendus rerum tempora tenetur? Aspernatur consectetur
+                            doloremque ea inventore maxime, sequi suscipit! Distinctio et numquam temporibus.&lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/section&gt;
+&lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<pre><code class="CSS">/*
+* 大 &gt;768px
+* 中 425 &lt; x＜=768
+* 小 &lt;=425px
+*/
+/*-----------------*/
+.cleanfix:before,
+.cleanfix:after {
+    display: table;
+    content: &#39; &#39;;
+}
+
+.cleanfix:after {
+    clear: both;
+}
+
+/*-----------------*/
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+@media screen and (min-width: 768px) {
+    .container {
+        max-width: 1080px;
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .container{
+        box-sizing: border-box;
+        padding: 0 1rem;
+    }
+}
+
+
+.title {
+    color: #47a3da;
+    font-weight: 500;
+    margin-top: 2.5rem;
+}
+@media screen and (max-width: 768px){
+    .title{
+        text-align: center;
+        margin-top: 1.5rem;
+    }
+}
+
+.main {
+    margin-top: 5rem;
+    position: relative;
+}
+
+.item-all:before {
+    position: absolute;
+    content: &#39; &#39;;
+    width: .5rem;
+    height: 100%;
+    background-color: #afdcf8;
+    left: 25%;
+    top: 0;
+    bottom: 0;
+}
+@media screen and (max-width: 768px) and  (min-width: 425px){
+    .item-all:before {
+        left: 22%;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .item-all:before {
+        display: none;
+    }
+    .main {
+        margin-top: 2rem;
+    }
+}
+.item-all .item:nth-child(2n) .right-wrap,
+.item-all .item:nth-child(2n) .item-right:before {
+    background-color: #3594CB;
+}
+
+.item-all .item:nth-child(2n+1) .right-wrap,
+.item-all .item:nth-child(2n+1) .item-right:before {
+    background-color: #6CBFEE;
+}
+.item-all{
+    padding: 0;
+}
+.item {
+    list-style: none;
+    position: relative;
+    margin-bottom: 2rem;
+}
+@media screen and (max-width: 768px) and (min-width: 425px){
+    .item {
+        margin-bottom: 1rem;
+    }
+}
+.item-left {
+    float: left;
+    width: 30%;
+    padding-right: 5rem;
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+}
+@media screen and (max-width: 768px) and (min-width: 425px){
+    .item-left {
+        padding-right: 10%;
+    }
+}
+.item-right {
+    float: right;
+    width: 70%;
+    position: relative;
+}
+
+.left-data {
+    font-size: 1rem;
+    color: #bdd0db;
+    display: block;
+    text-align: right;
+}
+@media screen and (max-width: 768px) and (min-width: 425px){
+    .left-data {
+        text-align: left;
+    }
+}
+.item-all .item:nth-child(2n) .left-time {
+    color: #3594CB;
+}
+.item-all .item:nth-child(2n+1) .left-time {
+    color: #6CBFEE;
+}
+.left-time {
+    display: block;
+    text-align: right;
+    font-size: 3rem;
+    font-weight: 400;
+    margin-top: .2rem;
+}
+@media screen and (max-width: 768px) and (min-width: 425px){
+    .left-time {
+        font-size: 2rem;
+        text-align: left;
+    }
+}
+
+
+.right-wrap {
+    /*background-color: #6CBFEE;*/
+    border-radius: .4rem;
+    padding: 2rem;
+}
+
+.item-right:before {
+    position: absolute;
+    content: &#39; &#39;;
+    display: block;
+    width: 1.2rem;
+    height: 1.2rem;
+    /*background-color: #6CBFEE;*/
+    left: -.5rem;
+    top: 2rem;
+    transform: rotate(45deg);
+}
+
+.right-title {
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+.right-title:after {
+    content: &#39; &#39;;
+    display: block;
+    height: 1px;
+    background-color: #ffffff;
+    margin-top: .8rem;
+}
+
+.right-desc {
+    color: #ffffff;
+    line-height: 1.5;
+}
+
+@media screen and (max-width: 425px) {
+    .item-left {
+        float: none;
+        width: 100%;
+        display: block;
+        position: relative;
+    }
+    .item-right {
+        float: none;
+        width: 100%;
+        display: block;
+        position: relative;
+        margin-top: 1rem;
+    }
+    .left-time{
+        text-align: left;
+        font-size: 2rem;
+    }
+    .left-data{
+        text-align: left;
+    }
+    .item-right:before {
+        position: absolute;
+        content: &#39; &#39;;
+        display: block;
+        width: 1.2rem;
+        height: 1.2rem;
+        /* background-color: #6CBFEE; */
+        left: 2rem;
+        top: -.5rem;
+        transform: rotate(45deg);
+    }
+}
+</code></pre>
+<h4 id="老师的代码"><a href="#老师的代码" class="headerlink" title="老师的代码"></a>老师的代码</h4><pre><code class="html">
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot; class=&quot;no-js&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;utf-8&quot;/&gt;
+    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge,chrome=1&quot;&gt;
+    &lt;title&gt;Responsive Timeline&lt;/title&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;css/style.css&quot;/&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div class=&quot;container&quot;&gt;
+    &lt;header class=&quot;clearfix&quot;&gt;
+        &lt;h1&gt;Responsive Timeline&lt;/h1&gt;
+    &lt;/header&gt;
+    &lt;div class=&quot;main&quot;&gt;
+        &lt;ul class=&quot;tmtimeline&quot;&gt;
+            &lt;li&gt;
+                &lt;time class=&quot;tmtime&quot;&gt;&lt;span&gt;2016-05-01&lt;/span&gt; &lt;span&gt;18:30&lt;/span&gt;&lt;/time&gt;
+                &lt;div class=&quot;tmlabel&quot;&gt;
+                    &lt;h2&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, neque.&lt;/h2&gt;
+                    &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid architecto at atque consequatur
+                        consequuntur corporis dolor facere, fuga laborum natus, nihil rem repudiandae temporibus ullam
+                        ut veniam veritatis voluptas voluptates. Aliquam assumenda eius exercitationem hic ipsa numquam
+                        quam quis ratione, repellat, reprehenderit sunt, ullam! Accusamus, ad aliquid asperiores
+                        aspernatur at consequuntur cupiditate delectus deleniti dignissimos doloremque ea enim error, et
+                        excepturi explicabo facere fuga illo impedit iste laudantium minima molestias non nulla odit
+                        optio quos repellat sequi similique tempore vel veniam, vero voluptates voluptatum! At, cum
+                        deleniti, eaque enim fugiat illo in molestiae necessitatibus non obcaecati perferendis possimus
+                        temporibus tenetur.&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;time class=&quot;tmtime&quot;&gt;&lt;span&gt;2016-04-01&lt;/span&gt; &lt;span&gt;12:30&lt;/span&gt;&lt;/time&gt;
+                &lt;div class=&quot;tmlabel&quot;&gt;
+                    &lt;h2&gt;Lorem ipsum dolor sit amet.&lt;/h2&gt;
+                    &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet beatae cupiditate debitis
+                        doloribus eius eligendi, error est eveniet ipsam laborum laudantium magnam natus non omnis
+                        placeat praesentium quas repellat reprehenderit saepe soluta sunt temporibus totam vero
+                        voluptatem voluptatibus? Ab atque consequuntur cupiditate dolorum ducimus eligendi error eveniet
+                        excepturi facilis harum, in iste nihil obcaecati officiis, quas quasi qui quia quos reiciendis
+                        rem rerum sapiente totam unde voluptatibus voluptatum? Dolor dolore dolorum ducimus et fugit
+                        iusto modi odit quibusdam vitae voluptas!&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;time class=&quot;tmtime&quot;&gt;&lt;span&gt;2016-03-21&lt;/span&gt; &lt;span&gt;11:30&lt;/span&gt;&lt;/time&gt;
+                &lt;div class=&quot;tmlabel&quot;&gt;
+                    &lt;h2&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit.&lt;/h2&gt;
+                    &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. At dignissimos dolor dolores error
+                        quisquam vero, voluptatem. Accusantium consectetur consequuntur debitis dicta dolor dolores
+                        fugit laborum libero molestiae, natus nobis odit. Ab aliquid consequuntur, dolorum eius eligendi
+                        impedit ipsam neque odit, perspiciatis quis, similique unde voluptate! Corporis necessitatibus
+                        odit repellendus tempora.&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;time class=&quot;tmtime&quot;&gt;&lt;span&gt;2016-02-11&lt;/span&gt; &lt;span&gt;9:45&lt;/span&gt;&lt;/time&gt;
+                &lt;div class=&quot;tmlabel&quot;&gt;
+                    &lt;h2&gt;Lorem ipsum dolor sit amet, consectetur adipisicing.&lt;/h2&gt;
+                    &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti, dolorem id inventore iste
+                        odit perferendis provident? A cupiditate doloribus, enim et fuga iste nemo non nostrum omnis
+                        perspiciatis praesentium provident, quas repellendus rerum sit tempore voluptates. Aliquam
+                        distinctio fugit hic maiores ullam voluptate! Aspernatur autem blanditiis deleniti dolor dolores
+                        dolorum enim et illum ipsa iure laboriosam, natus officiis ullam voluptas?&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;time class=&quot;tmtime&quot;&gt;&lt;span&gt;2016-02-11&lt;/span&gt; &lt;span&gt;9:45&lt;/span&gt;&lt;/time&gt;
+                &lt;div class=&quot;tmlabel&quot;&gt;
+                    &lt;h2&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas?&lt;/h2&gt;
+                    &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error eum ex iusto magnam obcaecati.
+                        Adipisci deserunt dicta dolorem ea enim et eum labore laboriosam, quos reprehenderit sequi vero
+                        vitae voluptatum.&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+
+</code></pre>
+<pre><code class="css">*, *:after, *:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: &quot; &quot;;
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+body {
+    font-family: &#39;Lato&#39;, Calibri, Arial, sans-serif;
+    color: #47a3da;
+}
+
+a {
+    color: #f0f0f0;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #000;
+}
+
+.main,
+.container &gt; header {
+    width: 96%;
+    max-width: 70em;
+    margin: 0 auto;
+    padding: 0 2em 3em 2em;
+}
+
+.container &gt; header {
+    padding: 3em 2em 2em;
+}
+
+.container &gt; header h1 {
+    font-weight: 400;
+}
+
+@media screen and (max-width: 55em) {
+
+    .main,
+    .container &gt; header {
+        width: 98%;
+        padding: 0 2em 1em 2em;
+    }
+
+    .container &gt; header h1 {
+        text-align: center;
+    }
+}
+
+/* Timeline */
+
+.tmtimeline {
+    position: relative;
+    margin: 30px 0 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.tmtimeline:before {
+    content: &#39;&#39;;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 20%;
+    width: 10px;
+    margin-left: -10px;
+    background: #afdcf8;
+}
+
+.tmtimeline &gt; li {
+    position: relative;
+}
+
+.tmtimeline &gt; li .tmtime {
+    position: absolute;
+    display: block;
+    width: 25%;
+    padding-right: 100px;
+}
+
+.tmtimeline &gt; li .tmtime span {
+    display: block;
+    text-align: right;
+}
+
+.tmtimeline &gt; li .tmtime span:first-child {
+    font-size: 0.9em;
+    color: #bdd0db;
+}
+
+.tmtimeline &gt; li .tmtime span:last-child {
+    font-size: 2.9em;
+    color: #3594cb;
+}
+
+.tmtimeline &gt; li:nth-child(odd) .tmtime span:last-child {
+    color: #6cbfee;
+}
+
+.tmtimeline &gt; li .tmlabel {
+    position: relative;
+    margin: 0 0 15px 25%;
+    padding: 2em;
+    color: #fff;
+    font-size: 1.2em;
+    font-weight: 300;
+    line-height: 1.4;
+    border-radius: 5px;
+    background: #3594cb;
+}
+
+.tmtimeline &gt; li:nth-child(odd) .tmlabel {
+    background: #6cbfee;
+}
+
+.tmtimeline &gt; li .tmlabel h2 {
+    margin-top: 0;
+    padding: 0 0 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.tmtimeline &gt; li .tmlabel:after {
+    content: &quot; &quot;;
+    position: absolute;
+    top: 10px;
+    right: 100%;
+    height: 0;
+    width: 0;
+    pointer-events: none;
+    border: 10px solid transparent;
+    border-right-color: #3594cb;
+}
+
+.tmtimeline &gt; li:nth-child(odd) .tmlabel:after {
+    border-right-color: #6cbfee;
+}
+
+@media screen and (max-width: 55em) {
+
+    .tmtimeline &gt; li .tmtime {
+        padding-right: 65px;
+    }
+
+    .tmtimeline &gt; li .tmtime span:last-child {
+        font-size: 1.5em;
+    }
+}
+
+@media screen and (max-width: 40em) {
+
+    .tmtimeline:before {
+        display: none;
+    }
+
+    .tmtimeline &gt; li .tmtime {
+        position: relative;
+        width: 100%;
+        padding: 0 0 20px 0;
+    }
+
+    .tmtimeline &gt; li .tmtime span {
+        text-align: left;
+    }
+
+    .tmtimeline &gt; li .tmlabel {
+        margin: 0 0 30px 0;
+        padding: 1em;
+        font-weight: 400;
+        font-size: 95%;
+    }
+
+    .tmtimeline &gt; li .tmlabel:after {
+        top: -20px;
+        right: auto;
+        left: 20px;
+        border-right-color: transparent;
+        border-bottom-color: #3594cb;
+    }
+
+    .tmtimeline &gt; li:nth-child(odd) .tmlabel:after {
+        border-right-color: transparent;
+        border-bottom-color: #6cbfee;
+    }
+
+    .tmtimeline &gt; li .tmicon {
+        position: relative;
+        float: right;
+        left: auto;
+        margin: -55px 5px 0 0;
+    }
+}
+</code></pre>
+<h4 id="normalize"><a href="#normalize" class="headerlink" title="normalize"></a>normalize</h4><pre><code class="css">/*! normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css */
+
+/**
+ * 1. Change the default font family in all browsers (opinionated).
+ * 2. Prevent adjustments of font size after orientation changes in IE and iOS.
+ */
+
+html {
+    font-family: sans-serif; /* 1 */
+    -ms-text-size-adjust: 100%; /* 2 */
+    -webkit-text-size-adjust: 100%; /* 2 */
+}
+
+/**
+ * Remove the margin in all browsers (opinionated).
+ */
+
+body {
+    margin: 0;
+}
+
+/* HTML5 display definitions
+   ========================================================================== */
+
+/**
+ * Add the correct display in IE 9-.
+ * 1. Add the correct display in Edge, IE, and Firefox.
+ * 2. Add the correct display in IE.
+ */
+
+article,
+aside,
+details, /* 1 */
+figcaption,
+figure,
+footer,
+header,
+main, /* 2 */
+menu,
+nav,
+section,
+summary { /* 1 */
+    display: block;
+}
+
+/**
+ * Add the correct display in IE 9-.
+ */
+
+audio,
+canvas,
+progress,
+video {
+    display: inline-block;
+}
+
+/**
+ * Add the correct display in iOS 4-7.
+ */
+
+audio:not([controls]) {
+    display: none;
+    height: 0;
+}
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+
+progress {
+    vertical-align: baseline;
+}
+
+/**
+ * Add the correct display in IE 10-.
+ * 1. Add the correct display in IE.
+ */
+
+template, /* 1 */
+[hidden] {
+    display: none;
+}
+
+/* Links
+   ========================================================================== */
+
+/**
+ * 1. Remove the gray background on active links in IE 10.
+ * 2. Remove gaps in links underline in iOS 8+ and Safari 8+.
+ */
+
+a {
+    background-color: transparent; /* 1 */
+    -webkit-text-decoration-skip: objects; /* 2 */
+}
+
+/**
+ * Remove the outline on focused links when they are also active or hovered
+ * in all browsers (opinionated).
+ */
+
+a:active,
+a:hover {
+    outline-width: 0;
+}
+
+/* Text-level semantics
+   ========================================================================== */
+
+/**
+ * 1. Remove the bottom border in Firefox 39-.
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+
+abbr[title] {
+    border-bottom: none; /* 1 */
+    text-decoration: underline; /* 2 */
+    text-decoration: underline dotted; /* 2 */
+}
+
+/**
+ * Prevent the duplicate application of `bolder` by the next rule in Safari 6.
+ */
+
+b,
+strong {
+    font-weight: inherit;
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+
+b,
+strong {
+    font-weight: bolder;
+}
+
+/**
+ * Add the correct font style in Android 4.3-.
+ */
+
+dfn {
+    font-style: italic;
+}
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+
+h1 {
+    font-size: 2em;
+    margin: 0.67em 0;
+}
+
+/**
+ * Add the correct background and color in IE 9-.
+ */
+
+mark {
+    background-color: #ff0;
+    color: #000;
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+
+small {
+    font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+
+sub,
+sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+
+sub {
+    bottom: -0.25em;
+}
+
+sup {
+    top: -0.5em;
+}
+
+/* Embedded content
+   ========================================================================== */
+
+/**
+ * Remove the border on images inside links in IE 10-.
+ */
+
+img {
+    border-style: none;
+}
+
+/**
+ * Hide the overflow in IE.
+ */
+
+svg:not(:root) {
+    overflow: hidden;
+}
+
+/* Grouping content
+   ========================================================================== */
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+
+code,
+kbd,
+pre,
+samp {
+    font-family: monospace, monospace; /* 1 */
+    font-size: 1em; /* 2 */
+}
+
+/**
+ * Add the correct margin in IE 8.
+ */
+
+figure {
+    margin: 1em 40px;
+}
+
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+
+hr {
+    box-sizing: content-box; /* 1 */
+    height: 0; /* 1 */
+    overflow: visible; /* 2 */
+}
+
+/* Forms
+   ========================================================================== */
+
+/**
+ * 1. Change font properties to `inherit` in all browsers (opinionated).
+ * 2. Remove the margin in Firefox and Safari.
+ */
+
+button,
+input,
+select,
+textarea {
+    font: inherit; /* 1 */
+    margin: 0; /* 2 */
+}
+
+/**
+ * Restore the font weight unset by the previous rule.
+ */
+
+optgroup {
+    font-weight: bold;
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+
+button,
+input { /* 1 */
+    overflow: visible;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+
+button,
+select { /* 1 */
+    text-transform: none;
+}
+
+/**
+ * 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`
+ *    controls in Android 4.
+ * 2. Correct the inability to style clickable types in iOS and Safari.
+ */
+
+button,
+html [type=&quot;button&quot;], /* 1 */
+[type=&quot;reset&quot;],
+[type=&quot;submit&quot;] {
+    -webkit-appearance: button; /* 2 */
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+
+button::-moz-focus-inner,
+[type=&quot;button&quot;]::-moz-focus-inner,
+[type=&quot;reset&quot;]::-moz-focus-inner,
+[type=&quot;submit&quot;]::-moz-focus-inner {
+    border-style: none;
+    padding: 0;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+
+button:-moz-focusring,
+[type=&quot;button&quot;]:-moz-focusring,
+[type=&quot;reset&quot;]:-moz-focusring,
+[type=&quot;submit&quot;]:-moz-focusring {
+    outline: 1px dotted ButtonText;
+}
+
+/**
+ * Change the border, margin, and padding in all browsers (opinionated).
+ */
+
+fieldset {
+    border: 1px solid #c0c0c0;
+    margin: 0 2px;
+    padding: 0.35em 0.625em 0.75em;
+}
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+
+legend {
+    box-sizing: border-box; /* 1 */
+    color: inherit; /* 2 */
+    display: table; /* 1 */
+    max-width: 100%; /* 1 */
+    padding: 0; /* 3 */
+    white-space: normal; /* 1 */
+}
+
+/**
+ * Remove the default vertical scrollbar in IE.
+ */
+
+textarea {
+    overflow: auto;
+}
+
+/**
+ * 1. Add the correct box sizing in IE 10-.
+ * 2. Remove the padding in IE 10-.
+ */
+
+[type=&quot;checkbox&quot;],
+[type=&quot;radio&quot;] {
+    box-sizing: border-box; /* 1 */
+    padding: 0; /* 2 */
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+
+[type=&quot;number&quot;]::-webkit-inner-spin-button,
+[type=&quot;number&quot;]::-webkit-outer-spin-button {
+    height: auto;
+}
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+
+[type=&quot;search&quot;] {
+    -webkit-appearance: textfield; /* 1 */
+    outline-offset: -2px; /* 2 */
+}
+
+/**
+ * Remove the inner padding and cancel buttons in Chrome and Safari on OS X.
+ */
+
+[type=&quot;search&quot;]::-webkit-search-cancel-button,
+[type=&quot;search&quot;]::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+
+/**
+ * Correct the text style of placeholders in Chrome, Edge, and Safari.
+ */
+
+::-webkit-input-placeholder {
+    color: inherit;
+    opacity: 0.54;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+
+::-webkit-file-upload-button {
+    -webkit-appearance: button; /* 1 */
+    font: inherit; /* 2 */
+}
+</code></pre>
+
+        
+                <blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;">
+                    <p><strong>
+                         
+                            本文作者：<a href="https://i7xy.cn" target="_blank">Arley</a> <br> 本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/deed.zh" target="_blank">CC BY-NC-SA 3.0 Unported License</a> 协议进行许可
+                        </strong>
+                        <br>
+                        <strong>本文链接：</strong><a href="https://i7xy.cn/记一次原生css3实现响应式布局-timeLine/">https://i7xy.cn/记一次原生css3实现响应式布局-timeLine/</a>
+                    </p>
+                </blockquote>
+        
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+    <!-- 使用 changyan -->
+<div id="changyan-comment">
+    <!--PC和WAP自适应版-->
+<div id="SOHUCS" sid="记一次原生css3实现响应式布局-timeLine/"  ></div>
+<script type="text/javascript">
+(function(){
+var appid = 'cytKUOEJj';
+var conf = 'prod_e63d83c1855a6c55967d425a6e615d16';
+var width = window.innerWidth || document.documentElement.clientWidth;
+if (width < 960) {
+window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); } })(); </script>
+
+</div>
+<style>
+    #changyan-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/display-inline-block-导致换行/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
+
+
+                    
+                        <!-- Overlay For Active Sidebar -->
+<div class="sidebar-overlay"></div>
+
+<!-- Material sidebar -->
+<aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
+    <div id="sidebar-main">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header header-cover" style="background-image: url(/img/sidebar_header.png);">
+    <!-- Top bar -->
+    <div class="top-bar"></div>
+
+    <!-- Sidebar toggle button -->
+    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
+        <i class="material-icons">clear_all</i>
+        <span class="mdl-button__ripple-container">
+            <span class="mdl-ripple">
+            </span>
+        </span>
+    </button>
+
+    <!-- Sidebar Avatar -->
+    <div class="sidebar-image">
+        <img src="/img/avatar.png" alt="Arley's avatar">
+    </div>
+
+    <!-- Sidebar Email -->
+    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
+        34805850@qq.com
+        <b class="caret"></b>
+    </a>
+</div>
+
+
+        <!-- Sidebar Navigation  -->
+        <ul class="nav sidebar-nav">
+    <!-- User dropdown  -->
+    <li class="dropdown">
+        <ul id="settings-dropdown" class="dropdown-menu">
+            
+                <li>
+                    <a href="mailto:34805850@qq.com" target="_blank" title="Email Me">
+                        
+                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
+                        
+                        Email Me
+                    </a>
+                </li>
+            
+        </ul>
+    </li>
+
+    <!-- Homepage -->
+    
+        <li id="sidebar-first-li">
+            <a href="/">
+                
+                    <i class="material-icons sidebar-material-icons">home</i>
+                
+                主页
+            </a>
+        </li>
+        
+    
+
+    <!-- Archives  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">inbox</i>
+                
+                    归档
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+            <li>
+                <a class="sidebar_archives-link" href="/archives/2018/10/">十月 2018<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/09/">九月 2018<span class="sidebar_archives-count">17</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/08/">八月 2018<span class="sidebar_archives-count">10</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/07/">七月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/06/">六月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/09/">九月 2016<span class="sidebar_archives-count">1</span></a>
+            </ul>
+        </li>
+        
+    
+
+    <!-- Categories  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">chrome_reader_mode</i>
+                
+                分类
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+                <li>
+                <a class="sidebar_archives-link" href="/categories/学习笔记/">学习笔记<span class="sidebar_archives-count">22</span></a></li><li><a class="sidebar_archives-link" href="/categories/实战开发/">实战开发<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/技巧备份/">技巧备份<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/杂谈/">杂谈<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/categories/课设/">课设<span class="sidebar_archives-count">2</span></a>
+            </ul>
+        </li>
+        
+            <li class="divider"></li>
+        
+    
+
+    <!-- Pages  -->
+    
+        <li>
+            <a href="/gallery" title="相册">
+                
+                    <i class="material-icons sidebar-material-icons">photo</i>
+                
+                相册
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/tags" title="标签云">
+                
+                    <i class="material-icons sidebar-material-icons">book</i>
+                
+                标签云
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/timeline" title="时间轴">
+                
+                    <i class="material-icons sidebar-material-icons">timeline</i>
+                
+                时间轴
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/about" title="关于">
+                
+                    <i class="material-icons sidebar-material-icons">person</i>
+                
+                关于
+            </a>
+        </li>
+        
+    
+
+    <!-- Article Number  -->
+    
+        <li>
+            <a href="/archives">
+                文章总数
+                <span class="sidebar-badge">34</span>
+            </a>
+        </li>
+        
+    
+</ul>
+
+
+        <!-- Sidebar Footer -->
+        <!--
+I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
+If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
+It will not impact the appearance and can give developers a lot of support :)
+
+很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。
+如果您仍然想删除的话 能否只保留第一项呢？即 "Theme Material"
+它不会影响美观并可以给开发者很大的支持和动力。 :)
+-->
+
+<!-- Sidebar Divider -->
+
+
+<!-- Theme Material -->
+
+
+<!-- Help & Support -->
+<!--
+
+-->
+
+<!-- Feedback -->
+<!--
+
+-->
+
+<!-- About Theme -->
+<!--
+
+-->
+
+    </div>
+
+    <!-- Sidebar Image -->
+    
+
+</aside>
+
+                    
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
+
+                    
+
+                    <!--Footer-->
+<footer class="mdl-mini-footer" id="bottom">
+    
+        <!-- Paradox Footer Left Section -->
+        <div class="mdl-mini-footer--left-section sns-list">
+    <!-- Twitter -->
+    
+
+    <!-- Facebook -->
+    
+
+    <!-- Google + -->
+    
+
+    <!-- Weibo -->
+    
+
+    <!-- Instagram -->
+    
+
+    <!-- Tumblr -->
+    
+
+    <!-- Github -->
+    
+
+    <!-- LinkedIn -->
+    
+
+    <!-- Zhihu -->
+    
+
+    <!-- Bilibili -->
+    
+
+    <!-- Telegram -->
+    
+
+    <!-- V2EX -->
+    
+
+    <!-- Segmentfault -->
+    
+</div>
+
+
+        <!--Copyright-->
+        <div id="copyright">
+            Copyright&nbsp;©&nbsp;<span year></span>&nbsp;Arley's Blog (小磊同学博客)
+            
+        </div>
+
+        <!-- Paradox Footer Right Section -->
+
+        <!--
+        I am glad you use this theme, the development is no so easy, I hope you can keep the copyright.
+        It will not impact the appearance and can give developers a lot of support :)
+
+        很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
+        它不会影响美观并可以给开发者很大的支持。 :)
+        -->
+
+        <div class="mdl-mini-footer--right-section">
+            <div>
+                <div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
+                <div class="footer-develop-div">Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
+                <div class="footer-develop-div">Hosted by <a href="https://pages.coding.me" target="_blank" class="footer-develop-a">Coding Pages</a></div>
+            </div>
+        </div>
+    
+</footer>
+
+
+                    <!-- Import JS File -->
+
+    <script>lsloader.load("lazyload_js","/js/lazyload.min.js?1BcfzuNXqV+ntF6gq+5X3Q==", true)</script>
+
+
+
+    <script>lsloader.load("js_js","/js/js.min.js?Bn9UzEm8RrBSxqyZB0zPjA==", true)</script>
+
+
+
+    <script>lsloader.load("np_js","/js/nprogress.js?pl3Qhb9lvqR1FlyLUna1Yw==", true)</script>
+
+
+<script type="text/ls-javascript" id="NProgress-script">
+    NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+    $('#nprogress .bar').css({
+        'background': '#29d'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #29d, 0 0 15px #29d'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#29d',
+        'border-left-color': '#29d'
+    });
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);
+</script>
+
+
+
+    
+        <script>lsloader.load("sm_js","/js/smoothscroll.js?lOy/ACj5suSNi7ZVFVbpFQ==", true)</script>
+    
+
+
+
+
+
+
+
+   <!-- 畅言公共 js 代码 start -->
+<script id="cy_cmt_num" src="https://changyan.sohu.com/upload/plugins/plugins.list.count.js?clientId=cytKUOEJj">
+</script>
+<!-- 畅言公共 js 代码 end -->
+
+
+
+
+
+<!-- UC Browser Compatible -->
+<script>
+	var agent = navigator.userAgent.toLowerCase();
+	if(agent.indexOf('ucbrowser')>0) {
+		document.write('<link rel="stylesheet" href="/css/uc.css">');
+	   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+	}
+</script>
+
+<!-- Import prettify js  -->
+
+    
+        
+            <script>lsloader.load("prettify_js","/js/prettify.min.js?WN07fivHQSMKWy7BmHBB6w==", true)</script>
+        
+    
+
+
+
+<!-- Window Load -->
+<!-- add class for prettify -->
+<script type="text/ls-javascript" id="window-load">
+    $(window).on('load', function() {
+        // Post_Toc parent position fixed
+        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
+    });
+
+    
+        
+            $(function() {
+                $('pre').addClass('prettyprint linenums').attr('style', 'overflow:auto;');
+                prettyPrint();
+                })
+        
+    
+    
+</script>
+
+<!-- MathJax Load-->
+
+
+<!-- Bing Background -->
+
+
+<script type="text/ls-javascript" id="lazy-load">
+    // Offer LazyLoad
+    queue.offer(function(){
+        $('.lazy').lazyload({
+            effect : 'show'
+        });
+    });
+
+    // Start Queue
+    $(document).ready(function(){
+        setInterval(function(){
+            queue.execNext();
+        },200);
+    });
+</script>
+
+<!-- Custom Footer -->
+
+
+
+<script>
+    var copyrightNow = new Date().getFullYear();
+    var textContent = document.querySelector('span[year]')
+
+    copyrightSince = 2016;
+    if (copyrightSince === copyrightNow||copyrightSince === 0000) {
+        textContent.textContent = copyrightNow
+    } else {
+        textContent.textContent = copyrightSince + ' - ' + copyrightNow
+    }
+
+    (function(){
+        var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
+
+        for (var i = 0; i < scriptList.length; ++i) {
+            var item = scriptList[i];
+            lsloader.runInlineScript(item.id,item.id);
+        }
+    })()
+console.log('\n %c © Material Theme | Version: 1.5.6 | https://github.com/viosey/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
+</script>
+
+                </main>
+            </div>
+        </body>
+    
+</html>
