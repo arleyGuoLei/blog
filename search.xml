@@ -3,6 +3,56 @@
   
     
     <entry>
+      <title>ES6(2) - 解构赋值</title>
+      <link href="/ES6-2-%E8%A7%A3%E6%9E%84%E8%B5%8B%E5%80%BC/"/>
+      <url>/ES6-2-%E8%A7%A3%E6%9E%84%E8%B5%8B%E5%80%BC/</url>
+      <content type="html"><![CDATA[<h4 id="数组解构赋值"><a href="#数组解构赋值" class="headerlink" title="数组解构赋值"></a>数组解构赋值</h4><pre><code class="js">let a,b,restArr;[a,b,...restArr] = [1,2,3,4,5,6,7];//相当于 a = 1;b = 2; reatArr = [4,5,6,7];</code></pre><h5 id="使用场景"><a href="#使用场景" class="headerlink" title="使用场景"></a>使用场景</h5><p>1.变量值交换</p><pre><code class="js">let a=1,b=2;[a,b] = [b,a];console.log(a,b);//交换a,b</code></pre><p>对应编译之后的代码:</p><pre><code class="js">var a = 1,    b = 2;var _ref = [b, a];a = _ref[0];b = _ref[1];console.log(a, b);</code></pre><p>2.返回多个值</p><pre><code class="js">function fun() {    //return [1,2];    return [1,2,3,4,5];}let a,b;[a,,,b] = fun();//只接收部分返回值console.log(a,b);</code></pre><p>对应编译之后的代码:</p><pre><code class="js">var _slicedToArray = function () { function sliceIterator(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i &amp;&amp; _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n &amp;&amp; _i[&quot;return&quot;]) _i[&quot;return&quot;](); } finally { if (_d) throw _e; } } return _arr; } return function (arr, i) { if (Array.isArray(arr)) { return arr; } else if (Symbol.iterator in Object(arr)) { return sliceIterator(arr, i); } else { throw new TypeError(&quot;Invalid attempt to destructure non-iterable instance&quot;); } }; }();var fun = function fun() {    return [1, 2];};var a = void 0,    b = void 0;var _fun = fun();var _fun2 = _slicedToArray(_fun, 2);a = _fun2[0];b = _fun2[1];console.log(a, b);</code></pre><h4 id="对象解构赋值"><a href="#对象解构赋值" class="headerlink" title="对象解构赋值"></a>对象解构赋值</h4><pre><code class="js">let a,b;({a,b}={a:1,b:2})console.log(a,b)//1 2</code></pre><h5 id="使用场景-1"><a href="#使用场景-1" class="headerlink" title="使用场景"></a>使用场景</h5><p>1.对象解析</p><pre><code class="js">let o = {a:1,b:2};let {a,b} = o;console.log(a,b);//key需要一致.</code></pre><p>2.json解析</p><pre><code class="js">let json = {    title: &#39;t1&#39;,    body: [{        title: &#39;t2&#39;    }]};let {title: titleX, body: [{title: titleY}]} = json;//注意:变量名在后,结构体结构类似.console.log(titleX,titleY);</code></pre>]]></content>
+      
+      <categories>
+          
+          <category> 学习笔记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 学习笔记 </tag>
+            
+            <tag> JavaScript </tag>
+            
+            <tag> ES6 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
+      <title>ES6(1) - let const命令</title>
+      <link href="/ES6-1-let-const%E5%91%BD%E4%BB%A4/"/>
+      <url>/ES6-1-let-const%E5%91%BD%E4%BB%A4/</url>
+      <content type="html"><![CDATA[<p>1.作用域</p><ul><li>ES5:全局作用域 + 函数作用域</li><li>ES6:ES5基础上添加块作用域(let和const都是块作用域)</li></ul><h4 id="let"><a href="#let" class="headerlink" title="let"></a>let</h4><p>1.let声明的变量只在自己的块作用域之内有效.<br>2.严格模式,变量未声明,不能引用.<code>&#39;use strict&#39;</code>,es6默认就是严格模式.</p><pre><code class="js">for (let i=0;i&lt;=3;i++){    console.log(i);}console.log(i);//报错  let i = 0;换成var之后不报错</code></pre><p>3.let变量不能重复定义,两个都为<code>var</code>不报错.</p><pre><code class="js">let a = 1;let a = 2;//报错</code></pre><h4 id="const"><a href="#const" class="headerlink" title="const"></a>const</h4><p>1.声明的时候必须赋值</p><pre><code class="js">const a = 1;a = 2;//报错</code></pre><p>2.值不能被修改,只读(对象可修改,因为对象存储的是指针内存地址)</p><pre><code class="js">const k = {    a:1};k.b=2;//没错console.log(k);</code></pre>]]></content>
+      
+      <categories>
+          
+          <category> 学习笔记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 学习笔记 </tag>
+            
+            <tag> JavaScript </tag>
+            
+            <tag> ES6 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
       <title>记一次原生css3实现响应式布局 - timeLine</title>
       <link href="/%E8%AE%B0%E4%B8%80%E6%AC%A1%E5%8E%9F%E7%94%9Fcss3%E5%AE%9E%E7%8E%B0%E5%93%8D%E5%BA%94%E5%BC%8F%E5%B8%83%E5%B1%80-timeLine/"/>
       <url>/%E8%AE%B0%E4%B8%80%E6%AC%A1%E5%8E%9F%E7%94%9Fcss3%E5%AE%9E%E7%8E%B0%E5%93%8D%E5%BA%94%E5%BC%8F%E5%B8%83%E5%B1%80-timeLine/</url>
