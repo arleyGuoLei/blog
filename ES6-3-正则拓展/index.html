@@ -50,7 +50,7 @@
     
     <title>
         
-            ES6(2) - 解构赋值 | 
+            ES6(3)-正则拓展 | 
         
         Arley&#39;s Blog (小磊同学博客)
     </title>
@@ -227,7 +227,7 @@
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="Arley&#39;s Blog (小磊同学博客)">
-    <meta name="msapplication-starturl" content="https://i7xy.cn/ES6-2-解构赋值/">
+    <meta name="msapplication-starturl" content="https://i7xy.cn/ES6-3-正则拓展/">
     <meta name="msapplication-navbutton-color" content="#619DDE">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="Arley&#39;s Blog (小磊同学博客)">
@@ -242,16 +242,16 @@
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="https://i7xy.cn/ES6-2-解构赋值/">
+    <meta property="og:url" content="https://i7xy.cn/ES6-3-正则拓展/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="ES6(2) - 解构赋值 | Arley&#39;s Blog (小磊同学博客)">
+    <meta property="og:title" content="ES6(3)-正则拓展 | Arley&#39;s Blog (小磊同学博客)">
     <meta property="og:image" content="/img/logo.png">
     <meta property="og:description" content="小程序全栈开发者/伪极客/灵魂摄影师，热爱技术&amp;生活，很高兴能在这里与你分享我对技术和生活的思考。">
     <meta property="og:article:tag" content="学习笔记"> <meta property="og:article:tag" content="JavaScript"> <meta property="og:article:tag" content="ES6"> 
 
     
-        <meta property="article:published_time" content="Tue Oct 09 2018 19:21:24 GMT+0800">
-        <meta property="article:modified_time" content="Tue Oct 09 2018 19:52:10 GMT+0800">
+        <meta property="article:published_time" content="Tue Oct 09 2018 19:56:33 GMT+0800">
+        <meta property="article:modified_time" content="Tue Oct 09 2018 20:17:10 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -259,7 +259,7 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="https://i7xy.cn/ES6-2-解构赋值/index.html" />
+        <link rel="canonical" href="https://i7xy.cn/ES6-3-正则拓展/index.html" />
     
 
     <!-- Structured-data for SEO -->
@@ -271,10 +271,10 @@
 {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "mainEntityOfPage": "https://i7xy.cn/ES6-2-解构赋值/index.html",
-    "headline": "ES6(2) - 解构赋值",
-    "datePublished": "Tue Oct 09 2018 19:21:24 GMT+0800",
-    "dateModified": "Tue Oct 09 2018 19:52:10 GMT+0800",
+    "mainEntityOfPage": "https://i7xy.cn/ES6-3-正则拓展/index.html",
+    "headline": "ES6(3)-正则拓展",
+    "datePublished": "Tue Oct 09 2018 19:56:33 GMT+0800",
+    "dateModified": "Tue Oct 09 2018 20:17:10 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "Arley",
@@ -356,15 +356,6 @@
     <!-- Left aligned menu below button -->
     
     
-    <button id="post-toc-trigger-btn"
-        class="mdl-button mdl-js-button mdl-button--icon">
-        <i class="material-icons">format_list_numbered</i>
-    </button>
-
-    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#数组解构赋值"><span class="post-toc-number">1.</span> <span class="post-toc-text">数组解构赋值</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#使用场景"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">使用场景</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#对象解构赋值"><span class="post-toc-number">2.</span> <span class="post-toc-text">对象解构赋值</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#使用场景-1"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">使用场景</span></a></li></ol></li></ol>
-    </ul>
-    
 
 
 
@@ -394,7 +385,7 @@
         
     
             <p class="article-headline-p">
-                ES6(2) - 解构赋值
+                ES6(3)-正则拓展
             </p>
         </div>
 
@@ -435,7 +426,7 @@
 <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
     <li class="mdl-menu__item">在其它设备中阅读本文章</li>
     
-        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACaklEQVR42u3aQY7jMAwEwPz/07vXBQbrdFOybAxKpyCIE5cPotLk58+vXh88PDw8PDw8PLyX8T7x+vn5/33D9ff/+/7P1yv3hoeHh3eS92WrHX0muSrh1b+Lh4eHd5C3axNfKRgr94aHh4f3Tt71YXdWGJLSgoeHh/c7eO1V19e+rjDg4eHhbQoj8s9fl5P8wR3NWvDw8PBiXtsAO/n6gf4eHh4e3iVv7/qUa1YMvtwDHh4e3s28vc2tPJJYGUFYylrw8PDwlnnJD+SBwsogwgyGh4eHd56XbPptW6vd6Fvel7YZHh4e3hFe3sRKoodZMywpAFFLDA8PD+9mXrsF5yOqs3LSjmRF/xjw8PDwbuCttLhmx+WkALTHfTw8PLyneO2Y6ey2io2+DEfw8PDw7ubVF8ehQN5UawOOOmvBw8PD28qbtZraYpAHHG1BwsPDw3uKl1w8C3DbYKIdw8LDw8M7z1sZKo1+bGHNxgjw8PDwzvDamGBvmNs+puJIjYeHh3czLw8Udg0E5GFH0a7Dw8PDu5m3smXPDsS7gmA8PDy8p3jtIbjdrJPisf6I8fDw8E7ykr/9KyWhLR55dFuPDuDh4eFt4s2aUsPWVDAK0N4DHh4e3nleu9rQoR1EyB/N8EiNh4eHt8ybjUDNhrTacKEtPHh4eHgneUkxSAKLXS2xfOiqmIzAw8PDu4FXB6YBcnakbqMQPDw8vPfzknKyEnPMHhYeHh7eO3lFI6q80faqW47UeHh4eEfCiCggiJtbt0xG4OHh4T00dDXbyvMxgmEZuGN0AA8PD2/r0NX7Fx4eHh4eHh4e3gvWXxkNTwIc/OKSAAAAAElFTkSuQmCC">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACaElEQVR42u3aUY7rMAgF0O5/0/MWMEp6gZjXqY6/KitNfPwBFvj189XjhYeHh4eHh4eH92G8VzwuX3fxzNXM1dvun8/XhoeHh7fDexNqb5eebMH9v37Pj9aGh4eHt8jLP/kmNN8uMcdU14aHh4f3V3jJ4noJBg8PD++bePcLypPHhyYGPDw8vEeLEdXjdVI+mDyJh4eH9794eZNp//dqfw8PDw8v4JWvNAWH4N6x++ehgYeHh3eaNyklTA7leaGhfAkMDw8Pb4XXu6J6Nd9LA72kgoeHh/c5vKsPTFpi1aN5/kU8PDy8TV6vDJGH9fyiQLId5cSAh4eHd4yXp4dJk2zytsLVBDw8PLzDvDyUT0q9eWqZpwc8PDy807xeWTZh9Fpo8ySBh4eHt8PLw/dTxYheSSJKMHh4eHgrvEmJNjkW56WEfGsKDTA8PDy8FV5SDrg/5ub/rT7/QDECDw8Pb8xLQvNT1wvymWaDDQ8PD+8wr3fBdF5K6KWTchkXDw8P7wAvCcHVMkQvMeTb8eZ5PDw8vMO8vEiaN/vv5yftsWgGDw8Pb4XXa0HNm1vVjWsmBjw8PLxjvPwCQX7srjaxJlf88fDw8PZ51cJutQwxH9HlBjw8PLzDvOqIQnOxMPFUWQQPDw9vhzcJytUDdFLsmBSO8fDw8DZ5eeG19/mnEkO09Xh4eHiLvDxA58Xc3lWq6tbg4eHh/RVeXgiuXhrIi8UHEwMeHh7escRQDe69lliSbPDw8PD2eb2gXG1Z5Smk2kLDw8PD2+T1QnMS6JNjdy8NXM7j4eHhHeZ938DDw8PDw8PDw/uA8Q9C9BYRFsXfZgAAAABJRU5ErkJggg==">
     
 </ul>
 
@@ -466,7 +457,7 @@
 
     <!-- Share Weibo -->
     
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=ES6(2) - 解构赋值&url=https://i7xy.cn/ES6-2-解构赋值/index.html&pic=https://i7xy.cn/img/favicon.png&searchPic=false&style=simple" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=ES6(3)-正则拓展&url=https://i7xy.cn/ES6-3-正则拓展/index.html&pic=https://i7xy.cn/img/favicon.png&searchPic=false&style=simple" target="_blank">
             <li class="mdl-menu__item">
                 分享到微博
             </li>
@@ -487,7 +478,7 @@
 
     <!-- Share QQ -->
     
-        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=Arley&#39;s Blog (小磊同学博客)&title=ES6(2) - 解构赋值&summary=小程序全栈开发者/伪极客/灵魂摄影师，热爱技术&amp;生活，很高兴能在这里与你分享我对技术和生活的思考。&pics=https://i7xy.cn/img/favicon.png&url=https://i7xy.cn/ES6-2-解构赋值/index.html" target="_blank">
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=Arley&#39;s Blog (小磊同学博客)&title=ES6(3)-正则拓展&summary=小程序全栈开发者/伪极客/灵魂摄影师，热爱技术&amp;生活，很高兴能在这里与你分享我对技术和生活的思考。&pics=https://i7xy.cn/img/favicon.png&url=https://i7xy.cn/ES6-3-正则拓展/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 QQ
             </li>
@@ -506,71 +497,82 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <h4 id="数组解构赋值"><a href="#数组解构赋值" class="headerlink" title="数组解构赋值"></a>数组解构赋值</h4><pre><code class="js">let a,b,restArr;
-[a,b,...restArr] = [1,2,3,4,5,6,7];
-//相当于 a = 1;b = 2; reatArr = [4,5,6,7];
-</code></pre>
-<h5 id="使用场景"><a href="#使用场景" class="headerlink" title="使用场景"></a>使用场景</h5><p>1.变量值交换</p>
-<pre><code class="js">let a=1,b=2;
-[a,b] = [b,a];
-console.log(a,b);
-//交换a,b
-</code></pre>
-<p>对应编译之后的代码:</p>
-<pre><code class="js">var a = 1,
-    b = 2;
-var _ref = [b, a];
-a = _ref[0];
-b = _ref[1];
+        <p>1.加入新的混合写法</p>
+<pre><code class="js">//ES5的两种写法,不混用
+let regex1 = new RegExp(&quot;xyz&quot;,&quot;i&quot;);
+let regex2 = new RegExp(/xyz/i);
+console.log(regex1.test(&quot;xyz123&quot;),regex2.test(&quot;xyz123&quot;));
 
-console.log(a, b);
+//ES6 加入混用,后面的参数会替换前面的标志参数
+let regex3 = new RegExp(/xyz/ig,&quot;i&quot;);
+//i替换了ig
+console.log(regex3.flags);
 </code></pre>
-<p>2.返回多个值</p>
-<pre><code class="js">function fun() {
-    //return [1,2];
-    return [1,2,3,4,5];
+<p>2.新增<code>y</code>,<code>u</code>修饰符</p>
+<pre><code class="js">{
+    // #构造函数#
+    let regex = new RegExp(&#39;xyz&#39;, &#39;i&#39;); //第一个参数是字符串，第二个是修饰符
+    let regex2 = new RegExp(/xyz/i); //第一个参数是正则表达式，不接受第二个参数，否则会报错
+    console.log(regex.test(&#39;xyz123&#39;), regex2.test(&#39;xyz123&#39;));
+    console.log(regex.test(&#39;xyZ123&#39;), regex2.test(&#39;xyZ123&#39;));
+
+    let regex3 = new RegExp(/abc/ig, &#39;i&#39;);
+    console.log(regex3.flags); //原有正则对象的修饰符是ig，它会被第二个参数i覆盖
+
 }
 
-let a,b;
-[a,,,b] = fun();//只接收部分返回值
-console.log(a,b);
-</code></pre>
-<p>对应编译之后的代码:</p>
-<pre><code class="js">var _slicedToArray = function () { function sliceIterator(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i &amp;&amp; _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n &amp;&amp; _i[&quot;return&quot;]) _i[&quot;return&quot;](); } finally { if (_d) throw _e; } } return _arr; } return function (arr, i) { if (Array.isArray(arr)) { return arr; } else if (Symbol.iterator in Object(arr)) { return sliceIterator(arr, i); } else { throw new TypeError(&quot;Invalid attempt to destructure non-iterable instance&quot;); } }; }();
+// 字符串对象的4个使用正则表达式的方法： match(),replace(),search(),split()这四个方法全部调用RegExp的实例的方法。
 
-var fun = function fun() {
-    return [1, 2];
-};
-var a = void 0,
-    b = void 0;
+{
+    let regex = new RegExp(&#39;xyz&#39;, &#39;ig&#39;);
+    console.log(regex.test(&#39;xyz0XYZ1xyz2&#39;), regex.exec(&#39;xyz0XYZ1xyz2&#39;));
+}
 
-var _fun = fun();
-var _fun2 = _slicedToArray(_fun, 2);
+{
+    // y修饰符
+    let s = &#39;bbbb_bbb_bb_b&#39;;
+    var a1 = /b+/g;
+    var a2 = /b+/y;
 
-a = _fun2[0];
-b = _fun2[1];
-console.log(a, b);
-</code></pre>
-<h4 id="对象解构赋值"><a href="#对象解构赋值" class="headerlink" title="对象解构赋值"></a>对象解构赋值</h4><pre><code class="js">let a,b;
-({a,b}={a:1,b:2})
-console.log(a,b)//1 2
-</code></pre>
-<h5 id="使用场景-1"><a href="#使用场景-1" class="headerlink" title="使用场景"></a>使用场景</h5><p>1.对象解析</p>
-<pre><code class="js">let o = {a:1,b:2};
-let {a,b} = o;
-console.log(a,b);
-//key需要一致.
-</code></pre>
-<p>2.json解析</p>
-<pre><code class="js">let json = {
-    title: &#39;t1&#39;,
-    body: [{
-        title: &#39;t2&#39;
-    }]
-};
-let {title: titleX, body: [{title: titleY}]} = json;
-//注意:变量名在后,结构体结构类似.
-console.log(titleX,titleY);
+    console.log(a1.exec(s), a2.exec(s)); // [&quot;bbbb&quot;],[&quot;bbbb&quot;]
+    console.log(a1.exec(s), a2.exec(s)); // [&quot;bbb&quot;],null
+
+    console.log(a1.sticky, a2.sticky); //表示是否开启了粘连模式
+}
+
+{
+    console.log(&#39;u修饰符&#39;,/^\uD83D/.test(&#39;\uD83D\uDC2A&#39;)); // true
+    console.log(&#39;u修饰符&#39;,/^\uD83D/u.test(&#39;\uD83D\uDC2A&#39;)); // false
+    // 大括号表示Unicode字符，只有加上u才能识别
+    console.log(/\u{61}/.test(&#39;a&#39;)); // false
+    console.log(/\u{61}/u.test(&#39;a&#39;)); // true
+    console.log(/\u{20BB7}/u.test(&#39;𠮷&#39;)); // true
+    // 点（.）字符不能识别码点大于0xFFFF的Unicode字符，必须加上u修饰符。
+    let s = &#39;𠮷&#39;;
+    console.log(&#39;大于0xFFFF的Unicode字符&#39;,/^.$/.test(s)); // false
+    console.log(&#39;使用u字符&#39;,/^.$/u.test(s)); // true
+
+    // 使用u修饰符后，所有量词都会正确识别大于码点大于0xFFFF的Unicode字符。
+    console.log(&#39;量词&#39;,/a{2}/.test(&#39;aa&#39;)); // true
+    console.log(&#39;量词&#39;,/a{2}/u.test(&#39;aa&#39;)); // true
+    console.log(&#39;量词&#39;,/𠮷{2}/.test(&#39;𠮷𠮷&#39;)); // false
+    console.log(&#39;量词&#39;,/𠮷{2}/u.test(&#39;𠮷𠮷&#39;)); // true
+}
+
+{
+    // #正则表达式中，点（.）是一个特殊字符，代表任意的单个字符，但是行终止符（line terminator character）除外
+    // U+000A 换行符（\n）
+    // U+000D 回车符（\r）
+    // U+2028 行分隔符（line separator）
+    // U+2029 段分隔符（paragraph separator）
+    // 只是一个提案目前还不支持
+    // let reg=/test.go/s;
+    // console.log(reg.test(&#39;test\ngo&#39;));
+    // console.log(reg.test(&#39;test\ngo&#39;));
+    console.log(&#39;s变通方法&#39;,/foo.bar/.test(&#39;foo\nbar&#39;));
+    console.log(&#39;s变通方法&#39;,/foo[^]bar/.test(&#39;foo\nbar&#39;));
+}
+
 </code></pre>
 
         
@@ -580,7 +582,7 @@ console.log(titleX,titleY);
                             本文作者：<a href="https://i7xy.cn" target="_blank">Arley</a> <br> 本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/deed.zh" target="_blank">CC BY-NC-SA 3.0 Unported License</a> 协议进行许可
                         </strong>
                         <br>
-                        <strong>本文链接：</strong><a href="https://i7xy.cn/ES6-2-解构赋值/">https://i7xy.cn/ES6-2-解构赋值/</a>
+                        <strong>本文链接：</strong><a href="https://i7xy.cn/ES6-3-正则拓展/">https://i7xy.cn/ES6-3-正则拓展/</a>
                     </p>
                 </blockquote>
         
@@ -598,7 +600,7 @@ console.log(titleX,titleY);
     <!-- 使用 changyan -->
 <div id="changyan-comment">
     <!--PC和WAP自适应版-->
-<div id="SOHUCS" sid="ES6-2-解构赋值/"  ></div>
+<div id="SOHUCS" sid="ES6-3-正则拓展/"  ></div>
 <script type="text/javascript">
 (function(){
 var appid = 'cytKUOEJj';
@@ -622,21 +624,13 @@ window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="tex
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
     
-        <a href="/ES6-3-正则拓展/" id="post_nav-newer" class="prev-content">
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
-                <i class="material-icons">arrow_back</i>
-            </button>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            新篇
-        </a>
-    
 
     <!-- Section Spacer -->
     <div class="section-spacer"></div>
 
     <!-- Next Nav -->
     
-        <a href="/ES6-1-let-const命令/" id="post_nav-older" class="next-content">
+        <a href="/ES6-2-解构赋值/" id="post_nav-older" class="next-content">
             旧篇
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">

@@ -3,6 +3,31 @@
   
     
     <entry>
+      <title>ES6(3)-正则拓展</title>
+      <link href="/ES6-3-%E6%AD%A3%E5%88%99%E6%8B%93%E5%B1%95/"/>
+      <url>/ES6-3-%E6%AD%A3%E5%88%99%E6%8B%93%E5%B1%95/</url>
+      <content type="html"><![CDATA[<p>1.加入新的混合写法</p><pre><code class="js">//ES5的两种写法,不混用let regex1 = new RegExp(&quot;xyz&quot;,&quot;i&quot;);let regex2 = new RegExp(/xyz/i);console.log(regex1.test(&quot;xyz123&quot;),regex2.test(&quot;xyz123&quot;));//ES6 加入混用,后面的参数会替换前面的标志参数let regex3 = new RegExp(/xyz/ig,&quot;i&quot;);//i替换了igconsole.log(regex3.flags);</code></pre><p>2.新增<code>y</code>,<code>u</code>修饰符</p><pre><code class="js">{    // #构造函数#    let regex = new RegExp(&#39;xyz&#39;, &#39;i&#39;); //第一个参数是字符串，第二个是修饰符    let regex2 = new RegExp(/xyz/i); //第一个参数是正则表达式，不接受第二个参数，否则会报错    console.log(regex.test(&#39;xyz123&#39;), regex2.test(&#39;xyz123&#39;));    console.log(regex.test(&#39;xyZ123&#39;), regex2.test(&#39;xyZ123&#39;));    let regex3 = new RegExp(/abc/ig, &#39;i&#39;);    console.log(regex3.flags); //原有正则对象的修饰符是ig，它会被第二个参数i覆盖}// 字符串对象的4个使用正则表达式的方法： match(),replace(),search(),split()这四个方法全部调用RegExp的实例的方法。{    let regex = new RegExp(&#39;xyz&#39;, &#39;ig&#39;);    console.log(regex.test(&#39;xyz0XYZ1xyz2&#39;), regex.exec(&#39;xyz0XYZ1xyz2&#39;));}{    // y修饰符    let s = &#39;bbbb_bbb_bb_b&#39;;    var a1 = /b+/g;    var a2 = /b+/y;    console.log(a1.exec(s), a2.exec(s)); // [&quot;bbbb&quot;],[&quot;bbbb&quot;]    console.log(a1.exec(s), a2.exec(s)); // [&quot;bbb&quot;],null    console.log(a1.sticky, a2.sticky); //表示是否开启了粘连模式}{    console.log(&#39;u修饰符&#39;,/^\uD83D/.test(&#39;\uD83D\uDC2A&#39;)); // true    console.log(&#39;u修饰符&#39;,/^\uD83D/u.test(&#39;\uD83D\uDC2A&#39;)); // false    // 大括号表示Unicode字符，只有加上u才能识别    console.log(/\u{61}/.test(&#39;a&#39;)); // false    console.log(/\u{61}/u.test(&#39;a&#39;)); // true    console.log(/\u{20BB7}/u.test(&#39;𠮷&#39;)); // true    // 点（.）字符不能识别码点大于0xFFFF的Unicode字符，必须加上u修饰符。    let s = &#39;𠮷&#39;;    console.log(&#39;大于0xFFFF的Unicode字符&#39;,/^.$/.test(s)); // false    console.log(&#39;使用u字符&#39;,/^.$/u.test(s)); // true    // 使用u修饰符后，所有量词都会正确识别大于码点大于0xFFFF的Unicode字符。    console.log(&#39;量词&#39;,/a{2}/.test(&#39;aa&#39;)); // true    console.log(&#39;量词&#39;,/a{2}/u.test(&#39;aa&#39;)); // true    console.log(&#39;量词&#39;,/𠮷{2}/.test(&#39;𠮷𠮷&#39;)); // false    console.log(&#39;量词&#39;,/𠮷{2}/u.test(&#39;𠮷𠮷&#39;)); // true}{    // #正则表达式中，点（.）是一个特殊字符，代表任意的单个字符，但是行终止符（line terminator character）除外    // U+000A 换行符（\n）    // U+000D 回车符（\r）    // U+2028 行分隔符（line separator）    // U+2029 段分隔符（paragraph separator）    // 只是一个提案目前还不支持    // let reg=/test.go/s;    // console.log(reg.test(&#39;test\ngo&#39;));    // console.log(reg.test(&#39;test\ngo&#39;));    console.log(&#39;s变通方法&#39;,/foo.bar/.test(&#39;foo\nbar&#39;));    console.log(&#39;s变通方法&#39;,/foo[^]bar/.test(&#39;foo\nbar&#39;));}</code></pre>]]></content>
+      
+      <categories>
+          
+          <category> 学习笔记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 学习笔记 </tag>
+            
+            <tag> JavaScript </tag>
+            
+            <tag> ES6 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
       <title>ES6(2) - 解构赋值</title>
       <link href="/ES6-2-%E8%A7%A3%E6%9E%84%E8%B5%8B%E5%80%BC/"/>
       <url>/ES6-2-%E8%A7%A3%E6%9E%84%E8%B5%8B%E5%80%BC/</url>
@@ -827,13 +852,6 @@
     </entry>
     
     <entry>
-      <title>Arley&#39;s Inc</title>
-      <link href="/gallery/index.html"/>
-      <url>/gallery/index.html</url>
-      <content type="html"><![CDATA[]]></content>
-    </entry>
-    
-    <entry>
       <title>标签云</title>
       <link href="/tags/index.html"/>
       <url>/tags/index.html</url>
@@ -844,6 +862,13 @@
       <title>时间轴</title>
       <link href="/timeline/index.html"/>
       <url>/timeline/index.html</url>
+      <content type="html"><![CDATA[]]></content>
+    </entry>
+    
+    <entry>
+      <title>Arley&#39;s Inc</title>
+      <link href="/gallery/index.html"/>
+      <url>/gallery/index.html</url>
       <content type="html"><![CDATA[]]></content>
     </entry>
     
