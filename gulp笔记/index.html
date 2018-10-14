@@ -1,0 +1,1231 @@
+<!DOCTYPE html>
+<html style="display: none;" lang="zh">
+    <head>
+    <meta charset="utf-8">
+    <!--
+        © Material Theme
+        https://github.com/viosey/hexo-theme-material
+        Version: 1.5.6 -->
+    <script>
+        window.materialVersion = "1.5.6"
+        // Delete localstorage with these tags
+        window.oldVersion = [
+            'codestartv1',
+            '1.3.4',
+            '1.4.0',
+            '1.4.0b1',
+            '1.5.0',
+            '1.5.2',
+            '1.5.5'
+        ]
+    </script>
+
+    <!-- dns prefetch -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+
+
+
+
+
+    <link rel="dns-prefetch" href="https://changyan.sohu.com"/>
+
+
+
+    <link rel="dns-prefetch" href="https://s95.cnzz.com"/>
+
+
+
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com"/>
+
+
+
+
+
+    <!-- Meta & Info -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!-- Title -->
+    
+    <title>
+        
+            gulp笔记 | 
+        
+        Arley&#39;s Blog (小磊同学博客)
+    </title>
+
+    <!-- Favicons -->
+    <link rel="icon shortcut" type="image/ico" href="/img/favicon.png">
+    <link rel="icon" href="/img/logo.png">
+
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="description" itemprop="description" content="小程序全栈开发者/伪极客/灵魂摄影师，热爱技术&amp;生活，很高兴能在这里与你分享我对技术和生活的思考。">
+    <meta name="keywords" content="Arley&#39;s Blog,小磊同学,郭磊博客,郭磊技术分享,小程序博客,前端技术博客,学习笔记,构建工具,gulp">
+    <meta name="theme-color" content="#619DDE">
+
+    <!-- Disable Fucking Bloody Baidu Tranformation -->
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+
+        
+            <script src="/js/ie-blocker.zhCN.js"></script>
+        
+    <![endif]-->
+
+    <!-- Import lsloader -->
+    <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(a){try{localStorage.removeItem(a)}catch(b){}};lsloader.setLS=function(a,c){try{localStorage.setItem(a,c)}catch(b){}};lsloader.getLS=function(a){var c="";try{c=localStorage.getItem(a)}catch(b){c=""}return c};versionString="/*"+(window.materialVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var b=[];for(var a=0;a<localStorage.length;a++){b.push(localStorage.key(a))}b.forEach(function(e){var f=lsloader.getLS(e);if(window.oldVersion){var d=window.oldVersion.reduce(function(g,h){return g||f.indexOf("/*"+h+"*/")!==-1},false);if(d){lsloader.removeLS(e)}}})}catch(c){}};lsloader.clean();lsloader.load=function(f,a,b,d){if(typeof b==="boolean"){d=b;b=undefined}d=d||false;b=b||function(){};var e;e=this.getLS(f);if(e&&e.indexOf(versionString)===-1){this.removeLS(f);this.requestResource(f,a,b,d);return}if(e){var c=e.split(versionString)[0];if(c!=a){console.log("reload:"+a);this.removeLS(f);this.requestResource(f,a,b,d);return}e=e.split(versionString)[1];if(d){this.jsRunSequence.push({name:f,code:e});this.runjs(a,f,e)}else{document.getElementById(f).appendChild(document.createTextNode(e));b()}}else{this.requestResource(f,a,b,d)}};lsloader.requestResource=function(b,e,a,c){var d=this;if(c){this.iojs(e,b,function(h,f,g){d.setLS(f,h+versionString+g);d.runjs(h,f,g)})}else{this.iocss(e,b,function(f){document.getElementById(b).appendChild(document.createTextNode(f));d.setLS(b,e+versionString+f)},a)}};lsloader.iojs=function(d,b,g){var a=this;a.jsRunSequence.push({name:b,code:""});try{var f=new XMLHttpRequest();f.open("get",d,true);f.onreadystatechange=function(){if(f.readyState==4){if((f.status>=200&&f.status<300)||f.status==304){if(f.response!=""){g(d,b,f.response);return}}a.jsfallback(d,b)}};f.send(null)}catch(c){a.jsfallback(d,b)}};lsloader.iocss=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.iofonts=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.runjs=function(f,c,e){if(!!c&&!!e){for(var b in this.jsRunSequence){if(this.jsRunSequence[b].name==c){this.jsRunSequence[b].code=e}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var a=document.createElement("script");a.appendChild(document.createTextNode(this.jsRunSequence[0].code));a.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(a);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else{if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var d=this;var a=document.createElement("script");a.src=this.jsRunSequence[0].path;a.type="text/javascript";this.jsRunSequence[0].status="loading";a.onload=function(){d.jsRunSequence.shift();if(d.jsRunSequence.length>0){d.runjs()}};document.body.appendChild(a)}}};lsloader.tagLoad=function(b,a){this.jsRunSequence.push({name:a,code:"",path:b,status:"failed"});this.runjs()};lsloader.jsfallback=function(c,b){if(!!this.jsnamemap[b]){return}else{this.jsnamemap[b]=b}for(var a in this.jsRunSequence){if(this.jsRunSequence[a].name==b){this.jsRunSequence[a].code="";this.jsRunSequence[a].status="failed";this.jsRunSequence[a].path=c}}this.runjs()};lsloader.cssfallback=function(e,c,b){if(!!this.cssnamemap[c]){return}else{this.cssnamemap[c]=1}var d=document.createElement("link");d.type="text/css";d.href=e;d.rel="stylesheet";d.onload=d.onerror=b;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(d,a)};lsloader.runInlineScript=function(c,b){var a=document.getElementById(b).innerText;this.jsRunSequence.push({name:c,code:a});this.runjs()}})();</script>
+
+    <!-- Import queue -->
+    <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
+
+    <!-- Import CSS -->
+    
+        <style id="material_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_css","/css/material.min.css?Z7a72R1E4SxzBKR/WGctOA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+        <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?NKhlKQkXw/c66TR5p4wO+w==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+        
+            
+                <style id="prettify_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("prettify_css","/css/prettify.min.css?zp8STOU9v89XWFEnN+6YmQ==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+                <style id="prettify_theme"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("prettify_theme","/css/prettify/atelier-estuary-light.min.css?ZQObwZXHH6Mt8MNbyQJYfQ==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+            
+        
+
+    
+
+    
+
+    <!-- Config CSS -->
+
+<!-- Other Styles -->
+<style>
+  body, html {
+    font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    overflow-x: hidden !important;
+  }
+  
+  code {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  }
+
+  a {
+    color: #619DDE;
+  }
+
+  .mdl-card__media,
+  #search-label,
+  #search-form-label:after,
+  #scheme-Paradox .hot_tags-count,
+  #scheme-Paradox .sidebar_archives-count,
+  #scheme-Paradox .sidebar-colored .sidebar-header,
+  #scheme-Paradox .sidebar-colored .sidebar-badge{
+    background-color: #619DDE !important;
+  }
+
+  /* Sidebar User Drop Down Menu Text Color */
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
+    color: #619DDE !important;
+  }
+
+  #post_entry-right-info,
+  .sidebar-colored .sidebar-nav li:hover > a,
+  .sidebar-colored .sidebar-nav li:hover > a i,
+  .sidebar-colored .sidebar-nav li > a:hover,
+  .sidebar-colored .sidebar-nav li > a:hover i,
+  .sidebar-colored .sidebar-nav li > a:focus i,
+  .sidebar-colored .sidebar-nav > .open > a,
+  .sidebar-colored .sidebar-nav > .open > a:hover,
+  .sidebar-colored .sidebar-nav > .open > a:focus,
+  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
+    color: #619DDE !important;
+  }
+
+  .toTop {
+    background: #595959 !important;
+  }
+
+  .material-layout .material-post>.material-nav,
+  .material-layout .material-index>.material-nav,
+  .material-nav a {
+    color: #595959;
+  }
+
+  #scheme-Paradox .MD-burger-layer {
+    background-color: #595959;
+  }
+
+  #scheme-Paradox #post-toc-trigger-btn {
+    color: #595959;
+  }
+
+  .post-toc a:hover {
+    color: #619DDE;
+    text-decoration: underline;
+  }
+
+</style>
+
+
+<!-- Theme Background Related-->
+
+    <style>
+      body{
+        background-color: #f8f8f8;
+      }
+
+      /* blog_info bottom background */
+      #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text{
+        background-color: #fff;
+      }
+    </style>
+
+
+
+
+<!-- Fade Effect -->
+
+    <style>
+      .fade {
+        transition: all 800ms linear;
+        -webkit-transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        -o-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        opacity: 1;
+      }
+
+      .fade.out{
+        opacity: 0;
+      }
+    </style>
+
+
+<!-- Import Font -->
+<!-- Import Roboto -->
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+
+
+<!-- Import Material Icons -->
+
+
+    <style id="material_icons"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_icons","/css/material-icons.css?pqhB/Rd/ab0H2+kZp0RDmw==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+
+
+
+    <!-- Import jQuery -->
+    
+        <script>lsloader.load("jq_js","/js/jquery.min.js?qcusAULNeBksqffqUM2+Ig==", true)</script>
+    
+
+    <!-- WebAPP Icons -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="Arley&#39;s Blog (小磊同学博客)">
+    <meta name="msapplication-starturl" content="https://i7xy.cn/gulp笔记/">
+    <meta name="msapplication-navbutton-color" content="#619DDE">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="Arley&#39;s Blog (小磊同学博客)">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon" href="/img/logo.png">
+
+    <!-- Site Verification -->
+    
+    <meta name="baidu-site-verification" content="RX4cJpJSKB" />
+
+    <!-- RSS -->
+    
+
+    <!-- The Open Graph protocol -->
+    <meta property="og:url" content="https://i7xy.cn/gulp笔记/">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="gulp笔记 | Arley&#39;s Blog (小磊同学博客)">
+    <meta property="og:image" content="/img/logo.png">
+    <meta property="og:description" content="小程序全栈开发者/伪极客/灵魂摄影师，热爱技术&amp;生活，很高兴能在这里与你分享我对技术和生活的思考。">
+    <meta property="og:article:tag" content="学习笔记"> <meta property="og:article:tag" content="构建工具"> <meta property="og:article:tag" content="gulp"> 
+
+    
+        <meta property="article:published_time" content="Sun Oct 14 2018 10:22:52 GMT+0800">
+        <meta property="article:modified_time" content="Sun Oct 14 2018 12:06:20 GMT+0800">
+    
+
+    <!-- The Twitter Card protocol -->
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Add canonical link for SEO -->
+    
+        <link rel="canonical" href="https://i7xy.cn/gulp笔记/index.html" />
+    
+
+    <!-- Structured-data for SEO -->
+    
+        
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "https://i7xy.cn/gulp笔记/index.html",
+    "headline": "gulp笔记",
+    "datePublished": "Sun Oct 14 2018 10:22:52 GMT+0800",
+    "dateModified": "Sun Oct 14 2018 12:06:20 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "Arley",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/avatar.png"
+        },
+        "description": "学不思罔，思不学殆"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "Arley&#39;s Blog (小磊同学博客)",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/logo.png"
+        }
+    },
+    "keywords": ",学习笔记,构建工具,gulpArley&#39;s Blog,小磊同学,郭磊博客,郭磊技术分享,小程序博客,前端技术博客",
+    "description": "小程序全栈开发者/伪极客/灵魂摄影师，热爱技术&amp;生活，很高兴能在这里与你分享我对技术和生活的思考。",
+}
+</script>
+
+
+    
+
+    <!-- Analytics -->
+    
+    
+    
+        <div style="display: none;">
+    <script src="//s95.cnzz.com/z_stat.php?id=1274340778&web_id=1274340778" language="JavaScript"></script>
+</div>
+    
+
+    <!-- Custom Head -->
+    
+
+</head>
+
+
+    
+        <body id="scheme-Paradox" class="lazy">
+            <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
+                
+
+                <!-- Main Container -->
+                <main class="material-layout__content" id="main">
+
+                    <!-- Top Anchor -->
+                    <div id="top"></div>
+
+                    
+                        <!-- Hamburger Button -->
+                        <button class="MD-burger-icon sidebar-toggle">
+                            <span id="MD-burger-id" class="MD-burger-layer"></span>
+                        </button>
+                    
+
+                    <!-- Post TOC -->
+
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#文件操作"><span class="post-toc-number">1.</span> <span class="post-toc-text">文件操作</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#删除文件-（del）"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">删除文件 （del）</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#重命名文件-（gulp-rename）"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">重命名文件 （gulp-rename）</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#合并文件-（gulp-concat）"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">合并文件 （gulp-concat）</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#过滤文件-（gulp-filter）"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">过滤文件 （gulp-filter）</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#压缩文件"><span class="post-toc-number">2.</span> <span class="post-toc-text">压缩文件</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#压缩js-（gulp-uglify）"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">压缩js （gulp-uglify）</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#压缩css-（gulp-csso）"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">压缩css （gulp-csso）</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#压缩html-（gulp-html-minify-gulp-htmlmin）"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">压缩html （gulp-html-minify || gulp-htmlmin）</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#压缩图片（gulp-imagemin）"><span class="post-toc-number">2.4.</span> <span class="post-toc-text">压缩图片（gulp-imagemin）</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#代码处理"><span class="post-toc-number">3.</span> <span class="post-toc-text">代码处理</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#css属性加入浏览器前缀-（gulp-autoprefixer）"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">css属性加入浏览器前缀 （gulp-autoprefixer）</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#js-css文件合并引入-（gulp-useref）"><span class="post-toc-number">3.2.</span> <span class="post-toc-text">js/css文件合并引入 （gulp-useref）</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#静态文件添加hash值-（gulp-rev）"><span class="post-toc-number">3.3.</span> <span class="post-toc-text">静态文件添加hash值 （gulp-rev）</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#重写被gulp-rev重命名的文件名（gulp-rev-replace）"><span class="post-toc-number">3.4.</span> <span class="post-toc-text">重写被gulp-rev重命名的文件名（gulp-rev-replace）</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#流控制"><span class="post-toc-number">4.</span> <span class="post-toc-text">流控制</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#工具"><span class="post-toc-number">5.</span> <span class="post-toc-text">工具</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#gulp-load-plugins"><span class="post-toc-number">5.1.</span> <span class="post-toc-text">gulp-load-plugins</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#编译sass-gulp-sass"><span class="post-toc-number">5.2.</span> <span class="post-toc-text">编译sass(gulp-sass)</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#将ES6代码编译成ES5-gulp-babel"><span class="post-toc-number">5.3.</span> <span class="post-toc-text">将ES6代码编译成ES5(gulp-babel)</span></a></li></ol></li></ol>
+    </ul>
+    
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
+    
+        
+            <!-- Random Thumbnail -->
+            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
+
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').addClass('lazy');
+</script>
+
+        
+    
+            <p class="article-headline-p">
+                gulp笔记
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/avatar.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>Arley</strong>
+        <span>10月 14, 2018</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+        <button id="article-functions-qrcode-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">devices other</i>
+    <span class="visuallyhidden">devices other</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
+    <li class="mdl-menu__item">在其它设备中阅读本文章</li>
+    
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAAB6UlEQVR42u3aS26EQAwFwLn/pZNtpCjMsw1JwMUKjQa6i4XV/rw+HnG9MDAwMDAwMDD+DeMVX8dPff39+z/fbKi3BwwMjGWMZJlCKAw+wXwPGBgYOxlJGE3uj8No8p4olGNgYGDEy1TD5XHAxcDAwLgi4FbTXQwMDIwJIw+Xx4vNi3SX5+IYGBg3ZORF+evuf7W/gYGBcStGecShCM639aszIxgYGLdi5AsnsN57mutiYGCsYfy0lSiNvGDk65iKgYGxmXHWJpK2ZV6GO+2Ei4GBcXNGLylNAnH+bNLUxMDAwMjT1MlYWG84rBxwMTAwHsrIk9JeqJ1/lPJ0GwYGxoMYx2lkryhWPUT2EloMDIxtjEl4zX/JC3BJ+wEDA2MPozfOdZxw9sLoybk4BgbG4xjVJHZSbusNXlySi2NgYNyQkSycNxXmbYBmwMXAwFjAyJfPG5bVENxMYjEwMBYw8vZAYbEgWFfbEhgYGNsYvfZAtdlZHaqIPhwGBsYaRrUENjnq5WW1UX8DAwPjoYx8zCJvT86LdG92hYGBsZLRC4jJRidJLAYGBsaE0Ut6T/tYGBgYGDFjfl8FYGBgbGYkSWx+BKyCqwdEDAyMbYzqAa4aKJOEtlp6w8DA2MO474WBgYGBgYGB8afXJy9H8vBgU272AAAAAElFTkSuQmCC">
+    
+</ul>
+
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/gulp/">gulp</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/学习笔记/">学习笔记</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/构建工具/">构建工具</a>
+    </ul>
+    
+
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=gulp笔记&url=https://i7xy.cn/gulp笔记/index.html&pic=https://i7xy.cn/img/favicon.png&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+
+    <!-- Share Facebook -->
+    
+
+    <!-- Share Google+ -->
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=Arley&#39;s Blog (小磊同学博客)&title=gulp笔记&summary=小程序全栈开发者/伪极客/灵魂摄影师，热爱技术&amp;生活，很高兴能在这里与你分享我对技术和生活的思考。&pics=https://i7xy.cn/img/favicon.png&url=https://i7xy.cn/gulp笔记/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 QQ
+            </li>
+        </a>
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+    
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <p>###<code>gulp.src()</code></p>
+<blockquote>
+<p>匹配符 *、**、！、{}</p>
+</blockquote>
+<pre><code class="js">gulp.src(&#39;./js/*.js&#39;)               // * 匹配js文件夹下所有.js格式的文件
+gulp.src(&#39;./js/**/*.js&#39;)            // ** 匹配js文件夹的0个或多个子文件夹
+gulp.src([&#39;./js/*.js&#39;,&#39;!./js/index.js&#39;])    // ! 匹配除了index.js之外的所有js文件
+gulp.src(&#39;./js/**/{omui,common}.js&#39;)        // {} 匹配{}里的文件名
+</code></pre>
+<h3 id="文件操作"><a href="#文件操作" class="headerlink" title="文件操作"></a>文件操作</h3><h4 id="删除文件-（del）"><a href="#删除文件-（del）" class="headerlink" title="删除文件 （del）"></a>删除文件 （del）</h4><blockquote>
+<p>del (替代gulp-clean)</p>
+</blockquote>
+<pre><code class="js">gulp.task(&#39;del&#39;,()=&gt;{
+  var del = require(&#39;del&#39;);
+  del(&#39;./dist&#39;);// 删除整个dist文件夹
+});
+</code></pre>
+<h4 id="重命名文件-（gulp-rename）"><a href="#重命名文件-（gulp-rename）" class="headerlink" title="重命名文件 （gulp-rename）"></a>重命名文件 （gulp-rename）</h4><pre><code class="js">var rename = require(&quot;gulp-rename&quot;);
+
+// 单文件改名
+gulp.src(&quot;./src/main/text/hello.txt&quot;)
+  .pipe(rename(&quot;main/text/ciao/goodbye.md&quot;))
+  .pipe(gulp.dest(&quot;./dist&quot;)); // ./dist/main/text/ciao/goodbye.md
+
+//对所有文件改名
+gulp.task(&#39;rename&#39;,()=&gt;{
+  let rename = require(&#39;gulp-rename&#39;);
+  gulp.src(&#39;./src/**/*.js&#39;)
+    .pipe(rename((path)=&gt;{
+      // { dirname: &#39;js&#39;, basename: &#39;arley&#39;, extname: &#39;.js&#39; }
+      // { dirname: &#39;js&#39;, basename: &#39;main&#39;, extname: &#39;.js&#39; }
+      path.dirname  += &quot;/hello&quot;;
+      path.basename += &quot;-goodbye&quot;;
+      path.extname   = &quot;.js&quot;;
+    }))
+    .pipe(gulp.dest(&#39;./dist&#39;));
+});
+
+// 直接传入对象，并对多个文件重命名
+gulp.task(&#39;rename&#39;,()=&gt;{
+  let rename = require(&#39;gulp-rename&#39;);
+  gulp.src(&#39;./src/**/*.js&#39;)
+    .pipe(rename({
+      dirname : &#39;hello&#39;,
+      basename: &quot;base&quot;,
+      prefix : &quot;prefix-&quot;,
+      suffix : &quot;-suffix&quot;,
+      extname: &quot;.md&quot;
+    }))
+    .pipe(gulp.dest(&#39;./dist&#39;));
+});
+</code></pre>
+<h4 id="合并文件-（gulp-concat）"><a href="#合并文件-（gulp-concat）" class="headerlink" title="合并文件 （gulp-concat）"></a>合并文件 （gulp-concat）</h4><p><a href="https://www.npmjs.com/package/gulp-concat" target="_blank" rel="noopener">gulp-concat</a></p>
+<pre><code class="js">var concat = require(&#39;gulp-concat&#39;);
+
+gulp.src(&#39;./js/*.js&#39;)
+    .pipe(concat(&#39;all.js&#39;))         // 合并all.js文件
+    .pipe(gulp.dest(&#39;./dist&#39;));
+
+gulp.src([&#39;./js/demo1.js&#39;,&#39;./js/demo2.js&#39;,&#39;./js/demo2.js&#39;])
+    .pipe(concat(&#39;all.js&#39;))         // 按照[]里的顺序合并文件
+    .pipe(gulp.dest(&#39;./dist&#39;));
+
+</code></pre>
+<h4 id="过滤文件-（gulp-filter）"><a href="#过滤文件-（gulp-filter）" class="headerlink" title="过滤文件 （gulp-filter）"></a>过滤文件 （gulp-filter）</h4><pre><code class="js">var filter = require(&#39;gulp-filter&#39;);
+
+const f = filter([&#39;**&#39;, &#39;!*/index.js&#39;]);
+gulp.src(&#39;js/**/*.js&#39;)
+    .pipe(f)                        // 过滤掉index.js这个文件
+    .pipe(gulp.dest(&#39;dist&#39;));
+
+const f1 = filter([&#39;**&#39;, &#39;!*/index.js&#39;], {restore: true});
+gulp.src(&#39;js/**/*.js&#39;)
+    .pipe(f1)                       // 过滤掉index.js这个文件
+    .pipe(uglify())                 // 对其他文件进行压缩
+    .pipe(f1.restore)               // 返回到未过滤执行的所有文件
+    .pipe(gulp.dest(&#39;dist&#39;));       // 再对所有文件操作，包括index.js
+
+</code></pre>
+<h3 id="压缩文件"><a href="#压缩文件" class="headerlink" title="压缩文件"></a>压缩文件</h3><h4 id="压缩js-（gulp-uglify）"><a href="#压缩js-（gulp-uglify）" class="headerlink" title="压缩js （gulp-uglify）"></a>压缩js （gulp-uglify）</h4><pre><code class="js">var uglify = require(&quot;gulp-uglify&quot;);
+
+gulp.src(&#39;./hello.js&#39;)
+    .pipe(uglify())                 // 直接压缩hello.js
+    .pipe(gulp.dest(&#39;./dist&#39;))
+
+ gulp.src(&#39;./hello.js&#39;)
+    .pipe(uglify({
+        mangle: true,               // 是否修改变量名，默认为 true
+        compress: true,             // 是否完全压缩，默认为 true
+        preserveComments: &#39;all&#39;     // 保留所有注释
+    }))
+    .pipe(gulp.dest(&#39;./dist&#39;))
+
+</code></pre>
+<h4 id="压缩css-（gulp-csso）"><a href="#压缩css-（gulp-csso）" class="headerlink" title="压缩css （gulp-csso）"></a>压缩css （gulp-csso）</h4><pre><code class="js">var csso = require(&#39;gulp-csso&#39;);
+
+gulp.src(&#39;./css/*.css&#39;)
+    .pipe(csso())
+    .pipe(gulp.dest(&#39;./dist/css&#39;))
+</code></pre>
+<h4 id="压缩html-（gulp-html-minify-gulp-htmlmin）"><a href="#压缩html-（gulp-html-minify-gulp-htmlmin）" class="headerlink" title="压缩html （gulp-html-minify || gulp-htmlmin）"></a>压缩html （gulp-html-minify || gulp-htmlmin）</h4><pre><code class="js">var htmlminify = require(&#39;gulp-html-minify&#39;);
+
+gulp.src(&#39;index.html&#39;)
+    .pipe(htmlminify())
+    .pipe(gulp.dest(&#39;./dist&#39;))
+</code></pre>
+<pre><code class="js">const gulp = require(&#39;gulp&#39;);
+const htmlmin = require(&#39;gulp-htmlmin&#39;);
+
+gulp.task(&#39;minify&#39;, () =&gt; {
+  return gulp.src(&#39;src/*.html&#39;)
+    .pipe(htmlmin({ collapseWhitespace: true }))
+    .pipe(gulp.dest(&#39;dist&#39;));
+});
+</code></pre>
+<h4 id="压缩图片（gulp-imagemin）"><a href="#压缩图片（gulp-imagemin）" class="headerlink" title="压缩图片（gulp-imagemin）"></a>压缩图片（gulp-imagemin）</h4><pre><code class="js">var imagemin = require(&#39;gulp-imagemin&#39;);
+
+gulp.src(&#39;./img/*.{jpg,png,gif,ico}&#39;)
+    .pipe(imagemin())
+    .pipe(gulp.dest(&#39;./dist/img&#39;))
+</code></pre>
+<h3 id="代码处理"><a href="#代码处理" class="headerlink" title="代码处理"></a>代码处理</h3><h4 id="css属性加入浏览器前缀-（gulp-autoprefixer）"><a href="#css属性加入浏览器前缀-（gulp-autoprefixer）" class="headerlink" title="css属性加入浏览器前缀 （gulp-autoprefixer）"></a>css属性加入浏览器前缀 （gulp-autoprefixer）</h4><pre><code class="js">var autoprefixer = require(&#39;gulp-autoprefixer&#39;);
+
+gulp.src(&#39;./css/*.css&#39;)
+    .pipe(autoprefixer())           // 直接添加前缀
+    .pipe(gulp.dest(&#39;dist&#39;))
+
+gulp.src(&#39;./css/*.css&#39;)
+    .pipe(autoprefixer({
+        browsers: [&#39;last 2 versions&#39;],      // 浏览器版本
+        cascade：true                       // 美化属性，默认true
+        add: true                           // 是否添加前缀，默认true
+        remove: true                        // 删除过时前缀，默认true
+        flexbox: true                       // 为flexbox属性添加前缀，默认true
+    }))
+    .pipe(gulp.dest(&#39;./dist&#39;))
+</code></pre>
+<h4 id="js-css文件合并引入-（gulp-useref）"><a href="#js-css文件合并引入-（gulp-useref）" class="headerlink" title="js/css文件合并引入 （gulp-useref）"></a>js/css文件合并引入 （gulp-useref）</h4><pre><code class="html">// index.html
+
+&lt;!-- build:css /css/all.css --&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;css/normalize.css&quot;&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;css/main.css&quot;&gt;
+&lt;!-- endbuild --&gt;
+</code></pre>
+<pre><code class="js">// gulpfile.js
+var useref = require(&#39;gulp-useref&#39;);
+
+gulp.src(&#39;index.html&#39;)
+    .pipe(useref())
+    .pipe(gulp.dest(&#39;./dist&#39;))
+
+</code></pre>
+<p>替换之后的index.html中就会变成：</p>
+<pre><code class="html">&lt;link rel=&quot;stylesheet&quot; href=&quot;css/all.css&quot;&gt;  // 之前的两个&lt;link&gt;替换成一个了
+</code></pre>
+<h4 id="静态文件添加hash值-（gulp-rev）"><a href="#静态文件添加hash值-（gulp-rev）" class="headerlink" title="静态文件添加hash值 （gulp-rev）"></a>静态文件添加hash值 （gulp-rev）</h4><pre><code class="js">var rev = require(&#39;gulp-rev&#39;);
+
+gulp.src(&#39;./css/*.css&#39;)
+    .pipe(rev())
+    .pipe(gulp.dest(&#39;./dist/css&#39;))
+</code></pre>
+<h4 id="重写被gulp-rev重命名的文件名（gulp-rev-replace）"><a href="#重写被gulp-rev重命名的文件名（gulp-rev-replace）" class="headerlink" title="重写被gulp-rev重命名的文件名（gulp-rev-replace）"></a>重写被gulp-rev重命名的文件名（gulp-rev-replace）</h4><pre><code class="js">var rev = require(&#39;gulp-rev&#39;);
+var revReplace = require(&#39;gulp-rev-replace&#39;);
+var useref = require(&#39;gulp-useref&#39;);
+
+gulp.src(&#39;index.html&#39;)
+    .pipe(useref())                         // 替换HTML中引用的css和js
+    .pipe(rev())                            // 给css,js,html加上hash版本号
+    .pipe(revReplace())                     // 把引用的css和js替换成有版本号的名字
+    .pipe(gulp.dest(&#39;./dist&#39;))
+
+</code></pre>
+<h3 id="流控制"><a href="#流控制" class="headerlink" title="流控制"></a>流控制</h3><pre><code class="js">var gulpif = require(&#39;gulp-if&#39;);
+var uglify = require(&#39;gulp-uglify&#39;);
+var concat = require(&#39;gulp-concat&#39;);
+var condition = true; 
+
+gulp.src(&#39;./js/*.js&#39;)
+    .pipe(gulpif(condition, uglify(), concat(&#39;all.js&#39;)))  // condition为true时执行uglify(), else 执行concat(&#39;all.js&#39;)
+    .pipe(gulp.dest(&#39;./dist/&#39;));
+</code></pre>
+<h3 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h3><h4 id="gulp-load-plugins"><a href="#gulp-load-plugins" class="headerlink" title="gulp-load-plugins"></a>gulp-load-plugins</h4><blockquote>
+<p>描述：从包的依赖和附件里加载gulp插件到一个对象里给你选择。</p>
+</blockquote>
+<pre><code class="json">// package.json 
+
+&quot;devDependencies&quot;: {
+    &quot;gulp&quot;: &quot;^3.9.1&quot;,
+    &quot;gulp-concat&quot;: &quot;^2.6.1&quot;,
+    &quot;gulp-rename&quot;: &quot;^1.2.2&quot;,
+    &quot;gulp-uglify&quot;: &quot;^2.0.1&quot;
+}
+</code></pre>
+<pre><code class="js">// gulpfile.js
+
+var $ = require(&#39;gulp-load-plugins&#39;)();     // $ 是一个对象,加载了依赖里的插件
+
+gulp.src(&#39;./**/*.js&#39;)
+    .pipe($.concat(&#39;all.js&#39;))               // 使用插件就可以用$.PluginsName()
+    .pipe($.uglify())
+    .pipe($.rename(&#39;all.min.js&#39;))
+    .pipe(gulp.dest(&#39;./dist&#39;))
+
+</code></pre>
+<h4 id="编译sass-gulp-sass"><a href="#编译sass-gulp-sass" class="headerlink" title="编译sass(gulp-sass)"></a>编译sass(gulp-sass)</h4><pre><code class="js">var sass = require(&#39;gulp-sass&#39;);
+
+gulp.src(&#39;./sass/**/*.scss&#39;)
+    .pipe(sass({
+        outputStyle: &#39;compressed&#39;           // 配置输出方式,默认为nested
+    }))
+    .pipe(gulp.dest(&#39;./dist/css&#39;));
+
+gulp.watch(&#39;./sass/**/*.scss&#39;, [&#39;sass&#39;]);   // 实时监听sass文件变动,执行sass任务
+
+</code></pre>
+<h4 id="将ES6代码编译成ES5-gulp-babel"><a href="#将ES6代码编译成ES5-gulp-babel" class="headerlink" title="将ES6代码编译成ES5(gulp-babel)"></a>将ES6代码编译成ES5(gulp-babel)</h4><pre><code class="js">var babel = require(&#39;gulp-babel&#39;);
+
+gulp.src(&#39;./js/index.js&#39;)
+    .pipe(babel({
+        presets: [&#39;es2015&#39;]
+    }))
+    .pipe(gulp.dest(&#39;./dist&#39;))
+</code></pre>
+
+        
+                <blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;">
+                    <p><strong>
+                         
+                            本文作者：<a href="https://i7xy.cn" target="_blank">Arley</a> <br> 本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/deed.zh" target="_blank">CC BY-NC-SA 3.0 Unported License</a> 协议进行许可
+                        </strong>
+                        <br>
+                        <strong>本文链接：</strong><a href="https://i7xy.cn/gulp笔记/">https://i7xy.cn/gulp笔记/</a>
+                    </p>
+                </blockquote>
+        
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+    <!-- 使用 changyan -->
+<div id="changyan-comment">
+    <!--PC和WAP自适应版-->
+<div id="SOHUCS" sid="gulp笔记/"  ></div>
+<script type="text/javascript">
+(function(){
+var appid = 'cytKUOEJj';
+var conf = 'prod_e63d83c1855a6c55967d425a6e615d16';
+var width = window.innerWidth || document.documentElement.clientWidth;
+if (width < 960) {
+window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); } })(); </script>
+
+</div>
+<style>
+    #changyan-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/mysql笔记/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
+
+
+                    
+                        <!-- Overlay For Active Sidebar -->
+<div class="sidebar-overlay"></div>
+
+<!-- Material sidebar -->
+<aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
+    <div id="sidebar-main">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header header-cover" style="background-image: url(/img/sidebar_header.png);">
+    <!-- Top bar -->
+    <div class="top-bar"></div>
+
+    <!-- Sidebar toggle button -->
+    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
+        <i class="material-icons">clear_all</i>
+        <span class="mdl-button__ripple-container">
+            <span class="mdl-ripple">
+            </span>
+        </span>
+    </button>
+
+    <!-- Sidebar Avatar -->
+    <div class="sidebar-image">
+        <img src="/img/avatar.png" alt="Arley's avatar">
+    </div>
+
+    <!-- Sidebar Email -->
+    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
+        34805850@qq.com
+        <b class="caret"></b>
+    </a>
+</div>
+
+
+        <!-- Sidebar Navigation  -->
+        <ul class="nav sidebar-nav">
+    <!-- User dropdown  -->
+    <li class="dropdown">
+        <ul id="settings-dropdown" class="dropdown-menu">
+            
+                <li>
+                    <a href="mailto:34805850@qq.com" target="_blank" title="Email Me">
+                        
+                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
+                        
+                        Email Me
+                    </a>
+                </li>
+            
+        </ul>
+    </li>
+
+    <!-- Homepage -->
+    
+        <li id="sidebar-first-li">
+            <a href="/">
+                
+                    <i class="material-icons sidebar-material-icons">home</i>
+                
+                主页
+            </a>
+        </li>
+        
+    
+
+    <!-- Archives  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">inbox</i>
+                
+                    归档
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+            <li>
+                <a class="sidebar_archives-link" href="/archives/2018/10/">十月 2018<span class="sidebar_archives-count">11</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/09/">九月 2018<span class="sidebar_archives-count">17</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/08/">八月 2018<span class="sidebar_archives-count">10</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/07/">七月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/06/">六月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/09/">九月 2016<span class="sidebar_archives-count">1</span></a>
+            </ul>
+        </li>
+        
+    
+
+    <!-- Categories  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">chrome_reader_mode</i>
+                
+                分类
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+                <li>
+                <a class="sidebar_archives-link" href="/categories/学习笔记/">学习笔记<span class="sidebar_archives-count">29</span></a></li><li><a class="sidebar_archives-link" href="/categories/实战开发/">实战开发<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/技巧备份/">技巧备份<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/杂谈/">杂谈<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/categories/课设/">课设<span class="sidebar_archives-count">2</span></a>
+            </ul>
+        </li>
+        
+            <li class="divider"></li>
+        
+    
+
+    <!-- Pages  -->
+    
+        <li>
+            <a href="/gallery" title="相册">
+                
+                    <i class="material-icons sidebar-material-icons">photo</i>
+                
+                相册
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/tags" title="标签云">
+                
+                    <i class="material-icons sidebar-material-icons">book</i>
+                
+                标签云
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/timeline" title="时间轴">
+                
+                    <i class="material-icons sidebar-material-icons">timeline</i>
+                
+                时间轴
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/about" title="关于">
+                
+                    <i class="material-icons sidebar-material-icons">person</i>
+                
+                关于
+            </a>
+        </li>
+        
+    
+
+    <!-- Article Number  -->
+    
+        <li>
+            <a href="/archives">
+                文章总数
+                <span class="sidebar-badge">41</span>
+            </a>
+        </li>
+        
+    
+</ul>
+
+
+        <!-- Sidebar Footer -->
+        <!--
+I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
+If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
+It will not impact the appearance and can give developers a lot of support :)
+
+很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。
+如果您仍然想删除的话 能否只保留第一项呢？即 "Theme Material"
+它不会影响美观并可以给开发者很大的支持和动力。 :)
+-->
+
+<!-- Sidebar Divider -->
+
+
+<!-- Theme Material -->
+
+
+<!-- Help & Support -->
+<!--
+
+-->
+
+<!-- Feedback -->
+<!--
+
+-->
+
+<!-- About Theme -->
+<!--
+
+-->
+
+    </div>
+
+    <!-- Sidebar Image -->
+    
+
+</aside>
+
+                    
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
+
+                    
+
+                    <!--Footer-->
+<footer class="mdl-mini-footer" id="bottom">
+    
+        <!-- Paradox Footer Left Section -->
+        <div class="mdl-mini-footer--left-section sns-list">
+    <!-- Twitter -->
+    
+
+    <!-- Facebook -->
+    
+
+    <!-- Google + -->
+    
+
+    <!-- Weibo -->
+    
+
+    <!-- Instagram -->
+    
+
+    <!-- Tumblr -->
+    
+
+    <!-- Github -->
+    
+
+    <!-- LinkedIn -->
+    
+
+    <!-- Zhihu -->
+    
+
+    <!-- Bilibili -->
+    
+
+    <!-- Telegram -->
+    
+
+    <!-- V2EX -->
+    
+
+    <!-- Segmentfault -->
+    
+</div>
+
+
+        <!--Copyright-->
+        <div id="copyright">
+            Copyright&nbsp;©&nbsp;<span year></span>&nbsp;Arley's Blog (小磊同学博客)
+            
+        </div>
+
+        <!-- Paradox Footer Right Section -->
+
+        <!--
+        I am glad you use this theme, the development is no so easy, I hope you can keep the copyright.
+        It will not impact the appearance and can give developers a lot of support :)
+
+        很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
+        它不会影响美观并可以给开发者很大的支持。 :)
+        -->
+
+        <div class="mdl-mini-footer--right-section">
+            <div>
+                <div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
+                <div class="footer-develop-div">Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
+                <div class="footer-develop-div">Hosted by <a href="https://pages.coding.me" target="_blank" class="footer-develop-a">Coding Pages</a></div>
+            </div>
+        </div>
+    
+</footer>
+
+
+                    <!-- Import JS File -->
+
+    <script>lsloader.load("lazyload_js","/js/lazyload.min.js?1BcfzuNXqV+ntF6gq+5X3Q==", true)</script>
+
+
+
+    <script>lsloader.load("js_js","/js/js.min.js?Bn9UzEm8RrBSxqyZB0zPjA==", true)</script>
+
+
+
+    <script>lsloader.load("np_js","/js/nprogress.js?pl3Qhb9lvqR1FlyLUna1Yw==", true)</script>
+
+
+<script type="text/ls-javascript" id="NProgress-script">
+    NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+    $('#nprogress .bar').css({
+        'background': '#29d'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #29d, 0 0 15px #29d'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#29d',
+        'border-left-color': '#29d'
+    });
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);
+</script>
+
+
+
+    
+        <script>lsloader.load("sm_js","/js/smoothscroll.js?lOy/ACj5suSNi7ZVFVbpFQ==", true)</script>
+    
+
+
+
+
+
+
+
+   <!-- 畅言公共 js 代码 start -->
+<script id="cy_cmt_num" src="https://changyan.sohu.com/upload/plugins/plugins.list.count.js?clientId=cytKUOEJj">
+</script>
+<!-- 畅言公共 js 代码 end -->
+
+
+
+
+
+<!-- UC Browser Compatible -->
+<script>
+	var agent = navigator.userAgent.toLowerCase();
+	if(agent.indexOf('ucbrowser')>0) {
+		document.write('<link rel="stylesheet" href="/css/uc.css">');
+	   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+	}
+</script>
+
+<!-- Import prettify js  -->
+
+    
+        
+            <script>lsloader.load("prettify_js","/js/prettify.min.js?WN07fivHQSMKWy7BmHBB6w==", true)</script>
+        
+    
+
+
+
+<!-- Window Load -->
+<!-- add class for prettify -->
+<script type="text/ls-javascript" id="window-load">
+    $(window).on('load', function() {
+        // Post_Toc parent position fixed
+        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
+    });
+
+    
+        
+            $(function() {
+                $('pre').addClass('prettyprint linenums').attr('style', 'overflow:auto;');
+                prettyPrint();
+                })
+        
+    
+    
+</script>
+
+<!-- MathJax Load-->
+
+
+<!-- Bing Background -->
+
+
+<script type="text/ls-javascript" id="lazy-load">
+    // Offer LazyLoad
+    queue.offer(function(){
+        $('.lazy').lazyload({
+            effect : 'show'
+        });
+    });
+
+    // Start Queue
+    $(document).ready(function(){
+        setInterval(function(){
+            queue.execNext();
+        },200);
+    });
+</script>
+
+<!-- Custom Footer -->
+
+
+
+<script>
+    var copyrightNow = new Date().getFullYear();
+    var textContent = document.querySelector('span[year]')
+
+    copyrightSince = 2016;
+    if (copyrightSince === copyrightNow||copyrightSince === 0000) {
+        textContent.textContent = copyrightNow
+    } else {
+        textContent.textContent = copyrightSince + ' - ' + copyrightNow
+    }
+
+    (function(){
+        var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
+
+        for (var i = 0; i < scriptList.length; ++i) {
+            var item = scriptList[i];
+            lsloader.runInlineScript(item.id,item.id);
+        }
+    })()
+console.log('\n %c © Material Theme | Version: 1.5.6 | https://github.com/viosey/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
+</script>
+
+                </main>
+            </div>
+        </body>
+    
+</html>
