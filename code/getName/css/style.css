@@ -18,7 +18,8 @@
   padding: 12px;
 }
 .stu-item{
-  width: calc(10% - 2px);
+  /* width: calc(10% - 2px); */
+  width: 130px;
   overflow: hidden;
   float: left;
   background-color: #fff;
@@ -30,7 +31,7 @@
 
 /* 控制台 */
 .footer{
-  margin: 0 12px;
+  margin: 0 12px 30px 12px;
 }
 
 .footer h2{
