@@ -69,8 +69,8 @@ window.onload = () => {
   var checkTime = null;
   getStu.addEventListener('click', () => {
 
-    if(getStu.value==="开始随机选取"){
-      getStu.value="停止";
+    // if(getStu.value==="开始随机选取"){
+    //   getStu.value="停止";
       if (stus.length === 0) {
         alert("没有学生哦");
       } else {
@@ -82,28 +82,38 @@ window.onload = () => {
             break;
           }
         }
-  
-        if (nowId === 'nan') {
-          checkTime = setInterval(()=>{
-            let maxNum = stusNan.length;
-            let id = Math.floor(Math.random() * maxNum);
-            checkStu('nan', id, maxNum);
-          },300);
-        } else {
-          checkTime = setInterval(()=>{
-            let maxNum = stusNv.length;
-            let id = Math.floor(Math.random() * maxNum);
-            checkStu('nv', id, maxNum);
-          },300);
-          
+        let t = 50;
+        let fNan = function(){
+          let maxNum = stusNan.length;
+          let id = Math.floor(Math.random() * maxNum);
+          checkStu('nan', id, maxNum);
+          clearInterval(checkTime);
+          if(t<=300){
+            t+=10;
+            checkTime = setInterval(fNan,t);
+          }
         }
-  
-  
+
+        let fNv = function(){
+          let maxNum = stusNv.length;
+          let id = Math.floor(Math.random() * maxNum);
+          checkStu('nv', id, maxNum);
+          clearInterval(checkTime);
+          if(t<=300){
+            t+=10;
+            checkTime = setInterval(fNv,t);
+          }
+        }
+        if (nowId === 'nan') {
+          checkTime = setInterval(fNan,t);
+        } else {
+          checkTime = setInterval(fNv,t);
+        }
       }
-    }else{
-      clearInterval(checkTime);
-      getStu.value="开始随机选取";
-    }
+    // }else{
+    //   clearInterval(checkTime);
+    //   getStu.value="开始随机选取";
+    // }
 
 
 
