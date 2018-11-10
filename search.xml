@@ -943,16 +943,16 @@
   
     
     <entry>
-      <title>Arley&#39;s About</title>
-      <link href="/about-hexo/index.html"/>
-      <url>/about-hexo/index.html</url>
+      <title>标签云</title>
+      <link href="/tags/index.html"/>
+      <url>/tags/index.html</url>
       <content type="html"><![CDATA[]]></content>
     </entry>
     
     <entry>
-      <title>Arley&#39;s Inc</title>
-      <link href="/gallery/index.html"/>
-      <url>/gallery/index.html</url>
+      <title>Arley&#39;s About</title>
+      <link href="/about-hexo/index.html"/>
+      <url>/about-hexo/index.html</url>
       <content type="html"><![CDATA[]]></content>
     </entry>
     
@@ -964,9 +964,9 @@
     </entry>
     
     <entry>
-      <title>标签云</title>
-      <link href="/tags/index.html"/>
-      <url>/tags/index.html</url>
+      <title>Arley&#39;s Inc</title>
+      <link href="/gallery/index.html"/>
+      <url>/gallery/index.html</url>
       <content type="html"><![CDATA[]]></content>
     </entry>
     
